@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap");
+/* pour ajouter une police (hors google fonts, il faut la télécharger, puis l'INSTALLER)
+ensuite il faut écrire dans :
+-App.css @font-face{ font-family; src; url; format} 
+-tailwind.config.js - rajouter dans font-family nom souhaité: "nom de la police d'origine" */
+@font-face {
+  font-family: "Starjedi";
+  src: local("Starjedi"), url("./assets/fonts/Starjedi.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Galactic Basic";
+  src: local("Galactic Basic"), url("./assets/fonts/galbasic.ttf") format("ttf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
