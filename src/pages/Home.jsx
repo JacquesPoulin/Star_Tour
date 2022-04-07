@@ -1,9 +1,10 @@
 import React from "react";
+import HomeHeader from "../components/home/HomeHeader"
 
 const Home = () => {
   return (
     <div>
-      <h1 className="text-red-700 font-orb">Home</h1>
+      <HomeHeader />
     </div>
   );
 };
