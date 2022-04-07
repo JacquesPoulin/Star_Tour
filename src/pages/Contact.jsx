@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "../components/Navbar";
 
 const Contact = () => {
   return (
     <div>
-      <h1 className="bg-blue-700 font-jedi">Contact</h1>
+      <NavBar />
     </div>
   );
 };
