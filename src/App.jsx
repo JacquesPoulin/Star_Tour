@@ -1,20 +1,20 @@
-import './style/App.css';
-import React from 'react';
-import HomePage from './pages/HomePage';
-import Destinations from './pages/Destinations';
-import Questionnaire from './pages/Questionnaire';
-import Reservation from './pages/Reservation';
-import Vaisseaux from './pages/Vaisseaux';
-import Contact from './pages/Contact';
+import "./App.css";
+import React from "react";
+import Home from "./pages/Home";
+import Planets from "./pages/Planets";
+import Quiz from "./pages/Quiz";
+import Booking from "./pages/Booking";
+import Ships from "./pages/Ships";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
-      <Destinations />
-      <Questionnaire />
-      <Reservation />
-      <Vaisseaux />
+      <Home />
+      <Planets />
+      <Quiz />
+      <Booking />
+      <Ships />
       <Contact />
     </div>
   );

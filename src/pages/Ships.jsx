@@ -1,11 +1,11 @@
 import React from "react";
 
-const Form = () => {
+const Ships = () => {
   return (
     <div>
-      <h1>Formulaire</h1>
+      <h1>Ships</h1>
     </div>
   );
 };
 
-export default Form;
+export default Ships;
