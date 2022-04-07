@@ -5,6 +5,8 @@ module.exports = {
       fontFamily: {
         orb: "'Orbitron', 'sans-serif'",
         exo: "'Exo 2', 'sans-serif'",
+        starjedi: "Starjedi",
+        galactic: "Galactic Basic",
       },
     },
   },
