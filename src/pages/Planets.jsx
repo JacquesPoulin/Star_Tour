@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "../components/Navbar";
 
 const Planets = () => {
   return (
     <div>
-      <h1 className="font-starjedi">Planets</h1>
+      <NavBar />
     </div>
   );
 };

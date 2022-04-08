@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "../components/Navbar";
 
 const Quiz = () => {
   return (
     <div>
-      <h1>Quiz</h1>
+      <NavBar />
     </div>
   );
 };
