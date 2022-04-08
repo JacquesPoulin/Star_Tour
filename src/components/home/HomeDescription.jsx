@@ -3,20 +3,22 @@ import React from "react";
 const HomeDescription = () => {
   return (
     <div className="flex flex-col mx-10 my-10">
-      <h1 className="text-slate 50 font-orb">{`Qui sommes-nous?`}</h1>
-    
-      
+      <h1 className="text-slate 50 font-orb">Qui sommes-nous?</h1>
+
       <div className="flex flex-col my-5 gap-4 justify-center items-center space-x-0 sm:flex-row">
         <p className="text-slate 50 font-exo ">
-        {`Hello there !`}
-        <br />
-        {`
+          Hello there !
+          <br />
+          {`
         Nous sommes l'agence Star Tour, votre agence de voyage spécialisée dans
         les séjours aux quatre coins de notre galaxie !
         `}
         </p>
-        <img src="../src/assets/logo/startourHomeHelloThere.gif" className="w-80 rounded-xl"/>
-      
+        <img
+          src="../src/assets/logo/startourHomeHelloThere.gif"
+          alt="hellothere"
+          className="w-80 rounded-xl"
+        />
       </div>
       <p className="text-slate 50 font-exo">
         {`
