@@ -4,17 +4,17 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="min-w-full h-20 flex justify-content-between">
-      <nav className="min-w-full h-20 flex">
+      <nav className="min-w-full h-20 flex font-exo text-slate-50">
         <NavLink to="/Acceuil">
           <img
-            src="../../src/assets/logo/logo-StarTour-black.png"
+            src="../../src/assets/logo/logo-StarTour-white.png"
             alt="logo"
             className="w-28 h-28 ml-4"
           />
         </NavLink>
 
         <ul className="w-full h-20 flex justify-end">
-          <NavLink to="/Acceuil">
+          <NavLink to="/Accueil">
             <li className="mr-10 mb-10 font-medium py-10 hover:text-gray-400">
               Acceuil
             </li>
