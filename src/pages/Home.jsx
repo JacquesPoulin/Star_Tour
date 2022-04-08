@@ -1,9 +1,10 @@
 import React from "react";
+import HomeDescription from "../components/home/HomeDescription";
 
 const Home = () => {
   return (
     <div>
-      <h1 className="text-red-700 font-orb">Home</h1>
+      <HomeDescription />
     </div>
   );
 };
