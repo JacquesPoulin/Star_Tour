@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Acceuil" element={<Home />} />
+          <Route path="/Accueil" element={<Home />} />
           <Route path="/Destinations" element={<Planets />} />
           <Route path="/Reservation" element={<Booking />} />
           <Route path="/Vaisseaux" element={<Ships />} />
@@ -24,7 +24,6 @@ function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
