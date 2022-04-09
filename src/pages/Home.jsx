@@ -1,10 +1,13 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import HomeHeader from "../components/home/HomeHeader";
 import HomeLinks from "../components/home/HomeLinks";
 
 const Home = () => {
   return (
     <div>
-      <h1 className="text-red-700 font-orb">Home</h1>
+      <Navbar />
+      <HomeHeader />
       <HomeLinks />
     </div>
   );
