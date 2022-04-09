@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "../components/Navbar";
 
 const Booking = () => {
   return (
     <div>
-      <h1 className="font-galactic">Booking</h1>
+      <NavBar />
     </div>
   );
 };

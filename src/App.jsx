@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Planets from "./pages/Planets";
 import Quiz from "./pages/Quiz";
@@ -11,13 +12,19 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Acceuil" element={<Home />} />
+          <Route path="/Destinations" element={<Planets />} />
+          <Route path="/Reservation" element={<Booking />} />
+          <Route path="/Vaisseaux" element={<Ships />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Quiz" element={<Quiz />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
-      <Planets />
-      <Quiz />
-      <Booking />
-      <Ships />
-      <Contact />
     </div>
   );
 }
