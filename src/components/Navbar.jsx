@@ -13,7 +13,7 @@ const NavBar = () => {
           />
         </NavLink>
 
-        <ul className="flex justify-end w-full h-20 text-2xl text-shadow-2">
+        <ul className="flex justify-end w-full h-20 text-2xl text-shadow-gr">
           <NavLink to="/Accueil">
             <li className="py-10 mb-10 mr-10 font-medium hover:underline">
               Accueil
