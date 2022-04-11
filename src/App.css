@@ -17,10 +17,10 @@ ensuite il faut écrire dans :
 @tailwind utilities;
 
 @layer utilities {
-  .text-shadow-1 {
-    text-shadow: 6px 6px 10px rgb(0, 0, 0, 0.8);
-  }
-  .text-shadow-2 {
-    text-shadow: 4px 4px 8px rgb(0, 0, 0, 0.8);
-  }
+    .text-shadow-1 {
+      text-shadow: 6px 6px 10px rgb(0,0,0,0.8);
+    }
+    .text-shadow-2 {
+      text-shadow: 4px 4px 8px rgb(0,0,0,0.8);
+    }
 }
