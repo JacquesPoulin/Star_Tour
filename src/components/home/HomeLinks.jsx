@@ -9,7 +9,7 @@ const HomeLinks = () => {
         <NavLink to="/Destinations">
           <button
             type="button"
-            className="bg-[url('./assets/obione.png')] bg-cover bg-no-repeat h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl shadow-2xl"
+            className="bg-[url('./assets/obione.png')] bg-cover bg-no-repeat w-96 h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl shadow-2xl"
           >
             Découvrez toutes nos destinations !
           </button>
@@ -17,7 +17,7 @@ const HomeLinks = () => {
         <NavLink to="/Reservation">
           <button
             type="button"
-            className="bg-[url('./assets/obione1.png')] bg-cover bg-no-repeat h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl"
+            className="bg-[url('./assets/obione1.png')] bg-cover bg-no-repeat w-96 h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl"
           >
             Réservez votre prochain voyage !
           </button>
@@ -26,7 +26,7 @@ const HomeLinks = () => {
         <NavLink to="/Vaisseaux">
           <button
             type="button"
-            className="bg-[url('./assets/shiplink.png')] bg-cover bg-no-repeat h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl"
+            className="bg-[url('./assets/shiplink.png')] bg-cover bg-no-repeat w-96 h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl"
           >
             Admirez notre flotte de vaisseaux !
           </button>
@@ -35,7 +35,7 @@ const HomeLinks = () => {
         <NavLink to="/Contact">
           <button
             type="button"
-            className="bg-[url('./assets/storm.png')] bg-cover bg-no-repeat h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl"
+            className="bg-[url('./assets/storm.png')] bg-cover bg-no-repeat w-96 h-44 bg-center flex justify-center items-center text-center text-white font-exo text-2xl rounded-xl"
           >
             Contactez-nous !
           </button>
