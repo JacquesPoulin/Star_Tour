@@ -1,10 +1,12 @@
 import React from "react";
 import NavBar from "../components/Navbar";
+import PlanetModal from "../components/planets/PlanetModal";
 
 const Planets = () => {
   return (
     <div>
-      <NavBar />
+      
+      <PlanetModal />
     </div>
   );
 };
