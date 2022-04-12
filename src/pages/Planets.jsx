@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/Navbar";
 import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
+import GoToTop from "../components/GoToTop";
 
 const Planets = () => {
   return (
@@ -12,6 +13,7 @@ const Planets = () => {
       </div>
       <PlanetsList />
       <Footer />
+      <GoToTop />
     </div>
   );
 };
