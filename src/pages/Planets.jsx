@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/Navbar";
+import PlanetModal from "../components/planets/PlanetModal";
 import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
 import GoToTop from "../components/GoToTop";
@@ -13,6 +14,7 @@ const Planets = () => {
       </div>
       <PlanetsList />
       <Footer />
+      <PlanetModal />
       <GoToTop />
     </div>
   );
