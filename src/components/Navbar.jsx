@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="absolute flex h-20 min-w-full justify-content-between">
-      <nav className="flex h-20 min-w-full font-exo text-slate-50">
+      <nav className="flex justify-center items-center  h-20 min-w-full font-exo text-slate-50">
         <NavLink to="/Accueil">
           <img
             src="../../assets/images/logo-StarTour-white.png"
             alt="logo"
-            className="w-40 h-40 ml-4"
+            className=" absolute w-40 h-40 ml-8 -mt-14"
           />
         </NavLink>
 
