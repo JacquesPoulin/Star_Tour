@@ -10,7 +10,7 @@ const HomeDescription = () => {
         Qui sommes-nous ?
       </h1>
 
-      <div className="flex flex-col items-center justify-between gap-4 mb-10 space-x-0 sm:flex-row sm:items-end sm:mr-10">
+      <div className="flex flex-row items-end justify-between gap-4 mb-10 mr-10 space-x-0 bp2:items-center bp2:flex-col">
         <p className="text-xl font-thin text-slate-50 font-exo">
           Hello there !
           <br />

@@ -61,7 +61,7 @@ const planets = [
     img: "./assets/images/planets/08-Naboo.jpg",
     desc: "L’une des perles de la bordure médiane ! Plaines verdoyantes, lacs d’un bleu turquoise, villes à l’architecture raffinée : tout sur cette planète respire la douceur de vivre et la sérénité !",
     weather: "./assets/images/sun.png",
-    visit: "Toute l'année (mais particulièrement au printemps)",
+    visit: "Toute l'année (le mieux étant le printemps)",
   },
   {
     id: 9,
@@ -77,7 +77,7 @@ const planets = [
     img: "./assets/images/planets/10-Kamino.jpg",
     desc: "Planète aquatique habitée par un peuple de scientifiques, n’hésitez pas à aller visiter leur célèbre complexe de clonage ! N’oubliez pas votre parapluie, le risque de pluie est de 100% toute l’année !",
     weather: "./assets/images/rain.png",
-    visit: "Toute l'année (il pleut tout le temps de toute façon)",
+    visit: "Toute l'année (il pleut à 100% de toute façon)",
   },
   {
     id: 11,
@@ -117,7 +117,7 @@ const planets = [
     img: "./assets/images/planets/15-PolisMassa.jpg",
     desc: "Astéroïde perdu au milieu de la bordure extérieure, connu pour son centre médical, qui a vu naitre le plus célèbre héros de la galaxie ! Si vous aimez la tranquillité, c’est une destination de choix !",
     weather: "./assets/images/sun.png",
-    visit: "N'importe quand (vous sortirez rarement dehors)",
+    visit: "N'importe quand (vous sortirez rarement)",
   },
   {
     id: 16,
