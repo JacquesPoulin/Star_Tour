@@ -17,7 +17,7 @@ const Planets = () => {
       </div>
       <PlanetsList />
       <Footer />
-      {planets.map((planet) => (<PlanetModal {...planet} />))}
+      {planets.map((planet, index) => (<PlanetModal key={index} {...planet} />))}
       <GoToTop />
     </div>
   );

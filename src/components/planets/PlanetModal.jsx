@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
-const PlaneteModal = ({name, img, desc, weather, visit}) => {
+const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
+
+  const [info, setInfo] = useState({});
+
+  const getInfo = () => {
+    axios.get(`https://swapi.dev/api/planets/${id}`)
+    .then(res => res.data)
+    .then(data => setInfo(data))
+    .catch(err => console.log(err));
+  }
+
+  useEffect(() => {
+    getInfo();
+  },[])
+
   return (
     <div className="w-3/5 pb-10 m-auto mt-10 bp2:w-4/5">
       {/* Image et titre */}
@@ -57,14 +72,14 @@ const PlaneteModal = ({name, img, desc, weather, visit}) => {
             </p>
             <div className="flex items-end justify-start text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[2.6vw] bp2:pb-4">
               <p>
-                Diamètre : 12500 km
+                Diamètre : {info.diameter !== "unknown" && info.diameter !== "0" ? info.diameter : '6000'} km
                 <br />
-                Rotation : 24 h<br />
-                Orbite : 364 j<br />
+                Rotation : {info.rotation_period !== "unknown" ? info.rotation_period : "24"} h<br />
+                Orbite : {info.orbital_period !== "unknown" ? info.orbital_period : "365"} j<br />
               </p>
-              <p className="-ml-7 bp2:ml-4">
-                Population : 2000M <br />
-                Climat : Tempéré
+              <p className="-ml-7 bp2:ml-4 z-[50]">
+                Population : {info.population === "unknown" ? "Inconnu" : parseInt(info.population) < 1000000000 ? `${parseInt(info.population)/1000000}M` : `${parseInt(info.population)/1000000000}MM`}<br />
+                Climat : {info.climate}
                 <br />
               </p>
             </div>
