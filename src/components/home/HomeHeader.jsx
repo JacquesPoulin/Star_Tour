@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const HomeHeader = () => {
   return (
@@ -18,12 +19,17 @@ const HomeHeader = () => {
       <h2 className="pl-5 text-5xl text-white font-orb text-shadow-2">
         Là où les rêves prennent leur envol !
       </h2>
-      <a
-        href="#homeDesc"
+      <Link
+        activeClass="active"
+        to="homedescription"
+        smooth
+        duration={1000}
         className="self-center w-16 mt-32 mb-6 sha hover:scale-110"
       >
-        <img src="assets/images/arrowdown.png" />
-      </a>
+        <button type="button" href="#homeDesc">
+          <img src="assets/images/arrowdown.png" alt="fleche de direction" />
+        </button>
+      </Link>
     </div>
   );
 };
