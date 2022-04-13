@@ -4,6 +4,7 @@ import PlanetModal from "../components/planets/PlanetModal";
 import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
 import GoToTop from "../components/GoToTop";
+import planets from "../../data/planets";
 
 const Planets = () => {
   return (
@@ -16,7 +17,7 @@ const Planets = () => {
       </div>
       <PlanetsList />
       <Footer />
-      <PlanetModal />
+      {planets.map((planet) => (<PlanetModal {...planet} />))}
       <GoToTop />
     </div>
   );
