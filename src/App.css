@@ -21,7 +21,7 @@ ensuite il faut écrire dans :
     text-shadow: 6px 6px 10px rgb(0, 0, 0, 0.8);
   }
   .text-shadow-2 {
-    text-shadow: 4px 4px 8px rgb(0, 0, 0, 0.8);
+    text-shadow: 4px 4px 6px rgb(0, 0, 0, 0.8);
   }
   .text-shadow-3 {
     text-shadow: 3px 3px 4px rgb(0, 0, 0, 1);
