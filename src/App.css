@@ -17,25 +17,25 @@ ensuite il faut écrire dans :
 @tailwind utilities;
 
 @layer utilities {
-    .text-shadow-1 {
-      text-shadow: 6px 6px 10px rgb(0,0,0,0.8);
-    }
-    .text-shadow-2 {
-      text-shadow: 4px 4px 8px rgb(0,0,0,0.8);
-    }
-    .text-shadow-3 {
-      text-shadow: 3px 3px 4px rgb(0,0,0,1);
-    }
-    .text-shadow-gr {
-      text-shadow: 3px 3px 4px rgb(80,80,80,1);
-    }
-    .text-shadow-wh {
-      text-shadow: 4px 4px 8px rgb(250,250,250,0.5);
-    }
-    .box-shadow-1 {
-      box-shadow : 3px 3px 8px rgb(250,250,250,0.5);
-    }
-    .box-shadow-2 {
-      box-shadow : 4px 4px 8px rgb(0,0,0,0.6);
-    }
+  .text-shadow-1 {
+    text-shadow: 6px 6px 10px rgb(0, 0, 0, 0.8);
+  }
+  .text-shadow-2 {
+    text-shadow: 4px 4px 8px rgb(0, 0, 0, 0.8);
+  }
+  .text-shadow-3 {
+    text-shadow: 3px 3px 4px rgb(0, 0, 0, 1);
+  }
+  .text-shadow-gr {
+    text-shadow: 3px 3px 4px rgb(80, 80, 80, 1);
+  }
+  .text-shadow-wh {
+    text-shadow: 4px 4px 8px rgb(250, 250, 250, 0.5);
+  }
+  .box-shadow-1 {
+    box-shadow: 3px 3px 8px rgb(250, 250, 250, 0.5);
+  }
+  .box-shadow-2 {
+    box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.6);
+  }
 }
