@@ -1,6 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const PlanetCard = ({ name, img }) => {
+  PlanetCard.propTypes = {
+    name: PropTypes.string.isRequired,
+  };
+  PlanetCard.propTypes = {
+    img: PropTypes.string.isRequired,
+  };
   return (
     <div className="flex items-center justify-center h-40 w-72">
       <img
