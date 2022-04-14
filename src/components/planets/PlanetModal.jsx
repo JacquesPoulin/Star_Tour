@@ -1,34 +1,61 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import PropTypes from "prop-types";
+import axios from "axios";
 
-const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
-
+const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
+  PlaneteModal.propTypes = {
+    id: PropTypes.number.isRequired,
+  };
+  PlaneteModal.propTypes = {
+    name: PropTypes.string.isRequired,
+  };
+  PlaneteModal.propTypes = {
+    img: PropTypes.string.isRequired,
+  };
+  PlaneteModal.propTypes = {
+    desc: PropTypes.string.isRequired,
+  };
+  PlaneteModal.propTypes = {
+    weather: PropTypes.string.isRequired,
+  };
+  PlaneteModal.propTypes = {
+    visit: PropTypes.string.isRequired,
+  };
+  PlaneteModal.propTypes = {
+    closeModal: PropTypes.string.isRequired,
+  };
   const [info, setInfo] = useState({});
 
   const getInfo = () => {
-    axios.get(`https://swapi.dev/api/planets/${id}`)
-    .then(res => res.data)
-    .then(data => setInfo(data))
-    .catch(err => console.log(err));
-  }
+    axios
+      .get(`https://swapi.dev/api/planets/${id}`)
+      .then((res) => res.data)
+      .then((data) => setInfo(data))
+      .catch((err) => console.log(err));
+  };
 
   useEffect(() => {
     getInfo();
-  },[])
+  }, []);
 
   return (
-       <div className="z-[20] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-3/5 m-auto bp2:w-4/5 bg-black box-shadow-1 modal-bg rounded-xl">
+    <div className="z-[20] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-3/5 m-auto bp2:w-4/5 bg-black box-shadow-1 modal-bg rounded-xl">
       {/* Image et titre */}
       <div className="flex flex-col items-center justify-center border-b-[2px] border-black">
         <img
           src={img}
           className="w-full h-[270px] object-cover z-[1] rounded-t-xl"
+          alt="représentation de la planete"
         />
         <h1 className="absolute text-6xl bp3:text-4xl text-shadow-2 font-orb text-slate-50 z-[2]">
           {name}
         </h1>
-        <button onClick={closeModal} className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105">
+        <button
+          type="button"
+          onClick={closeModal}
+          className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105"
+        >
           X
         </button>
       </div>
@@ -37,6 +64,7 @@ const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
         <img
           src="assets/images/republic3.png"
           className="z-[4] w-[100px] h-[82px] mt-[-9.5px]"
+          alt="logo de la republique"
         />
       </div>
       {/* Grid de la partie inférieure */}
@@ -53,16 +81,23 @@ const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
         {/* Bouton */}
         <div className="flex justify-center items-center col-[1_/_2] row-[4_/_5] bp2:order-1">
           <Link to="/Reservation">
-            <button className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]">
+            <button
+              type="button"
+              className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]"
+            >
               JE RESERVE MON VOYAGE !
             </button>
           </Link>
         </div>
         {/* Infos */}
-        <div className="flex flex-col justify-center items-start col-[2_/_3] row-[1_/_3] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover bg-center opacity-95">
+        <div
+          className="flex flex-col justify-center items-start col-[2_/_3] row-[1_/_3] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover bg-center opacity-95"
+          alt=""
+        >
           {/* image books */}
           <img
             src="assets/images/books.png"
+            alt="Des livres posés sur une étagère"
             className="absolute self-end w-16 h-24 opacity-70"
           />
           {/* Paragraphe infos */}
@@ -72,14 +107,33 @@ const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
             </p>
             <div className="flex items-end justify-start text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[2.6vw] bp2:pb-4">
               <p>
-                Diamètre : {info.diameter !== "unknown" && info.diameter !== "0" ? info.diameter : '6000'} km
+                Diamètre :{" "}
+                {info.diameter !== "unknown" && info.diameter !== "0"
+                  ? info.diameter
+                  : "6000"}{" "}
+                km
                 <br />
-                Rotation : {info.rotation_period !== "unknown" ? info.rotation_period : "24"} h<br />
-                Orbite : {info.orbital_period !== "unknown" ? info.orbital_period : "365"} j<br />
+                Rotation :{" "}
+                {info.rotation_period !== "unknown"
+                  ? info.rotation_period
+                  : "24"}{" "}
+                h<br />
+                Orbite :{" "}
+                {info.orbital_period !== "unknown"
+                  ? info.orbital_period
+                  : "365"}{" "}
+                j<br />
               </p>
               <p className="-ml-7 bp2:ml-4 z-[50]">
-                Population : {info.population === "unknown" ? "Inconnu" : parseInt(info.population) < 1000000000 ? `${parseInt(info.population)/1000000}M` : `${parseInt(info.population)/1000000000}MM`}<br />
-                Climat : {info.climate === "unknown" ? "temperate" : info.climate}
+                Population :{" "}
+                {info.population === "unknown"
+                  ? "Inconnu"
+                  : parseInt(info.population) < 1000000000
+                  ? `${parseInt(info.population) / 1000000}M`
+                  : `${parseInt(info.population) / 1000000000}MM`}
+                <br />
+                Climat :{" "}
+                {info.climate === "unknown" ? "temperate" : info.climate}
                 <br />
               </p>
             </div>
@@ -106,6 +160,6 @@ const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
       </div>
     </div>
   );
-}; 
+};
 
 export default PlaneteModal;

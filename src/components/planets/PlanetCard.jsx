@@ -1,25 +1,35 @@
-import React from "react";
-import PropTypes, { nominalTypeHack } from "prop-types";
-import { useState } from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import PlaneteModal from "./PlanetModal";
 
 const PlanetCard = ({ id, name, img, desc, weather, visit }) => {
+  PlanetCard.propTypes = {
+    id: PropTypes.number.isRequired,
+  };
   PlanetCard.propTypes = {
     name: PropTypes.string.isRequired,
   };
   PlanetCard.propTypes = {
     img: PropTypes.string.isRequired,
   };
-  
+  PlanetCard.propTypes = {
+    desc: PropTypes.string.isRequired,
+  };
+  PlanetCard.propTypes = {
+    weather: PropTypes.string.isRequired,
+  };
+  PlanetCard.propTypes = {
+    visit: PropTypes.string.isRequired,
+  };
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
-  }
+  };
 
   return (
     <>
@@ -37,7 +47,6 @@ const PlanetCard = ({ id, name, img, desc, weather, visit }) => {
       </div>
       {isModalOpen && <PlaneteModal id={id} name={name} img={img} desc={desc} weather={weather} visit={visit} closeModal={closeModal} />}
     </>
-
   );
 };
 
