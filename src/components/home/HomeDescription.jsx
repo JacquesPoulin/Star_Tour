@@ -3,7 +3,7 @@ import React from "react";
 const HomeDescription = () => {
   return (
     <div
-      id="homeDesc"
+      id="homedescription"
       className="flex flex-col px-10 py-10 bg-[url('./assets/images/dark_bg.jpg')] bg-cover bg-repeat"
     >
       <h1 className="mb-10 text-4xl sm:mb-0 text-slate-50 font-orb">
