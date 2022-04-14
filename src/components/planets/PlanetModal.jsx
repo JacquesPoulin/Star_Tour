@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from 'axios';
 
-const PlaneteModal = () => {
+const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
+
+  const [info, setInfo] = useState({});
+
+  const getInfo = () => {
+    axios.get(`https://swapi.dev/api/planets/${id}`)
+    .then(res => res.data)
+    .then(data => setInfo(data))
+    .catch(err => console.log(err));
+  }
+
+  useEffect(() => {
+    getInfo();
+  },[])
+
   return (
-    <div className="w-3/5 pb-10 m-auto mt-10 bp2:w-4/5">
+       <div className="z-[20] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-3/5 m-auto bp2:w-4/5 bg-black box-shadow-1 modal-bg rounded-xl">
       {/* Image et titre */}
-      <div className="flex flex-col items-center justify-center border-b-2 border-black ">
+      <div className="flex flex-col items-center justify-center border-b-[2px] border-black">
         <img
-          src="assets/images/02-Alderaan.jpg"
-          className="w-full h-[270px] object-cover z-[1]"
+          src={img}
+          className="w-full h-[270px] object-cover z-[1] rounded-t-xl"
         />
-        <h1 className="absolute text-6xl text-shadow-2 font-orb text-slate-50 z-[2]">
-          Alderaan
+        <h1 className="absolute text-6xl bp3:text-4xl text-shadow-2 font-orb text-slate-50 z-[2]">
+          {name}
         </h1>
-        <button className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52">
+        <button onClick={closeModal} className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105">
           X
         </button>
       </div>
@@ -24,23 +40,23 @@ const PlaneteModal = () => {
         />
       </div>
       {/* Grid de la partie inférieure */}
-      <div className="gap-x-20 gap-y-6 p-6 grid bp2:flex bp2:flex-col grid-cols-[1fr_1fr] grid-rows-[1fr_1fr_1fr_1fr] h-[360px] bp2:h-auto bg-[url(assets/images/modal_bg.jpg)] -mt-12 bg-cover bg-center">
+      <div className="gap-x-20 gap-y-6 p-6 grid bp2:flex bp2:flex-col grid-cols-[1fr_1fr] grid-rows-[1fr_1fr_1fr_1fr] h-[360px] bp2:h-auto bg-[url(assets/images/modal_bg.jpg)] -mt-12 bg-cover bg-center rounded-b-xl">
         {/* Description */}
         <div className="col-[1_/_2] row-[1_/_4] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover opacity-95">
           <p className="pt-2 pl-6 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] font-thin font-exo text-slate-50 text-shadow-3">
             Description :
           </p>
           <p className="px-6 pt-3 bp2:pb-6 text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[2.6vw] bp1:leading-6 font-thin font-exo text-slate-50">
-            La planète d’origine de la célèbre famille Organa ! Une planète où
-            la douceur de vivre est une réalité, entre plaines verdoyantes,
-            montagnes immaculées, et cités modernes où il fait bon vivre !
+            {desc}
           </p>
         </div>
         {/* Bouton */}
         <div className="flex justify-center items-center col-[1_/_2] row-[4_/_5] bp2:order-1">
-          <button className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6">
-            JE RESERVE MON VOYAGE !
-          </button>{" "}
+          <Link to="/Reservation">
+            <button className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]">
+              JE RESERVE MON VOYAGE !
+            </button>
+          </Link>
         </div>
         {/* Infos */}
         <div className="flex flex-col justify-center items-start col-[2_/_3] row-[1_/_3] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover bg-center opacity-95">
@@ -56,14 +72,14 @@ const PlaneteModal = () => {
             </p>
             <div className="flex items-end justify-start text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[2.6vw] bp2:pb-4">
               <p>
-                Diamètre : 12500 km
+                Diamètre : {info.diameter !== "unknown" && info.diameter !== "0" ? info.diameter : '6000'} km
                 <br />
-                Rotation : 24 h<br />
-                Orbite : 364 j<br />
+                Rotation : {info.rotation_period !== "unknown" ? info.rotation_period : "24"} h<br />
+                Orbite : {info.orbital_period !== "unknown" ? info.orbital_period : "365"} j<br />
               </p>
-              <p className="-ml-7 bp2:ml-4">
-                Population : 2000M <br />
-                Climat : Tempéré
+              <p className="-ml-7 bp2:ml-4 z-[50]">
+                Population : {info.population === "unknown" ? "Inconnu" : parseInt(info.population) < 1000000000 ? `${parseInt(info.population)/1000000}M` : `${parseInt(info.population)/1000000000}MM`}<br />
+                Climat : {info.climate === "unknown" ? "temperate" : info.climate}
                 <br />
               </p>
             </div>
@@ -75,14 +91,14 @@ const PlaneteModal = () => {
             <p className="pb-2 text-xl bp1:text-[1.2vw] bp2:text-[2.8vw] bp3:text-[3.5vw] text-shadow-3">
               Météo / Période de visite conseillée :
             </p>
-            <div className="flex items-center justify-center gap-10 pt-1 pl-2 bp1:gap-5">
+            <div className="flex items-center justify-center gap-2 pt-1 pl-2 bp1:gap-5">
               <img
-                src="assets/images/sun.png"
+                src={weather}
                 className="w-[72px] bp2:w-[7vw] opacity-90 bp2:pb-4"
                 alt="meteo"
               />
-              <p className="px-4 bp1:px-0 text-3xl bp1:text-[1.8vw] bp2:text-[2.2vw] bp3:text-[3vw] italic text-center text-shadow-3">
-                Avril à Juillet
+              <p className="text-2xl bp1:text-[1.4vw] bp2:text-[2.2vw] bp3:text-[3vw] italic text-center text-shadow-3">
+                {visit}
               </p>
             </div>
           </div>
@@ -90,6 +106,6 @@ const PlaneteModal = () => {
       </div>
     </div>
   );
-};
+}; 
 
 export default PlaneteModal;
