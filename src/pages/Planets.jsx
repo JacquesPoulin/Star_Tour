@@ -1,10 +1,8 @@
 import React from "react";
 import NavBar from "../components/Navbar";
-import PlanetModal from "../components/planets/PlanetModal";
 import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
 import GoToTop from "../components/GoToTop";
-import planets from "../../data/planets";
 
 const Planets = () => {
   return (
@@ -17,7 +15,6 @@ const Planets = () => {
       </div>
       <PlanetsList />
       <Footer />
-      {/*{planets.map((planet, index) => (<PlanetModal key={index} {...planet} />))}*/}
       <GoToTop />
     </div>
   );
