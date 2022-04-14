@@ -7,7 +7,6 @@ import Quiz from "./pages/Quiz";
 import Booking from "./pages/Booking";
 import Ships from "./pages/Ships";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
 
 function App() {
   return (
