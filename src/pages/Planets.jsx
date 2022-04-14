@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import NavBar from "../components/Navbar";
+import PlanetsFilter from "../components/planets/PlanetsFilter";
+import PlanetModal from "../components/planets/PlanetModal";
 import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
 import GoToTop from "../components/GoToTop";
@@ -23,6 +25,7 @@ const Planets = () => {
           Découvrez toutes les destinations disponibles !
         </h1>
       </div>
+      <PlanetsFilter />
       <PlanetsSearch search={search} handleSearch={handleSearch} />
       {console.log(search)}
       <PlanetsList search={search} />
