@@ -38,4 +38,28 @@ ensuite il faut écrire dans :
   .box-shadow-2 {
     box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.6);
   }
+  .filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 4rem;
+    border: 1px solid white;
+    border-radius: 6px;
+    box-shadow: 3px 3px 8px rgb(250, 250, 250, 0.5);
+    background-color: #666373;
+    cursor: pointer;
+  }
+  .notFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 4rem;
+    border: 1px solid white;
+    border-radius: 6px;
+    box-shadow: 3px 3px 8px rgb(250, 250, 250, 0.5);
+    background-color: rgb(250, 250, 250, 0.1);
+    cursor: pointer;
+  }
 }
