@@ -20,14 +20,16 @@ const Planets = () => {
   return (
     <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
       <NavBar />
-      <div className="flex items-center justify-center pb-10 pt-44">
+      <div className="flex items-center justify-center pb-14 pt-44">
         <h1 className="w-4/6 text-6xl text-center text-slate-50 font-orb text-shadow-wh">
           Découvrez toutes les destinations disponibles !
         </h1>
       </div>
-      <PlanetsFilter />
-      <PlanetsSearch search={search} handleSearch={handleSearch} />
-      {console.log(search)}
+      <div className="flex flex-row items-end justify-around bp2:flex-col bp2:items-center bp2:justify-start">
+        <PlanetsFilter />
+        <PlanetsSearch search={search} handleSearch={handleSearch} />
+        {console.log(search)}
+      </div>
       <PlanetsList search={search} />
       <Footer />
       <GoToTop />

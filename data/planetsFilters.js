@@ -5,15 +5,15 @@ const planetsFilters = [
   },
   {
     item: 2,
-    name: "Océan",
+    name: "Océans",
   },
   {
     item: 3,
-    name: "Plaines et Fôrets",
+    name: "Plaines et Forêts",
   },
   {
     item: 4,
-    name: "Volcan",
+    name: "Volcans",
   },
   {
     item: 5,
@@ -25,11 +25,11 @@ const planetsFilters = [
   },
   {
     item: 7,
-    name: "Astéroïde",
+    name: "Astéroïdes",
   },
   {
     item: 8,
-    name: "Zone Urbaine",
+    name: "Zones Urbaines",
   },
 ];
 

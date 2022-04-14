@@ -4,11 +4,11 @@ import planetsFilters from "../../../data/planetsFilters";
 
 const PlanetsFilters = () => {
   return (
-    <div className="h-64 pl-10 w-fit">
-      <h1 className="mt-10 text-4xl text-left text-slate-50 font-orb text-shadow-1">
+    <div className="h-64 pl-10 bp2:pl-0 w-fit">
+      <h1 className="mt-10 text-4xl text-left bp3:text-3xl text-slate-50 font-orb text-shadow-1">
         Filtrer les planètes :
       </h1>
-      <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-4">
+      <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-4 bp2:grid-cols-3 bp2:grid-rows-3">
         {planetsFilters.map((planetFilter) => (
           <PlanetsTopography {...planetFilter} />
         ))}
