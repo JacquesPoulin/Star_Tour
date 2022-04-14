@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
+const PlaneteModal = ({id, name, img, desc, weather, visit, closeModal}) => {
 
   const [info, setInfo] = useState({});
 
@@ -18,17 +18,17 @@ const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
   },[])
 
   return (
-    <div className="w-3/5 pb-10 m-auto mt-10 bp2:w-4/5">
+       <div className="z-[20] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-3/5 m-auto bp2:w-4/5 bg-black box-shadow-1 modal-bg rounded-xl">
       {/* Image et titre */}
-      <div className="flex flex-col items-center justify-center border-b-2 border-black ">
+      <div className="flex flex-col items-center justify-center border-b-[2px] border-black">
         <img
           src={img}
-          className="w-full h-[270px] object-cover z-[1]"
+          className="w-full h-[270px] object-cover z-[1] rounded-t-xl"
         />
         <h1 className="absolute text-6xl bp3:text-4xl text-shadow-2 font-orb text-slate-50 z-[2]">
           {name}
         </h1>
-        <button className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52">
+        <button onClick={closeModal} className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105">
           X
         </button>
       </div>
@@ -40,7 +40,7 @@ const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
         />
       </div>
       {/* Grid de la partie inférieure */}
-      <div className="gap-x-20 gap-y-6 p-6 grid bp2:flex bp2:flex-col grid-cols-[1fr_1fr] grid-rows-[1fr_1fr_1fr_1fr] h-[360px] bp2:h-auto bg-[url(assets/images/modal_bg.jpg)] -mt-12 bg-cover bg-center">
+      <div className="gap-x-20 gap-y-6 p-6 grid bp2:flex bp2:flex-col grid-cols-[1fr_1fr] grid-rows-[1fr_1fr_1fr_1fr] h-[360px] bp2:h-auto bg-[url(assets/images/modal_bg.jpg)] -mt-12 bg-cover bg-center rounded-b-xl">
         {/* Description */}
         <div className="col-[1_/_2] row-[1_/_4] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover opacity-95">
           <p className="pt-2 pl-6 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] font-thin font-exo text-slate-50 text-shadow-3">
@@ -53,7 +53,7 @@ const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
         {/* Bouton */}
         <div className="flex justify-center items-center col-[1_/_2] row-[4_/_5] bp2:order-1">
           <Link to="/Reservation">
-            <button className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6">
+            <button className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]">
               JE RESERVE MON VOYAGE !
             </button>
           </Link>
@@ -79,7 +79,7 @@ const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
               </p>
               <p className="-ml-7 bp2:ml-4 z-[50]">
                 Population : {info.population === "unknown" ? "Inconnu" : parseInt(info.population) < 1000000000 ? `${parseInt(info.population)/1000000}M` : `${parseInt(info.population)/1000000000}MM`}<br />
-                Climat : {info.climate}
+                Climat : {info.climate === "unknown" ? "temperate" : info.climate}
                 <br />
               </p>
             </div>
@@ -106,6 +106,6 @@ const PlaneteModal = ({id, name, img, desc, weather, visit}) => {
       </div>
     </div>
   );
-};
+}; 
 
 export default PlaneteModal;
