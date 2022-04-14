@@ -2,12 +2,15 @@ import React from "react";
 
 const HomeDescription = () => {
   return (
-    <div className="flex flex-col px-10 py-10 bg-[url('./assets/images/dark_bg.jpg')] bg-cover bg-repeat">
+    <div
+      id="homedescription"
+      className="flex flex-col px-10 py-10 bg-[url('./assets/images/dark_bg.jpg')] bg-cover bg-repeat"
+    >
       <h1 className="mb-10 text-4xl sm:mb-0 text-slate-50 font-orb">
         Qui sommes-nous ?
       </h1>
 
-      <div className="flex flex-col items-center justify-between gap-4 mb-10 space-x-0 sm:flex-row sm:items-end sm:mr-10">
+      <div className="flex flex-row items-end justify-between gap-4 mb-10 mr-10 space-x-0 bp2:items-center bp2:flex-col">
         <p className="text-xl font-thin text-slate-50 font-exo">
           Hello there !
           <br />

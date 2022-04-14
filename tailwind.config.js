@@ -9,5 +9,10 @@ module.exports = {
         galactic: "Galactic Basic",
       },
     },
+    screens: {
+      bp1: { max: "1390px" },
+      bp2: { max: "1000px" },
+      bp3: { max: "600px" },
+    },
   },
 };
