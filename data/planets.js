@@ -132,7 +132,7 @@ const planets = [
     desc: "Astéroïde perdu au milieu de la bordure extérieure, connu pour son centre médical, qui a vu naitre le plus célèbre héros de la galaxie ! Si vous aimez la tranquillité, c’est une destination de choix !",
     weather: "./assets/images/sun.png",
     visit: "N'importe quand (vous sortirez rarement)",
-    biome: "asteroides",
+    biome: "asteroide",
   },
   {
     id: 16,

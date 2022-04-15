@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const FilterButton = ({ item, name }) => {
-  const [isFiltered, setisFiltered] = useState(false);
-  console.log(isFiltered);
+const FilterButton = ({ id, name, setFilter }) => {
+
+  const [isClicked, setIsClicked] = useState(false);
+  console.log(isClicked);
+
   return (
     <div
-      onClick={() => setisFiltered(!isFiltered)}
-      className={isFiltered ? "filter" : "notFilter"}
+      onClick={() => setFilter(id)}
+      className={isClicked ? "filter" : "notFilter"}
     >
       <p className="text-xl font-light text-center text-slate-50 font-exo">
         {name}

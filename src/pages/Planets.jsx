@@ -11,10 +11,15 @@ import PlanetsSearch from "../components/planets/PlanetsSearch";
 const Planets = () => {
   
   const [search, setSearch] = useState('');
+  const [filter, setFilter] = useState("");
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
     console.log(search);
+  }
+
+  const handleFilter = (x) => {
+    setFilter(x);
   }
   
   return (
@@ -26,11 +31,12 @@ const Planets = () => {
         </h1>
       </div>
       <div className="flex flex-row items-end justify-around bp2:flex-col bp2:items-center bp2:justify-start">
-        <PlanetsFilter />
+        <PlanetsFilter setFilter={setFilter}/>
+        {console.log(filter)}
         <PlanetsSearch search={search} handleSearch={handleSearch} />
         {console.log(search)}
       </div>
-      <PlanetsList search={search} />
+      <PlanetsList search={search} filter={filter} />
       <Footer />
       <GoToTop />
     </div>
