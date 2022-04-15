@@ -16,7 +16,7 @@ const HomeLinks = () => {
         </div>
         {/* Réservations */}
         <div className="overflow-hidden h-44 rounded-xl box-shadow-1">
-          <Link to="/Reservation">
+          <Link to="/booking">
             <div className="bg-[url('./assets/images/obiwan2.png')] bg-cover bg-no-repeat h-full bg-center flex justify-center items-center text-center text-white font-exo text-2xl md:text-3xl text-shadow-3 hover:scale-105 transition ease-in-out duration-500">
               Réservez votre prochain voyage !
             </div>
