@@ -10,7 +10,7 @@ const HomeHeader = () => {
         loop
         muted
       >
-        <source src="assets/videos/star-tour-heroPage.mp4" type="video/mp4" />
+        <source src="assets/videos/" type="video/mp4" />
       </video>
       <h1 className="pb-10 pl-5 text-5xl font-bold text-white font-orb text-shadow-1">
         BIENVENUE CHEZ <br />
