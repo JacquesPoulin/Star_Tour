@@ -27,7 +27,7 @@ const Planets = () => {
         </h1>
       </div>
       <div className="flex flex-row items-end justify-around bp2:flex-col bp2:items-center bp2:justify-start">
-        <PlanetsFilter setFilter={setFilter}/>
+        <PlanetsFilter filter={filter} setFilter={setFilter}/>
         <PlanetsSearch search={search} handleSearch={handleSearch} />
       </div>
       <PlanetsList search={search} filter={filter} />
