@@ -80,7 +80,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
         </div>
         {/* Bouton */}
         <div className="flex justify-center items-center col-[1_/_2] row-[4_/_5] bp2:order-1">
-          <Link to="/Reservation">
+          <Link to="/booking">
             <button
               type="button"
               className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]"

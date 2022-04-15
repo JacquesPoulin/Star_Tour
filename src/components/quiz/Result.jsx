@@ -24,7 +24,7 @@ const Result = () => {
             >
               En savoir plus
             </button>
-            <Link to="/Reservation">
+            <Link to="/booking">
               <button
                 type="button"
                 className=" font-orb text-lg tracking-wider text-slate-50 text-shadow-3 hover:scale-110 transition duration-900"
