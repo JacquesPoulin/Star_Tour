@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import planetsFilters from "../../../data/planetsFilters";
 
 const FilterButton = ({ item, name }) => {
   const [isFiltered, setisFiltered] = useState(false);
