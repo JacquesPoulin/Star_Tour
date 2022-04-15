@@ -11,7 +11,7 @@ import PlanetsSearch from "../components/planets/PlanetsSearch";
 const Planets = () => {
   
   const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
