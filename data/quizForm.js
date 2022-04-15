@@ -9,9 +9,11 @@ const quizForm = [
         answerText: "Farniente",
         img: "./assets/images/quizPic/1-farniente.jpeg",
       },
+    ],
+    answerOptions2: [
       {
-        answerText: "Aventure",
-        img: "./assets/images/quizPic/1-aventure.jpeg",
+        answerText2: "Aventure",
+        img2: "./assets/images/quizPic/1-aventure.jpeg",
       },
     ],
   },
@@ -22,9 +24,11 @@ const quizForm = [
         answerText: "Citadin dans l’âme",
         img: "./assets/images/quizPic/2-citadin.jpeg",
       },
+    ],
+    answerOptions2: [
       {
-        answerText: "Nature nature nature",
-        img: "./assets/images/quizPic/2-nature.jpeg",
+        answerText2: "Nature nature nature",
+        img2: "./assets/images/quizPic/2-nature.jpeg",
       },
     ],
   },
@@ -32,7 +36,9 @@ const quizForm = [
     questionText: "Pour vos sorties, que préférez-vous ?",
     answerOptions: [
       { answerText: "Plage", img: "./assets/images/quizPic/3-plage.jpg" },
-      { answerText: "Musée", img: "./assets/images/quizPic/3-musee.jpeg" },
+    ],
+    answerOptions2: [
+      { answerText2: "Musée", img2: "./assets/images/quizPic/3-musee.jpeg" },
     ],
   },
   {
@@ -42,9 +48,11 @@ const quizForm = [
         answerText: "Oui j'adore",
         img: "./assets/images/quizPic/4-soleil.jpeg",
       },
+    ],
+    answerOptions2: [
       {
-        answerText: "Quelle horreur",
-        img: "./assets/images/quizPic/4-horreur.jpeg",
+        answerText2: "Quelle horreur",
+        img2: "./assets/images/quizPic/4-horreur.jpeg",
       },
     ],
   },
@@ -55,9 +63,11 @@ const quizForm = [
         answerText: "Voir beaucoup de monde",
         img: "./assets/images/quizPic/5-peuple.png",
       },
+    ],
+    answerOptions2: [
       {
-        answerText: "Les lieux les plus intimes",
-        img: "./assets/images/quizPic/5-intime.jpeg",
+        answerText2: "Les lieux les plus intimes",
+        img2: "./assets/images/quizPic/5-intime.jpeg",
       },
     ],
   },
@@ -68,9 +78,11 @@ const quizForm = [
         answerText: "Une hutte",
         img: "./assets/images/quizPic/6-hutte.jpeg",
       },
+    ],
+    answerOptions2: [
       {
-        answerText: "Un hotel de luxe",
-        img: "./assets/images/quizPic/6-hotel.jpeg",
+        answerText2: "Un hotel de luxe",
+        img2: "./assets/images/quizPic/6-hotel.jpeg",
       },
     ],
   },
@@ -81,9 +93,11 @@ const quizForm = [
         answerText: "Jimmmmmyy Hiiiilp",
         img: "./assets/images/quizPic/7-jimmy.png",
       },
+    ],
+    answerOptions2: [
       {
-        answerText: "Lydiiiiiiie On va moouriiir",
-        img: "./assets/images/quizPic/7-lydie.png",
+        answerText2: "Lydiiiiiiie On va moouriiir",
+        img2: "./assets/images/quizPic/7-lydie.png",
       },
     ],
   },
