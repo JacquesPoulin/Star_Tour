@@ -64,7 +64,7 @@ const Footer = () => {
             </p>
           </a>
           {/* FAQ */}
-          <a href="#">
+          <a href="">
             <p className="flex p-3 text-xs font-bold text-slate-50">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
