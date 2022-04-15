@@ -1,6 +1,6 @@
 import React from "react";
-import PlanetsTopography from "./PlanetsTopography";
-import planetsFilters from "../../../data/planetsFilters";
+import FilterButton from "./FilterButton";
+import filters from "../../../data/filters";
 
 const PlanetsFilters = () => {
   return (
@@ -9,8 +9,8 @@ const PlanetsFilters = () => {
         Filtrer les planètes :
       </h1>
       <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-4 bp2:grid-cols-3 bp2:grid-rows-3">
-        {planetsFilters.map((planetFilter) => (
-          <PlanetsTopography {...planetFilter} />
+        {filters.map((filter) => (
+          <FilterButton {...filter} />
         ))}
       </div>
     </div>

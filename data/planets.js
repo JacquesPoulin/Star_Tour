@@ -6,7 +6,7 @@ const planets = [
     desc: "La plus célèbre des planètes de la bordure extérieure ! Visitez la mer de dunes, le spatioport de Mos Eisley et sa célèbre cantina, mais surtout n’oubliez pas votre crème solaire !",
     weather: "./assets/images/sun.png",
     visit: "Juillet/Août à éviter",
-    biome: "désert",
+    biome: "desert",
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ const planets = [
     desc: "Une planète gazeuse où les habitants vivent dans des villes suspendues, comme la célèbre Cité des Nuages, ville moderne et industrielle, qui a su prospérer grâce à l’exploitation du gaz naturel !",
     weather: "./assets/images/sun.png",
     visit: "Toute l'année",
-    biome: "zone urbaine",
+    biome: "urbain",
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ const planets = [
     desc: "La capitale de la galaxie ! Coruscant est une cité planète, recouverte à 100% par des zones urbaines ! Culture, vie nocturne, politique, institutions Jedi : Coruscant est assurément la planète de tous les possibles !",
     weather: "./assets/images/cloud.png",
     visit: "Toute l'année",
-    biome: "zone urbaine",
+    biome: "urbain",
   },
   {
     id: 10,
@@ -159,7 +159,7 @@ const planets = [
     desc: "L’attrait principal de cette planète réside dans les immenses cités suspendues tels des hamacs entre les pics rocheux vertigineux ! A visiter pour son architecture, mais aussi pour ses casinos !",
     weather: "./assets/images/sun.png",
     visit: "Août / Septembre",
-    biome: "zone urbaine",
+    biome: "urbain",
   },
   {
     id: 20,
@@ -177,7 +177,7 @@ const planets = [
     desc: "Une planète connue pour son expertise dans la construction de vaisseaux ! La plupart des vaisseaux de la galaxie sortent de ses extraordinaires chantiers navals ! A visiter pour du tourisme industriel !",
     weather: "./assets/images/rain.png",
     visit: "Evitez les vacances scolaires !",
-    biome: "zone urbaine",
+    biome: "urbain",
   },
   {
     id: 23,

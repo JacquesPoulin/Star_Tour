@@ -1,4 +1,4 @@
-const planetsFilters = [
+const filters = [
   {
     item: 1,
     name: "Déserts",
@@ -33,4 +33,4 @@ const planetsFilters = [
   },
 ];
 
-export default planetsFilters;
+export default filters;
