@@ -17,10 +17,6 @@ const Planets = () => {
     setSearch(e.target.value);
     console.log(search);
   }
-
-  const handleFilter = (x) => {
-    setFilter(x);
-  }
   
   return (
     <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
@@ -32,9 +28,7 @@ const Planets = () => {
       </div>
       <div className="flex flex-row items-end justify-around bp2:flex-col bp2:items-center bp2:justify-start">
         <PlanetsFilter setFilter={setFilter}/>
-        {console.log(filter)}
         <PlanetsSearch search={search} handleSearch={handleSearch} />
-        {console.log(search)}
       </div>
       <PlanetsList search={search} filter={filter} />
       <Footer />
