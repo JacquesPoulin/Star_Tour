@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import planetsFilters from "../../../data/planetsFilters";
 
-const PlanetsTopography = ({ item, name }) => {
+const FilterButton = ({ item, name }) => {
   const [isFiltered, setisFiltered] = useState(false);
   console.log(isFiltered);
   return (
@@ -16,4 +16,4 @@ const PlanetsTopography = ({ item, name }) => {
   );
 };
 
-export default PlanetsTopography;
+export default FilterButton;
