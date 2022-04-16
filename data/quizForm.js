@@ -18,7 +18,7 @@ const quizForm = [
     ],
   },
   {
-    questionText: "Vous êtes un ?",
+    questionText: "Dans votre quotidien, vous êtes ?",
     answerOptions: [
       {
         answerText: "Citadin dans l’âme",
@@ -42,7 +42,7 @@ const quizForm = [
     ],
   },
   {
-    questionText: "On vous dit Soleil vous répondez ?",
+    questionText: "On vous dit soleil vous répondez ?",
     answerOptions: [
       {
         answerText: "Oui j'adore",
@@ -72,7 +72,7 @@ const quizForm = [
     ],
   },
   {
-    questionText: "Quel confort souhaitez vous pour dormir ?",
+    questionText: "Quel confort vous faut-il pour dormir ?",
     answerOptions: [
       {
         answerText: "Une hutte",
@@ -90,13 +90,13 @@ const quizForm = [
     questionText: "Quel formateur est le meilleur ?",
     answerOptions: [
       {
-        answerText: "Jimmmmmyy Hiiiilp",
+        answerText: "Jimmmmmyy",
         img: "./assets/images/quizPic/7-jimmy.png",
       },
     ],
     answerOptions2: [
       {
-        answerText2: "Lydiiiiiiie On va moouriiir",
+        answerText2: "Lydiiiiiiie ",
         img2: "./assets/images/quizPic/7-lydie.png",
       },
     ],

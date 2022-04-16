@@ -16,8 +16,8 @@ const Question = () => {
 
   return (
     <div>
-      <div className="w-full h-full">
-        <div className="grid grid-cols-6 grid-rows-3 p-16 place-content-center h-3/5 ">
+      <div className="w-auto h-auto">
+        <div className="grid grid-cols-6 grid-rows-3 px-10 pt-36 place-content-center h-3/5 ">
           <div className="col-span-2 row-span-4 text-center">
             <img
               className="w-full h-full"
@@ -25,47 +25,46 @@ const Question = () => {
               alt="c3p0 et r2d2"
             />
           </div>
-          <div className="row-span-1 py-4 mx-1 text-5xl text-center text-white">
-            <span className="items-center justify-center text-center rounded-2xl font-exo text-shadow-3">
+          <div className="row-span-1 p-3 ml-16 text-5xl mt-14">
+            <span className="items-center justify-center p-10 text-center rounded-2xl font-exo text-shadow-3 text-slate-50 box-shadow-1 bg-black/50">
               {currentQuestion + 1}/{quizForm.length}
             </span>
           </div>
-
-          <div className="col-span-3 row-span-1 py-4 mx-1 text-5xl text-center text-white ">
-            <p className="items-center justify-center rounded-2xl font-exo text-shadow-3">
+          <div className="col-span-3 row-span-1 text-5xl mt-14">
+            <span className="items-center justify-center p-10 text-center text-slate-50 rounded-2xl font-exo text-shadow-3 box-shadow-1 bg-black/50">
               {quizForm[currentQuestion].questionText}
-            </p>
+            </span>
           </div>
 
-          <div className="col-span-2 row-span-2 py-4 m-5 text-5xl text-center text-white rounded-lg box-shadow-1 hover:scale-105">
+          <div className="col-span-2 row-span-2 ">
             {quizForm[currentQuestion].answerOptions.map((answerOption) => (
               <button
-                className="w-full h-full text-3xl text-center text-slate-50 font-exo text-shadow-3"
+                className="flex items-center justify-center h-[25rem] w-[30rem] text-7xl text-center text-slate-50 font-exo text-shadow-3 "
                 type="button"
                 onClick={() => handleAnswerOptionClick(answerOption)}
               >
                 <img
-                  className=""
+                  className="absolute h-[25rem] w-[30rem] rounded-2xl box-shadow-1 hover:scale-105"
                   src={answerOption.img}
                   alt={answerOption.answerText}
                 />
-                <span>{answerOption.answerText}</span>
+                <span className="z-10">{answerOption.answerText}</span>
               </button>
             ))}
           </div>
-          <div className="col-span-2 row-span-2 py-4 m-5 text-5xl text-center text-white rounded-lg box-shadow-1 hover:scale-105">
+          <div className="col-span-2 row-span-2 ">
             {quizForm[currentQuestion].answerOptions2.map((answerOption2) => (
               <button
-                className="w-full h-full text-3xl text-center text-slate-50 font-exo text-shadow-3"
+                className="flex items-center justify-center  h-[25rem] w-[30rem]  text-7xl text-center text-slate-50 font-exo text-shadow-3 "
                 type="button"
                 onClick={() => handleAnswerOptionClick(answerOption2)}
               >
                 <img
-                  className=""
+                  className="absolute h-[25rem] w-[30rem]  rounded-2xl box-shadow-1 hover:scale-105"
                   src={answerOption2.img2}
                   alt={answerOption2.answerText2}
                 />
-                <span>{answerOption2.answerText2}</span>
+                <span className="z-10">{answerOption2.answerText2}</span>
               </button>
             ))}
           </div>
