@@ -13,21 +13,21 @@ const Result = () => {
             </h2>
           </div>
           <div className="flex flex-col h-56">
-            <h1 className="font-orb font-normal m-auto text-slate-50 text-6xl text-shadow-4 ">
+            <h1 className="m-auto text-6xl font-normal font-orb text-slate-50 text-shadow-4 ">
               CORUSCANT
             </h1>
           </div>
-          <div className="flex flex-col justify-center align-middle m-auto mt-11">
+          <div className="flex flex-col justify-center m-auto align-middle mt-11">
             <button
               type="button"
-              className=" font-orb text-lg tracking-wider text-slate-50 text-shadow-3 mb-4 hover:scale-110 transition duration-900"
+              className="mb-4 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
             >
               En savoir plus
             </button>
             <Link to="/booking">
               <button
                 type="button"
-                className=" font-orb text-lg tracking-wider text-slate-50 text-shadow-3 hover:scale-110 transition duration-900"
+                className="text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
               >
                 Reserver mon voyage
               </button>

@@ -1,3 +1,6 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/button-has-type */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -128,9 +131,9 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
                 Population :{" "}
                 {info.population === "unknown"
                   ? "Inconnu"
-                  : parseInt(info.population) < 1000000000
-                  ? `${parseInt(info.population) / 1000000}M`
-                  : `${parseInt(info.population) / 1000000000}MM`}
+                  : parseInt(info.population, 10) < 1000000000
+                  ? `${parseInt(info.population, 10) / 1000000}M`
+                  : `${parseInt(info.population, 10) / 1000000000}MM`}
                 <br />
                 Climat :{" "}
                 {info.climate === "unknown" ? "temperate" : info.climate}
