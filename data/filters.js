@@ -1,35 +1,43 @@
 const filters = [
   {
     item: 1,
-    name: "Déserts",
+    id:"Tout afficher",
+    planets: []
   },
   {
     item: 2,
-    name: "Océans",
+    id:"Déserts",
+    planets: ["Tatooine","Ord Mantell","Ryloth","Condord Dawn","Geonosis","Utapau"]
   },
   {
     item: 3,
-    name: "Plaines et Forêts",
+    id:"Océans",
+    planets:["Kamino","Mon Cala"]
   },
   {
     item: 4,
-    name: "Volcans",
+    id:"Plaines et forêts",
+    planets: ["Alderaan","Yavin 4","Naboo","Endor","Kashyyyk","Felucia","Stewjon"]
   },
   {
     item: 5,
-    name: "Neige",
+    id:"Volcans",
+    planets: ["Mustafar","Sullust","Dathomir"]
   },
   {
     item: 6,
-    name: "Marais",
+    id:"Neige",
+    planets:["Hoth","Mygeeto"]
   },
   {
     item: 7,
-    name: "Astéroïdes",
+    id:"Marais",
+    planets:["Dagobah","Rodia","Nal Hutta"]
   },
   {
     item: 8,
-    name: "Zones Urbaines",
+    id:"Zones urbaines",
+    planets: ["Bespin","Cato Neimoidia","Coruscant","Corellia","Polis Massa"]
   },
 ];
 
