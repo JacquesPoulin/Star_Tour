@@ -3,7 +3,7 @@ import quizForm from "../../../data/quizForm";
 
 const Question = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [ShowScore, setShowScore] = useState(false);
+  const [, setShowScore] = useState(false);
 
   const handleAnswerOptionClick = () => {
     const nextQuestion = currentQuestion + 1;
