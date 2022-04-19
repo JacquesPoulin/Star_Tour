@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../components/Navbar";
-import ShipCard from "../components/ships/ShipCard";
+import Footer from '../components/Footer';
+import ShipList from "../components/ships/ShipList";
 
 const Ships = () => {
   return (
@@ -11,8 +12,8 @@ const Ships = () => {
           Découvrez notre flotte de vaisseaux !
         </h1>
       </div>
-      <ShipCard />
-      <p>P</p>
+      <ShipList />
+      <Footer />
     </div>
   );
 };
