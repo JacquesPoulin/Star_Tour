@@ -7,12 +7,14 @@ const quizForm = [
     answerOptions: [
       {
         answerText: "Farniente",
+        isCorrect: 1,
         img: "./assets/images/quizPic/1-farniente.jpeg",
       },
     ],
     answerOptions2: [
       {
         answerText2: "Aventure",
+        isCorrect: 2,
         img2: "./assets/images/quizPic/1-aventure.jpeg",
       },
     ],
@@ -22,12 +24,14 @@ const quizForm = [
     answerOptions: [
       {
         answerText: "Citadin dans l’âme",
+        isCorrect: 10,
         img: "./assets/images/quizPic/2-citadin.jpeg",
       },
     ],
     answerOptions2: [
       {
         answerText2: "Nature nature nature",
+        isCorrect: 20,
         img2: "./assets/images/quizPic/2-nature.jpeg",
       },
     ],
@@ -35,10 +39,18 @@ const quizForm = [
   {
     questionText: "Pour vos sorties, que préférez-vous ?",
     answerOptions: [
-      { answerText: "Plage", img: "./assets/images/quizPic/3-plage.jpg" },
+      {
+        answerText: "Plage",
+        isCorrect: 0,
+        img: "./assets/images/quizPic/3-plage.jpg",
+      },
     ],
     answerOptions2: [
-      { answerText2: "Musée", img2: "./assets/images/quizPic/3-musee.jpeg" },
+      {
+        answerText2: "Musée",
+        isCorrect: 0,
+        img2: "./assets/images/quizPic/3-musee.jpeg",
+      },
     ],
   },
   {
@@ -46,12 +58,14 @@ const quizForm = [
     answerOptions: [
       {
         answerText: "Oui j'adore",
+        isCorrect: 100,
         img: "./assets/images/quizPic/4-soleil.jpeg",
       },
     ],
     answerOptions2: [
       {
         answerText2: "Quelle horreur",
+        isCorrect: 200,
         img2: "./assets/images/quizPic/4-horreur.jpeg",
       },
     ],
@@ -61,12 +75,14 @@ const quizForm = [
     answerOptions: [
       {
         answerText: "Voir beaucoup de monde",
+        isCorrect: 0,
         img: "./assets/images/quizPic/5-peuple.png",
       },
     ],
     answerOptions2: [
       {
         answerText2: "Les lieux les plus intimes",
+        isCorrect: 0,
         img2: "./assets/images/quizPic/5-intime.jpeg",
       },
     ],
@@ -76,12 +92,14 @@ const quizForm = [
     answerOptions: [
       {
         answerText: "Une hutte",
+        isCorrect: 0,
         img: "./assets/images/quizPic/6-hutte.jpeg",
       },
     ],
     answerOptions2: [
       {
         answerText2: "Un hotel de luxe",
+        isCorrect: 0,
         img2: "./assets/images/quizPic/6-hotel.jpeg",
       },
     ],
@@ -91,12 +109,14 @@ const quizForm = [
     answerOptions: [
       {
         answerText: "Jimmmmmyy",
+        isCorrect: 0,
         img: "./assets/images/quizPic/7-jimmy.png",
       },
     ],
     answerOptions2: [
       {
         answerText2: "Lydiiiiiiie ",
+        isCorrect: 0,
         img2: "./assets/images/quizPic/7-lydie.png",
       },
     ],

@@ -3,9 +3,14 @@ import quizForm from "../../../data/quizForm";
 
 const Question = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [ShowScore, setShowScore] = useState(false);
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
 
-  const handleAnswerOptionClick = () => {
+  const handleAnswerOptionClick = (isCorrect) => {
+    if (isCorrect) {
+      setScore(score + isCorrect);
+    }
+
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizForm.length) {
       setCurrentQuestion(nextQuestion);
