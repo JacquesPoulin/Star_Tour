@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import NavBar from "../components/Navbar";
 import PlanetsFilter from "../components/planets/PlanetsFilter";
-import PlanetModal from "../components/planets/PlanetModal";
 import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
 import GoToTop from "../components/GoToTop";
 import PlanetsSearch from "../components/planets/PlanetsSearch";
+// import PlanetModal from "../components/planets/PlanetModal";
 
 const Planets = () => {
   const [search, setSearch] = useState("");
