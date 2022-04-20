@@ -7,6 +7,7 @@ const planets = [
     weather: "./assets/images/sun.png",
     visit: "Juillet/Août à éviter",
     biome: "Déserts",
+    score: "122",
   },
   {
     id: 2,
@@ -43,6 +44,7 @@ const planets = [
     weather: "./assets/images/rain.png",
     visit: "Septembre à Novembre",
     biome: "Marais",
+    score: "222",
   },
   {
     id: 6,
@@ -52,6 +54,7 @@ const planets = [
     weather: "./assets/images/sun.png",
     visit: "Toute l'année",
     biome: "Zones urbaines",
+    score: "112",
   },
   {
     id: 7,
@@ -70,6 +73,7 @@ const planets = [
     weather: "./assets/images/sun.png",
     visit: "Toute l'année (le mieux étant le printemps)",
     biome: "Plaines et forêts",
+    score: "121",
   },
   {
     id: 9,
@@ -79,6 +83,7 @@ const planets = [
     weather: "./assets/images/cloud.png",
     visit: "Toute l'année",
     biome: "Zones urbaines",
+    score: "111",
   },
   {
     id: 10,
@@ -88,6 +93,7 @@ const planets = [
     weather: "./assets/images/rain.png",
     visit: "Toute l'année (il pleut à 100% de toute façon)",
     biome: "Océans",
+    score: "211",
   },
   {
     id: 11,
@@ -133,6 +139,7 @@ const planets = [
     weather: "./assets/images/cloud.png",
     visit: "N'importe quand (vous sortirez rarement)",
     biome: "Zones urbaines",
+    score: "212",
   },
   {
     id: 16,
@@ -187,6 +194,7 @@ const planets = [
     weather: "./assets/images/rain.png",
     visit: "Septembre à Décembre",
     biome: "Marais",
+    score: "221",
   },
   {
     id: 24,
