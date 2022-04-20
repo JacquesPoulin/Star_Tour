@@ -33,7 +33,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
   const getInfo = () => {
     axios
       .get(`https://swapi.dev/api/planets/${id}`)
-      .then((res) => res.data)
+      .then((res) => console.log(res.data))
       .then((data) => setInfo(data))
       .catch((err) => console.log(err));
   };
