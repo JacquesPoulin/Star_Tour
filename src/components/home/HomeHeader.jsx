@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import Typist from 'react-typist';
+import Typist from "react-typist";
 
 const HomeHeader = () => {
   return (
@@ -16,12 +16,14 @@ const HomeHeader = () => {
       <Typist avgTypingDelay={70} stdTypingDelay={0}>
         <Typist.Delay ms={1000} />
         <h1 className="pb-10 pl-5 text-6xl font-thin text-slate-50 font-galactic text-shadow-1">
-          BIENVENUE CHEZ<br />
+          BIENVENUE CHEZ
+          <br />
           <span className="font-thin text-[7.5rem]">STAR TOUR</span>
         </h1>
         <Typist.Backspace count={24} delay={3000} />
         <h1 className="pb-6 pl-5 text-6xl font-bold text-slate-50 font-orb text-shadow-1">
-          BIENVENUE CHEZ<br />
+          BIENVENUE CHEZ
+          <br />
           <span className="font-extrabold text-[7.5rem]">STAR TOUR</span>
         </h1>
         <Typist.Delay ms={500} />
