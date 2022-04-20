@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-no-useless-fragment */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import quizForm from "../../../data/quizForm";
 import Result from "./Result";
+import planets from "../../../data/planets";
 
 const Question = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -21,10 +22,24 @@ const Question = () => {
     }
   };
 
+  const getQuizResult = (scoreQuiz) => {
+    const destinationResult = planets.filter(
+      (planet) => planet.score === scoreQuiz
+    );
+    const [destinationResultObject] = destinationResult;
+    return destinationResultObject;
+  };
+
+  const [chosenPlanet, setChosenPlanet] = useState();
+
+  useEffect(() => {
+    setChosenPlanet(getQuizResult(score));
+  }, [score]);
+
   return (
     <div>
       {showScore ? (
-        <Result />
+        <Result name={chosenPlanet.name} img={chosenPlanet.img} />
       ) : (
         <>
           <div>

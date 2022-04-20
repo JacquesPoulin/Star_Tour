@@ -1,13 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+// import { Link } from "react-router-dom";
 
-const Result = () => {
+const Result = ({ name, img }) => {
+  Result.propTypes = {
+    name: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    img: PropTypes.string.isRequired,
+  };
   return (
     <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] fixed flex flex-column justify-center w-3/5 rounded-xl box-shadow-1">
       <img
-        src="assets/images/planets/01-Tatooine.jpg"
-        alt=""
-        className=" z-0 absolute h-full rounded-xl box-shadow-1"
+        src={img}
+        alt={name}
+        className="absolute z-0 h-full rounded-xl box-shadow-1"
       />
       <div className="flex flex-col ">
         <div className="flex flex-col">
@@ -18,21 +25,21 @@ const Result = () => {
             </h2>
           </div>
           <div className="flex flex-col h-56">
-            <h1 className=" z-10 m-auto text-6xl font-normal font-orb text-slate-50 text-shadow-4 ">
-              CORUSCANT
+            <h1 className="z-10 m-auto text-6xl font-normal font-orb text-slate-50 text-shadow-4">
+              {name}
             </h1>
           </div>
           <div className="flex flex-col justify-center m-auto align-middle mt-11">
             <button
               type="button"
-              className=" z-10 mb-4 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
+              className="z-10 mb-4 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
             >
               En savoir plus
             </button>
 
             <button
               type="button"
-              className="z-10 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900 mb-10"
+              className="z-10 mb-10 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
             >
               Reserver mon voyage
             </button>
