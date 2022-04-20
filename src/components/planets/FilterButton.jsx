@@ -1,8 +1,19 @@
-import React, { useState } from "react";
 
-const FilterButton = ({ id, name, setFilter }) => {
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React from "react";
+import PropTypes from "prop-types";
+
+const FilterButton = ({ id, setFilter }) => {
+  FilterButton.propTypes = {
+    id: PropTypes.number.isRequired,
+  };
+  FilterButton.propTypes = {
+    setFilter: PropTypes.func.isRequired,
+  };
   return (
     <div
+      role="button"
       onClick={() => (id === "Tout afficher" ? setFilter("") : setFilter(id))}
       className="bp2:justify-self-center notFilter hover:filter"
     >
