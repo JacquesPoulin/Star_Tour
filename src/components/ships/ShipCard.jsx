@@ -1,6 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const ShipCard = ({ id, name, img }) => {
+const ShipCard = ({ name, img }) => {
+  ShipCard.propTypes = {
+    name: PropTypes.string.isRequired,
+  };
+  ShipCard.propTypes = {
+    img: PropTypes.string.isRequired,
+  };
   return (
     <div className="flex flex-col justify-start items-center w-[300px] h-[425px] rounded-xl box-shadow-1 bg-[url(assets/images/ship-card.jpg)] bg-cover hover:scale-[1.02]">
       <img className="w-[300px] h-[169px] rounded-t-xl" src={img} alt="ship" />

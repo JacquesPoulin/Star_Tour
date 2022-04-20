@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/Navbar";
 import Question from "../components/quiz/Question";
-import Result from "../components/quiz/Result";
+// import Result from "../components/quiz/Result";
 
 const Quiz = () => {
   return (

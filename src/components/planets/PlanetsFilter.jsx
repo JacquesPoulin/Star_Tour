@@ -1,8 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import FilterButton from "./FilterButton";
 import filters from "../../../data/filters";
 
 const PlanetsFilters = ({ filter, setFilter }) => {
+  PlanetsFilters.propTypes = {
+    filter: PropTypes.string.isRequired,
+  };
+  PlanetsFilters.propTypes = {
+    setFilter: PropTypes.func.isRequired,
+  };
   return (
     <div className="h-64 pl-10 bp2:pl-0 w-fit">
       <h1 className="mt-10 text-4xl text-left bp2:px-6 bp3:text-3xl text-slate-50 font-orb text-shadow-1">
