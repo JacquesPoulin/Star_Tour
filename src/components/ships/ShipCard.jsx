@@ -26,9 +26,9 @@ const ShipCard = ({ id, name, img }) => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-center w-[300px] h-[480px] rounded-xl box-shadow-1 bg-[url(assets/images/ship-card.jpg)] bg-cover hover:scale-[1.02]">
+    <div className="flex flex-col justify-start items-center w-[300px] h-[510px] rounded-xl box-shadow-1 bg-[url(assets/images/ship-card.jpg)] bg-cover hover:scale-[1.02]">
       <img className="w-[300px] h-[169px] rounded-t-xl" src={img} alt="ship" />
-      <div className="bg-[#ccc1be] w-[50px] h-[50px] rounded-[25px] mt-[-25px]"></div>
+      <div className="bg-[#ccc1be] w-[50px] h-[50px] rounded-[25px] mt-[-25px]" />
       <img
         className="w-[40px] h-[40px] mt-[-45px]"
         src="assets/images/jedi2.png"
@@ -37,10 +37,14 @@ const ShipCard = ({ id, name, img }) => {
       <h3 className="text-center mt-[10px] text-[1.5rem] font-orb text-shadow-gr">
         {name}
       </h3>
-      <p className="self-start pl-[18px] mt-[15px] text-lg leading-8 font-exo text-shadow-gr">
+      <p className="self-start pl-[18px] mt-[15px] text-xl leading-8 font-exo text-shadow-gr">
         Fabricant : {info.manufacturer} <br />
-        Longueur : {info.length} <br />
-        Capacité : {info.cargo_capacity} <br />
+        Longueur : {info.length} mètres <br />
+        Capacité :{" "}
+        {info.cargo_capacity === "unknown"
+          ? "Inconnu"
+          : info.cargo_capacity}{" "}
+        <br />
         Vitesse atmosphérique : {info.max_atmosphering_speed} <br />
         Ratio hyperdrive : {info.hyperdrive_rating}
       </p>
