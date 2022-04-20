@@ -25,16 +25,16 @@ const Question = () => {
 
   const getQuizResult = (scoreQuiz) => {
     const destinationResult = planets.filter(
-      (planet) => planet.score == scoreQuiz
+      (planet) => planet.score === scoreQuiz
     );
-    return destinationResult;
+    const [destinationResultObject] = destinationResult;
+    return destinationResultObject;
   };
 
-  const [chosenPlanet, setChosenPlanet] = useState({});
+  const [chosenPlanet, setChosenPlanet] = useState();
 
   useEffect(() => {
     setChosenPlanet(getQuizResult(score));
-    console.log(chosenPlanet);
   }, [score]);
 
   return (

@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+// import { Link } from "react-router-dom";
 
 const Result = ({ name, img }) => {
+  Result.propTypes = {
+    name: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    img: PropTypes.string.isRequired,
+  };
   return (
     <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] fixed flex flex-column justify-center w-3/5 rounded-xl box-shadow-1">
       <img
