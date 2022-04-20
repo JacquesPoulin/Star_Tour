@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import NavBar from "../components/Navbar";
 import PlanetsFilter from "../components/planets/PlanetsFilter";
 import PlanetModal from "../components/planets/PlanetModal";
@@ -9,15 +8,14 @@ import GoToTop from "../components/GoToTop";
 import PlanetsSearch from "../components/planets/PlanetsSearch";
 
 const Planets = () => {
-  
-  const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState('');
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("");
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
     console.log(search);
-  }
-  
+  };
+
   return (
     <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
       <NavBar />
@@ -27,7 +25,7 @@ const Planets = () => {
         </h1>
       </div>
       <div className="flex flex-row items-end justify-around bp2:flex-col bp2:items-center bp2:justify-start">
-        <PlanetsFilter filter={filter} setFilter={setFilter}/>
+        <PlanetsFilter filter={filter} setFilter={setFilter} />
         <PlanetsSearch search={search} handleSearch={handleSearch} />
       </div>
       <PlanetsList search={search} filter={filter} />
