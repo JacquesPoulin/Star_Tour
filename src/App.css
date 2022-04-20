@@ -66,10 +66,11 @@ ensuite il faut écrire dans :
     cursor: pointer;
   }
   @media screen and (max-width: 1390px) {
-    .filter, .notFilter {
+    .filter,
+    .notFilter {
       width: 7rem;
     }
-  }  
+  }
   .modal-bg {
     box-shadow: 0px 0px 0px 400px rgb(0, 0, 0, 0.5);
   }
