@@ -1,3 +1,6 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable react/prop-types */
+/* eslint-disable radix */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
@@ -41,12 +44,32 @@ const ShipCard = ({ id, name, img }) => {
         {name}
       </h3>
       <p className="self-start pl-[18px] pr-[8px] mt-[15px] text-xl leading-[2.8rem] font-exo text-shadow-gr">
-        Fabricant : {info.manufacturer === "Corellian Engineering Corporation" ? "Corellian Corp." : info.manufacturer === "Sienar Fleet Systems, Cyngus Spaceworks" ? "Siennar Fleet Sys." : info.manufacturer === "Gallofree Yards, Inc." ? "Gallofree Yards" : info.manufacturer === "Mon Calamari shipyards" ? "Mon Cala Yards" : info.manufacturer === "Huppla Pasa Tisc Shipwrights Collective" ? "Huppla Pasa Tisc" : info.manufacturer === "Kuat Drive Yards, Allanteen Six shipyards" ? "Kuat Drive Yards" : info.manufacturer === "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated" ? "Theed Space" : info.manufacturer} <br />
-        Longueur : {info.length} mètres <br />
-        Capacité :{" "}
-        {capacity} passagers
+        Fabricant :{" "}
+        {info.manufacturer === "Corellian Engineering Corporation"
+          ? "Corellian Corp."
+          : info.manufacturer === "Sienar Fleet Systems, Cyngus Spaceworks"
+          ? "Siennar Fleet Sys."
+          : info.manufacturer === "Gallofree Yards, Inc."
+          ? "Gallofree Yards"
+          : info.manufacturer === "Mon Calamari shipyards"
+          ? "Mon Cala Yards"
+          : info.manufacturer === "Huppla Pasa Tisc Shipwrights Collective"
+          ? "Huppla Pasa Tisc"
+          : info.manufacturer === "Kuat Drive Yards, Allanteen Six shipyards"
+          ? "Kuat Drive Yards"
+          : info.manufacturer ===
+            "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated"
+          ? "Theed Space"
+          : info.manufacturer}{" "}
         <br />
-        Vitesse atmosphérique : {info.max_atmosphering_speed === "n/a" ? "900" : info.max_atmosphering_speed} <br />
+        Longueur : {info.length} mètres <br />
+        Capacité : {capacity} passagers
+        <br />
+        Vitesse atmosphérique :{" "}
+        {info.max_atmosphering_speed === "n/a"
+          ? "900"
+          : info.max_atmosphering_speed}{" "}
+        <br />
         Ratio hyperdrive : {hyperdrive}
       </p>
     </div>

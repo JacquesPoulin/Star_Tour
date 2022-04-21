@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 module.exports = {
   content: ["./src/**/*.{html,jsx}"],
+  plugins: [require("flowbite/plugin")],
   theme: {
     extend: {
       fontFamily: {
