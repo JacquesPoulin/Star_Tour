@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ShipList from "../components/ships/ShipList";
+import GoToTop from "../components/GoToTop";
 
 const Ships = () => {
   return (
@@ -14,6 +15,7 @@ const Ships = () => {
       </div>
       <ShipList />
       <Footer />
+      <GoToTop />
     </div>
   );
 };
