@@ -6,8 +6,6 @@ import PropTypes from "prop-types";
 const FilterButton = ({ id, setFilter }) => {
   FilterButton.propTypes = {
     id: PropTypes.number.isRequired,
-  };
-  FilterButton.propTypes = {
     setFilter: PropTypes.func.isRequired,
   };
   return (

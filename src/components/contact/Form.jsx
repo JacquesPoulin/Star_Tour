@@ -20,9 +20,9 @@ const Form = () => {
         </p>
       </div>
       {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
-      <form className="flex flex-wrap justify-center">
+      <form className="flex flex-wrap justify-center bp2_1:flex-col">
         {/* CREATION SECTION FORM GAUCHE */}
-        <section className="flex justify-center w-2/4">
+        <section className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
           {/* CREATION DIV FORM GAUCHE */}
           <div className="relative flex flex-col ">
             {/* CREATION PRENOM */}
@@ -81,14 +81,14 @@ const Form = () => {
             {/* CREATION COUNTRY */}
             <div className="relative z-0 flex flex-row m-5">
               <label
-                className="flex flex-row pl-3 py-2.5 border-2 border-l-[#0780FE] border-b-[#0780FE] border-t-transparent border-r-transparent text-sm text-slate-50 font-orb"
+                className="bp2_1:flex-col bp2_1:w-[50%] flex flex-row pl-3 py-2.5 border-2 border-l-[#0780FE] border-b-[#0780FE] border-t-transparent border-r-transparent text-sm text-slate-50 font-orb"
                 htmlFor="country"
               >
                 CHOISIS TON PAYS
               </label>
               <select
                 id="countries"
-                className="pl-3 text-sm bg-transparent border-0 border-b-2 border-[#0780FE] cursor-pointer text-slate-50 font-exo focus:outline-none"
+                className="bp2_1:flex-col bp2_1:w-[50%] bp2_1:text-xs pl-3 text-sm bg-transparent border-0 border-b-2 border-[#0780FE] cursor-pointer text-slate-50 font-exo focus:outline-none"
               >
                 <option>Wild Code School</option>
                 <option>France</option>
@@ -103,23 +103,15 @@ const Form = () => {
           </div>
         </section>
         {/* CREATION SECTION FORM DROIT */}
-        <section className="flex justify-center w-2/4">
+        <section className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
           {/* CREATION DIV FORM DROIT */}
-          {/* <div className="relative flex flex-col h-full">
-            <textarea
-              placeholder="YOUR MESSAGE *"
-              type="text"
-              className=" text-sm h-full pl-3 m-5 bg-transparent resize-none w-96 text-slate-50 placeholder-slate-50 font-orb border-2 border-l-[#0780FE] border-b-[#0780FE] border-t-transparent border-r-transparent"
-            ></textarea>
-          </div> */}
-
           <div className="relative z-0 flex flex-row m-5">
             <textarea
               type="text"
               name="floating_message"
               autoComplete="none"
               required="required"
-              className="text-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+              className="bp2_1:w-full text-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
               placeholder=" "
             />
             <label

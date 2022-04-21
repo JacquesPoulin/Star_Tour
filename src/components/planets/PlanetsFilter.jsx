@@ -6,8 +6,6 @@ import filters from "../../../data/filters";
 const PlanetsFilters = ({ filter, setFilter }) => {
   PlanetsFilters.propTypes = {
     filter: PropTypes.string.isRequired,
-  };
-  PlanetsFilters.propTypes = {
     setFilter: PropTypes.func.isRequired,
   };
   return (
