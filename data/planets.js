@@ -21,7 +21,7 @@ const planets = [
   {
     id: 3,
     name: "Yavin 4",
-    img: "./assets/images/planets/03-Yavin4.jpg",
+    img: "./assets/images/planets/03-Yavin4bis.jpg",
     desc: "Une planète mystérieuse où les forêts brumeuses cohabitent avec d’anciennes ruines. Ne soyez pas surpris si vous croisez les vestiges d’une ancienne base rebelle abandonnée !",
     weather: "./assets/images/cloud.png",
     visit: "Mai / Juin",
