@@ -44,13 +44,13 @@ const Question = () => {
       ) : (
         <>
           {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
-          <div className="flex flex-wrap justify-center bp2_1:flex-col">
+          <div className="flex flex-wrap items-center justify-center w-screen h-screen">
             {/* CREATION SECTION FORM GAUCHE - R2D2 */}
-            <section className="flex justify-center w-1/3 bp2_1:flex-col bp2_1:w-full">
+            <section className="flex items-center justify-center w-1/3 bp2_1:hidden">
               {/* CREATION DIV FORM GAUCHE */}
-              <div className="relative flex flex-col ">
+              <div className="relative flex flex-col bp2_1:hidden">
                 {/* CREATION R2D2 */}
-                <div className="relative z-0 flex flex-row pt-32 m-5">
+                <div className="relative z-0 flex mt-16 flex-row m-2 h-[32rem] bp2_1:hidden">
                   <img
                     className="w-full h-full "
                     src="assets/images/c3po.png"
@@ -60,39 +60,39 @@ const Question = () => {
               </div>
             </section>
             {/* CREATION SECTION FORM DROITE - QUESTION/REPONSES */}
-            <section className="flex justify-center w-2/3 bp2_1:flex-col bp2_1:w-full">
+            <section className="flex justify-center w-2/3 bp2_1:w-full">
               {/* CREATION DIV FORM DROIT */}
-              <div className="relative flex flex-col w-full pt-32 m-5">
+              <div className="relative flex flex-col w-full pt-32 m-5 bp2_1:w-full bp4:pt-24">
                 {/* CREATION DIV NB+QUESTION */}
-                <div className="relative flex flex-row justify-center">
+                <div className="relative flex flex-row justify-center bp4:flex-col">
                   {/* CREATION NB */}
-                  <div className="relative flex flex-row w-1/6 m-5">
-                    <span className="items-center justify-center p-10 text-2xl text-center rounded-2xl font-exo text-shadow-3 text-slate-50 box-shadow-1 bg-black/50">
+                  <div className="relative flex flex-row items-center w-1/6 m-5 bp2_1:mx-2 bp2_1:w-2/6 bp2_1:justify-center bp4:w-full bp4:h-full ">
+                    <span className="items-center justify-center p-10 text-2xl text-center rounded-2xl font-exo text-shadow-3 text-slate-50 box-shadow-1 bg-black/50 bp2:p-6 bp3:text-xl bp4:text-sm bp4:p-2">
                       {currentQuestion + 1}/{quizForm.length}
                     </span>
                   </div>
                   {/* CREATION QUESTION */}
-                  <div className="relative flex flex-row justify-start w-5/6 m-5">
-                    <span className="items-center justify-center w-4/5 p-10 text-2xl text-center text-slate-50 rounded-2xl font-exo text-shadow-3 box-shadow-1 bg-black/50 ">
+                  <div className="relative flex flex-row items-center justify-start w-5/6 m-5 bp2:m-1 bp2:w-full bp2_1:mx-2 bp2_1:justify-center bp4:h-full ">
+                    <span className="items-center justify-center w-full p-10 text-2xl text-center text-slate-50 rounded-2xl font-exo text-shadow-3 box-shadow-1 bg-black/50 bp2:p-6 bp2:px-1 bp2_1:text-lg bp4:py-2">
                       {quizForm[currentQuestion].questionText}
                     </span>
                   </div>
                 </div>
                 {/* CREATION REPONSES */}
-                <div className="relative flex flex-row mt-10 bp2_1:flex-col bp2_1:w-full">
+                <div className="relative flex flex-row mt-10 bp2_1:w-full bp2_1:mt-1 bp4:flex-col ">
                   {/* CREATION REPONSE 1 */}
-                  <div className="relative flex flex-row w-1/2 m-5 bp2_1:w-full">
+                  <div className="relative flex flex-row w-1/2 m-5 bp2_1:w-1/2 bp2_1:justify-center bp4:w-full bp4:h-full bp4:m-2">
                     {quizForm[currentQuestion].answerOptions.map(
                       (answerOption) => (
                         <button
-                          className="flex items-center justify-center h-[18rem] w-[22rem] text-4xl text-center text-slate-50 font-exo text-shadow-3 bp2:h-[7rem] bp2:w-[10rem] bp2:text-xl"
+                          className="flex items-center justify-center w-full h-64 mb-16 text-4xl text-center text-slate-50 font-exo text-shadow-3 bp4:w-52 bp4:h-44 bp4:text-lg bp4:mb-2"
                           type="button"
                           onClick={() =>
                             handleAnswerOptionClick(answerOption.isCorrect)
                           }
                         >
                           <img
-                            className="absolute h-[18rem] w-[22rem] rounded-2xl box-shadow-1 hover:scale-105 bp2:h-[7rem] bp2:w-[10rem]"
+                            className="absolute w-full h-64 rounded-2xl box-shadow-1 hover:scale-105 bp4:w-52 bp4:h-44"
                             src={answerOption.img}
                             alt={answerOption.answerText}
                           />
@@ -104,18 +104,18 @@ const Question = () => {
                     )}
                   </div>
                   {/* CREATION REPONSE 2 */}
-                  <div className="relative z-0 flex flex-row justify-start w-1/2 m-5 bp2_1:w-full bp2_1:h-full">
+                  <div className="relative z-0 flex flex-row justify-start w-1/2 m-5 bp2_1:w-1/2 bp2_1:justify-center bp4:w-full bp4:h-full bp4:m-2 ">
                     {quizForm[currentQuestion].answerOptions2.map(
                       (answerOption2) => (
                         <button
-                          className="flex items-center justify-center h-[18rem] w-[22rem] text-4xl text-center text-slate-50 font-exo text-shadow-3 bp2_1:w-auto bp2:text-xl "
+                          className="flex items-center justify-center w-full h-64 mb-16 text-4xl text-center text-slate-50 font-exo text-shadow-3 bp4:w-52 bp4:h-44 bp4:text-lg bp4:mb-0"
                           type="button"
                           onClick={() =>
                             handleAnswerOptionClick(answerOption2.isCorrect)
                           }
                         >
                           <img
-                            className="absolute h-[18rem] w-[22rem] rounded-2xl box-shadow-1 hover:scale-105 bp2_1:w-full bp2_1:h-full"
+                            className="absolute w-full h-64 rounded-2xl box-shadow-1 hover:scale-105 bp4:w-52 bp4:h-44"
                             src={answerOption2.img2}
                             alt={answerOption2.answerText2}
                           />
