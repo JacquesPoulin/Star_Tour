@@ -13,6 +13,7 @@ module.exports = {
     screens: {
       bp1: { max: "1390px" },
       bp2: { max: "1000px" },
+      bp2_1: { max: "800px" },
       bp3: { max: "600px" },
     },
   },
