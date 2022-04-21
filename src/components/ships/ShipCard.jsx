@@ -41,7 +41,7 @@ const ShipCard = ({ id, name, img }) => {
         {name}
       </h3>
       <p className="self-start pl-[18px] pr-[8px] mt-[15px] text-xl leading-[2.8rem] font-exo text-shadow-gr">
-        Fabricant :{" "}
+        Fabricant :
         {info.manufacturer === "Corellian Engineering Corporation"
           ? "Corellian Corp."
           : info.manufacturer === "Sienar Fleet Systems, Cyngus Spaceworks"
@@ -57,15 +57,15 @@ const ShipCard = ({ id, name, img }) => {
           : info.manufacturer ===
             "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated"
           ? "Theed Space"
-          : info.manufacturer}{" "}
+          : info.manufacturer}
         <br />
         Longueur : {info.length} mètres <br />
         Capacité : {capacity} passagers
         <br />
-        Vitesse atmosphérique :{" "}
+        Vitesse atmosphérique :
         {info.max_atmosphering_speed === "n/a"
           ? "900"
-          : info.max_atmosphering_speed}{" "}
+          : info.max_atmosphering_speed}
         <br />
         Ratio hyperdrive : {hyperdrive}
       </p>
