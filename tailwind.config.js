@@ -15,6 +15,7 @@ module.exports = {
       bp2: { max: "1000px" },
       bp2_1: { max: "800px" },
       bp3: { max: "600px" },
+      bp4: { max: "500px" },
     },
   },
 };
