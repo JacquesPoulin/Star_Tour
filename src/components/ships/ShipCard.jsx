@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const ShipCard = ({ id, name, img }) => {
+const ShipCard = ({ id, name, img, sort }) => {
   ShipCard.propTypes = {
     id: PropTypes.number.isRequired,
   };
@@ -11,6 +11,9 @@ const ShipCard = ({ id, name, img }) => {
   };
   ShipCard.propTypes = {
     img: PropTypes.string.isRequired,
+  };
+  ShipCard.propTypes = {
+    sort: PropTypes.string.isRequired,
   };
 
   const [info, setInfo] = useState({});
@@ -24,7 +27,7 @@ const ShipCard = ({ id, name, img }) => {
 
   useEffect(() => {
     getInfo();
-  }, []);
+  }, [sort]);
 
   const capacity = parseInt(info.crew, 10) + parseInt(info.passengers, 10);
   const hyperdrive = info.hyperdrive_rating;
