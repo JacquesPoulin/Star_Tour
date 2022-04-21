@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line react/prop-types
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
