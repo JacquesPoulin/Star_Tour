@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
@@ -200,7 +201,7 @@ const Form = () => {
               </p>
             </a>
             {/* FAQ */}
-            <a href="">
+            <a href="www.google.com">
               <p className="flex p-3 text-xs font-bold text-slate-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
