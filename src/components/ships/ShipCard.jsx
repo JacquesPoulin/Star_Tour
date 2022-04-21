@@ -1,3 +1,7 @@
+/* eslint-disable radix */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line react/prop-types
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
@@ -5,11 +9,7 @@ import PropTypes from "prop-types";
 const ShipCard = ({ id, name, img, sort }) => {
   ShipCard.propTypes = {
     id: PropTypes.number.isRequired,
-  };
-  ShipCard.propTypes = {
     name: PropTypes.string.isRequired,
-  };
-  ShipCard.propTypes = {
     img: PropTypes.string.isRequired,
   };
   ShipCard.propTypes = {

@@ -5,10 +5,12 @@ import PlanetModal from "../planets/PlanetModal";
 
 const Result = ({ name, img, desc, weather, visit, id }) => {
   Result.propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-  };
-  Result.propTypes = {
     img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    weather: PropTypes.string.isRequired,
+    visit: PropTypes.string.isRequired,
   };
   Result.propTypes = {
     desc: PropTypes.string.isRequired,
