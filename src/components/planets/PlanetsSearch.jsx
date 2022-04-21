@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 const PlanetsSearch = ({ search, handleSearch }) => {
   PlanetsSearch.propTypes = {
     search: PropTypes.string.isRequired,
-  };
-  PlanetsSearch.propTypes = {
     handleSearch: PropTypes.func.isRequired,
   };
   return (

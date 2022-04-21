@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import PropTypes from "prop-types";
 import PlanetCard from "./PlanetCard";
@@ -7,8 +8,6 @@ const PlanetsList = ({ search, filter }) => {
   // const [count, setCount] = useState(0);
   PlanetsList.propTypes = {
     filter: PropTypes.string.isRequired,
-  };
-  PlanetsList.propTypes = {
     search: PropTypes.string.isRequired,
   };
   return (

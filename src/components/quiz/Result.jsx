@@ -6,10 +6,24 @@ import PlanetModal from "../planets/PlanetModal";
 
 const Result = ({ name, img, id, desc, weather, visit }) => {
   Result.propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    weather: PropTypes.string.isRequired,
+    visit: PropTypes.string.isRequired,
   };
   Result.propTypes = {
-    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    weather: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    visit: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    id: PropTypes.number.isRequired,
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
