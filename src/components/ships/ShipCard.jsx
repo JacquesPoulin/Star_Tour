@@ -72,10 +72,10 @@ const ShipCard = ({ id, name, img, sort }) => {
         Longueur : {info.length} mètres <br />
         Capacité : {capacity} passagers
         <br />
-        Vitesse atmosphérique :{" "}
+        Vitesse atmosphérique :
         {info.max_atmosphering_speed === "n/a"
           ? "900"
-          : info.max_atmosphering_speed}{" "}
+          : info.max_atmosphering_speed}
         <br />
         Ratio hyperdrive : {hyperdrive}
       </p>
