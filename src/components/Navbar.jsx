@@ -8,13 +8,13 @@ const NavBar = () => {
   return (
     <header className="absolute flex h-20 min-w-full justify-content-between">
       {/* DESKTOP MENU */}
-      <div className="flex justify-center items-center  h-20 min-w-full font-exo text-slate-50 bp2:justify-start">
+      <div className="flex items-center justify-center h-20 min-w-full font-exo text-slate-50 dark:text-slate-900 bp2:justify-start">
         <NavLink to="/home">
           {/* Site logo */}
           <img
             src="../../assets/images/logo-StarTour-white.png"
             alt="logo"
-            className=" absolute w-40 h-40 ml-8 -mt-14"
+            className="absolute w-40 h-40 ml-8 -mt-14"
           />
         </NavLink>
         {/* NAVBAR */}
@@ -52,12 +52,12 @@ const NavBar = () => {
         {/* Burger icon */}
         <button
           type="button"
-          className="hidden rounded-md active:outline-none focus:outline-none first-letter:focus:ring-inset mt-9 bp2:inline-block bp2:ml-auto bp2:mr-7 transition-all"
+          className="hidden transition-all rounded-md active:outline-none focus:outline-none first-letter:focus:ring-inset mt-9 bp2:inline-block bp2:ml-auto bp2:mr-7"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 rounded-md text-slate-50 bg-gradient-to-br from-transparent to-transparent hover:text-white hover:from-slate-500 hover:to-slate-900"
+            className="w-8 h-8 rounded-md text-slate-50 dark:text-slate-900 bg-gradient-to-br from-transparent to-transparent hover:text-white hover:from-slate-500 hover:to-slate-900 dark:hover:text-slate-900 dark:hover:from-slate-500 dark:hover:to-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -84,28 +84,28 @@ const NavBar = () => {
       >
         {/* MOBILE MENU */}
         {isOpen && (
-          <div className="absolute md:hidden right-0 top-20 mr-7 lg:hidden">
-            <ul className="text-xl text-slate-50">
+          <div className="absolute right-0 md:hidden top-20 mr-7 lg:hidden">
+            <ul className="text-xl text-slate-50 hover:to-slate-900">
               <NavLink to="/home">
-                <li className="font-medium hover:underline mt-4 mb-6">
+                <li className="mt-4 mb-6 font-medium hover:underline">
                   Accueil
                 </li>
               </NavLink>
 
               <NavLink to="/destination">
-                <li className="font-medium hover:underline mb-6">
+                <li className="mb-6 font-medium hover:underline">
                   Destinations
                 </li>
               </NavLink>
 
               <NavLink to="/booking">
-                <li className="font-medium hover:underline mb-6">
+                <li className="mb-6 font-medium hover:underline">
                   Reservation
                 </li>
               </NavLink>
 
               <NavLink to="/ships">
-                <li className="font-medium hover:underline mb-6">Vaisseaux</li>
+                <li className="mb-6 font-medium hover:underline">Vaisseaux</li>
               </NavLink>
 
               <NavLink to="/contact">

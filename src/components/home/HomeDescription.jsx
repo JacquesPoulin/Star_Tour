@@ -4,14 +4,14 @@ const HomeDescription = () => {
   return (
     <div
       id="homedescription"
-      className="flex flex-col px-10 py-10 bg-[url('./assets/images/dark_bg.jpg')] bg-cover bg-repeat"
+      className="flex flex-col px-10 py-10 bg-[url('./assets/images/dark_bg.jpg')] bg-cover bg-repeat dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat "
     >
-      <h1 className="mb-10 text-4xl sm:mb-0 text-slate-50 font-orb">
+      <h1 className="mb-10 text-4xl sm:mb-0 text-slate-50 dark:text-slate-900 font-orb">
         Qui sommes-nous ?
       </h1>
 
       <div className="flex flex-row items-end justify-between gap-4 mb-10 mr-10 space-x-0 bp2:items-center bp2:flex-col">
-        <p className="text-xl font-thin text-slate-50 font-exo">
+        <p className="text-xl font-thin text-slate-50 dark:text-slate-900 font-exo">
           Hello there !
           <br />
           {`
@@ -22,10 +22,10 @@ const HomeDescription = () => {
         <img
           src="../assets/images/startourHomeHelloThere.gif"
           alt="hellothere"
-          className="w-60 rounded-xl box-shadow-1"
+          className="w-60 rounded-xl box-shadow-1 dark:box-shadow-2"
         />
       </div>
-      <p className="text-xl font-thin text-slate-50 font-exo">
+      <p className="text-xl font-thin text-slate-50 dark:text-slate-900 font-exo">
         {`
         Notre objectif : vous permettre de vivre un dépaysement total, en vous
         proposant des séjours all-inclusive vers 28 destinations toutes plus
@@ -34,7 +34,7 @@ const HomeDescription = () => {
         `}
       </p>
       <br />
-      <p className="text-xl font-thin text-slate-50 font-exo">
+      <p className="text-xl font-thin text-slate-50 dark:text-slate-900 font-exo">
         {`
         Notre devise : être à votre écoute, répondre à vos attentes, afin de
         vous proposer le voyage intergalactique de votre vie !

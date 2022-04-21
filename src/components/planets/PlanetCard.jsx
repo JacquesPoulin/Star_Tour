@@ -24,11 +24,11 @@ const PlanetCard = ({ id, name, img, desc, weather, visit }) => {
 
   return (
     <>
-      <div className="overflow-hidden box-shadow-1 rounded-2xl">
+      <div className="overflow-hidden box-shadow-1 rounded-2xl dark:box-shadow-2">
         <button
           type="button"
           onClick={openModal}
-          className="flex items-center justify-center h-40 transition duration-500 ease-in-out w-72 hover:scale-[1.03]"
+          className="flex items-center justify-center h-40 transition duration-500 ease-in-out w-72 hover:scale-[1.03] "
         >
           <img
             src={img}

@@ -21,13 +21,13 @@ const HomeHeader = () => {
           <span className="font-thin text-[7.5rem]">STAR TOUR</span>
         </h1>
         <Typist.Backspace count={24} delay={3000} />
-        <h1 className="pb-6 pl-5 text-6xl font-bold text-slate-50 font-orb text-shadow-1">
+        <h1 className="pb-6 pl-5 text-6xl font-bold text-slate-50 font-orb text-shadow-1 ">
           BIENVENUE CHEZ
           <br />
           <span className="font-extrabold text-[7.5rem]">STAR TOUR</span>
         </h1>
         <Typist.Delay ms={500} />
-        <h2 className="pl-5 text-[2.4rem] text-white font-orb text-shadow-2">
+        <h2 className="pl-5 text-[2.4rem] text-slate-50  font-orb text-shadow-2 ">
           Là où les rêves prennent leur envol !
         </h2>
       </Typist>

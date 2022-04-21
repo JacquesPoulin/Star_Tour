@@ -39,7 +39,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
           className="w-full h-[270px] object-cover z-[1] rounded-t-xl"
           alt="représentation de la planete"
         />
-        <h1 className="absolute text-6xl bp3:text-4xl text-shadow-2 font-orb text-slate-50 z-[2]">
+        <h1 className="absolute text-6xl bp3:text-4xl text-shadow-2 font-orb text-slate-50  z-[2]">
           {name}
         </h1>
         <button

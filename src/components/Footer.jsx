@@ -3,15 +3,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo">
+    <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat">
       {/* Container Helps + Icons */}
-      <div className="w-6/6 h-0.5 -m-5 bg-[#0780FE]" />
+      <div className="w-6/6 h-0.5 -m-5 bg-slate-50 dark:bg-slate-900" />
       <div className="flex flex-row flex-wrap w-full md:pb-px20">
         {/* Helps -- phone -- adress -- faq */}
         <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
           {/* Phone */}
           <a href="tel:0607514408">
-            <p className="flex p-3 text-xs font-bold text-slate-50 ">
+            <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 500 747.2"
@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
           {/* Adress */}
           <a href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351">
-            <p className="flex p-3 text-xs font-bold text-slate-50 ">
+            <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 44.6 44.6"
@@ -66,7 +66,7 @@ const Footer = () => {
           </a>
           {/* FAQ */}
           <a href="www.google.com">
-            <p className="flex p-3 text-xs font-bold text-slate-50 ">
+            <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 47 47"
@@ -87,7 +87,7 @@ const Footer = () => {
           {/* Facebook */}
           <a
             href="https://www.facebook.com/StarWars.fr"
-            className="hover:text-[#4267B2] p-3 text-slate-50"
+            className="hover:text-[#4267B2] p-3 text-slate-50 dark:text-slate-900"
           >
             <span className="sr-only ">Facebook</span>
             <svg
@@ -104,7 +104,7 @@ const Footer = () => {
           {/* Twitter */}
           <a
             href="https://twitter.com/StarWarsFR"
-            className="p-3 ml-3 text-slate-50 hover:text-[#1DA1F2]"
+            className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#1DA1F2]"
           >
             <span className="sr-only">Twitter</span>
             <svg
@@ -121,7 +121,7 @@ const Footer = () => {
           {/* Instagram */}
           <a
             href="https://www.instagram.com/starwars/"
-            className="p-3 ml-3 text-slate-50 hover:text-[#7e22ce]"
+            className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#7e22ce]"
           >
             <span className="sr-only">Instagram</span>
             <svg
@@ -140,7 +140,7 @@ const Footer = () => {
           {/* Linkedin */}
           <a
             href="https://www.linkedin.com/showcase/starwars/about/"
-            className="p-3 ml-3 text-slate-50  hover:text-[#0B66C2]"
+            className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#0B66C2]"
           >
             <span className="sr-only">Linkedin</span>
             <svg
@@ -162,7 +162,7 @@ const Footer = () => {
           {/* GitHub */}
           <a
             href="https://github.com/"
-            className="p-3 ml-3 text-slate-50 hover:text-[#252A30] "
+            className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#252A30] "
           >
             <span className="sr-only">GitHub</span>
             <svg
@@ -181,7 +181,7 @@ const Footer = () => {
           {/* Youtube */}
           <a
             href="https://www.youtube.com/c/StarWars"
-            className="p-3 ml-3 text-slate-50  hover:text-[#FF0000]"
+            className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#FF0000]"
           >
             <span className="sr-only">Youtube</span>
             <svg
@@ -199,10 +199,10 @@ const Footer = () => {
 
       {/* :CGV/NEWSLETTER */}
       {/* <div>
-         <nav className="flex flex-wrap justify-center p-3 text-lg list-none text-slate-50">
+         <nav className="flex flex-wrap justify-center p-3 text-lg list-none text-slate-50 dark:text-slate-900">
           <li>
             <button
-              className="p-3 text-white bg-transparent hover:bg-slate-50 hover:text-slate-900 focus:ring-1 focus:ring-slate-50 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
+              className="p-3 text-slate-50 dark:text-slate-900 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-50 focus:ring-1 focus:ring-slate-50 dark:focus:ring-slate-900 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
               type="button"
               data-modal-toggle="extralarge-modal"
             >
@@ -211,7 +211,7 @@ const Footer = () => {
           </li>
           <li>
             <button
-              className="p-3 text-white bg-transparent hover:bg-slate-50 hover:text-slate-900 focus:ring-1 focus:ring-slate-50 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
+              className="p-3 text-slate-50 dark:text-slate-900 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-50 focus:ring-1 focus:ring-slate-50 dark:focus:ring-slate-900 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
               type="button"
               data-modal-toggle="large-modal"
             >
@@ -223,7 +223,7 @@ const Footer = () => {
       <div className="flex justify-center">
         <a
           href="https://www.wildcodeschool.com"
-          className="pt-5 text-sm text-center text-slate-50"
+          className="pt-5 text-sm text-center text-slate-50 dark:text-slate-900"
         >
           <span>
             &copy;2022, Wild Code School Biarritz <br />

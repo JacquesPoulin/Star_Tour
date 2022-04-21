@@ -7,12 +7,12 @@ const Form = () => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-center mx-16 pt-36">
-        <h1 className=" bg-transparent border-2 border-[#0780FE] shadow-lg shadow-[#0780FE]/50 text-lg tracking-[0.2rem] text-[#0780FE] font-orb text-center px-20 py-4">
+        <h1 className=" bg-transparent border-2 border-[#0780FE] dark:border-[#FF0010] shadow-lg shadow-[#0780FE]/50 dark:shadow-[#FF0010]/50 text-lg tracking-[0.2rem] text-[#0780FE] dark:text-[#FF0010] font-orb text-center px-20 py-4">
           CONTACT
         </h1>
       </div>
       <div className="flex justify-center">
-        <p className="w-4/5 text-sm m-12 px-6 text-center border-2 text-slate-50 border-y-transparent border-x-[#0780FE] font-exo bp3:border-none">
+        <p className="w-4/5 text-sm m-12 px-6 text-center border-2 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo bp3:border-none">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
           provident ipsa quis, recusandae porro dicta nesciunt doloremque
           corporis, fuga necessitatibus corrupti voluptas perspiciatis magnam et
@@ -32,12 +32,12 @@ const Form = () => {
                 name="floating_firstname"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0100] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
                 htmlFor="floating_firstname"
-                className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 ÉCRIS TON PRÉNOM*
               </label>
@@ -49,12 +49,12 @@ const Form = () => {
                 name="floating_lastname"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
                 htmlFor="floating_lastname"
-                className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 ÉCRIS TON NOM*
               </label>
@@ -66,12 +66,12 @@ const Form = () => {
                 name="floating_email"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
                 htmlFor="floating_email"
-                className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 ÉCRIS TON EMAIL*
               </label>
@@ -85,12 +85,12 @@ const Form = () => {
                 id="floating_phone"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 dark:text-slate-900 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
                 htmlFor="floating_number"
-                className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 ÉCRIS TON TÉLÉPHONE*
               </label>
@@ -106,12 +106,12 @@ const Form = () => {
               name="floating_message"
               autoComplete="none"
               required="required"
-              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 dark:text-slate-900 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
               placeholder=" "
             />
             <label
               htmlFor="floating_message"
-              className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               ÉCRIS TON MESSAGE*
             </label>
@@ -120,21 +120,21 @@ const Form = () => {
 
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
-          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 border-y-transparent border-x-[#0780FE] font-exo hover:text-[#0780FE]">
+          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]">
             ENVOYER
           </button>
         </section>
       </form>
 
-      <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo">
+      <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat">
         {/* Container Helps + Icons */}
-        <div className="w-6/6 h-0.5 -m-5 bg-[#0780FE]" />
+        <div className="w-6/6 h-0.5 -m-5 bg-[#0780FE] dark:bg-[#FF0010]" />
         <div className="flex flex-row flex-wrap w-full md:pb-px20">
           {/* Helps -- phone -- adress -- faq */}
           <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
             {/* Phone */}
             <a href="tel:0607514408">
-              <p className="flex p-3 text-xs font-bold text-slate-50 ">
+              <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 500 747.2"
@@ -168,7 +168,7 @@ const Form = () => {
             </a>
             {/* Adress */}
             <a href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351">
-              <p className="flex p-3 text-xs font-bold text-slate-50 ">
+              <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 44.6 44.6"
@@ -189,7 +189,7 @@ const Form = () => {
             </a>
             {/* FAQ */}
             <a href="www.google.com">
-              <p className="flex p-3 text-xs font-bold text-slate-50 ">
+              <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 47 47"
@@ -210,7 +210,7 @@ const Form = () => {
             {/* Facebook */}
             <a
               href="https://www.facebook.com/StarWars.fr"
-              className="hover:text-[#4267B2] p-3 text-slate-50"
+              className="hover:text-[#4267B2] p-3 text-slate-50 dark:text-slate-900"
             >
               <span className="sr-only ">Facebook</span>
               <svg
@@ -227,7 +227,7 @@ const Form = () => {
             {/* Twitter */}
             <a
               href="https://twitter.com/StarWarsFR"
-              className="p-3 ml-3 text-slate-50 hover:text-[#1DA1F2]"
+              className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#1DA1F2]"
             >
               <span className="sr-only">Twitter</span>
               <svg
@@ -244,7 +244,7 @@ const Form = () => {
             {/* Instagram */}
             <a
               href="https://www.instagram.com/starwars/"
-              className="p-3 ml-3 text-slate-50 hover:text-[#7e22ce]"
+              className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#7e22ce]"
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -263,7 +263,7 @@ const Form = () => {
             {/* Linkedin */}
             <a
               href="https://www.linkedin.com/showcase/starwars/about/"
-              className="p-3 ml-3 text-slate-50  hover:text-[#0B66C2]"
+              className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#0B66C2]"
             >
               <span className="sr-only">Linkedin</span>
               <svg
@@ -285,7 +285,7 @@ const Form = () => {
             {/* GitHub */}
             <a
               href="https://github.com/"
-              className="p-3 ml-3 text-slate-50 hover:text-[#252A30] "
+              className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#252A30] "
             >
               <span className="sr-only">GitHub</span>
               <svg
@@ -304,7 +304,7 @@ const Form = () => {
             {/* Youtube */}
             <a
               href="https://www.youtube.com/c/StarWars"
-              className="p-3 ml-3 text-slate-50  hover:text-[#FF0000]"
+              className="p-3 ml-3 text-slate-50 dark:text-slate-900  hover:text-[#FF0000]"
             >
               <span className="sr-only">Youtube</span>
               <svg
@@ -319,34 +319,11 @@ const Form = () => {
             </a>
           </div>
         </div>
-
-        {/* :CGV/NEWSLETTER */}
-        {/* <div>
-         <nav className="flex flex-wrap justify-center p-3 text-lg list-none text-slate-50">
-          <li>
-            <button
-              className="p-3 text-white bg-transparent hover:bg-slate-50 hover:text-slate-900 focus:ring-1 focus:ring-slate-50 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
-              type="button"
-              data-modal-toggle="extralarge-modal"
-            >
-              CGV
-            </button>
-          </li>
-          <li>
-            <button
-              className="p-3 text-white bg-transparent hover:bg-slate-50 hover:text-slate-900 focus:ring-1 focus:ring-slate-50 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
-              type="button"
-              data-modal-toggle="large-modal"
-            >
-              Newsletter
-            </button>
-          </li>
-        </nav> */}
         {/* :COPYRIGHT */}
         <div className="flex justify-center">
           <a
             href="https://www.wildcodeschool.com"
-            className="pt-5 text-sm text-center text-slate-50"
+            className="pt-5 text-sm text-center text-slate-50 dark:text-slate-900"
           >
             <span>
               &copy;2022, Wild Code School Biarritz <br />
