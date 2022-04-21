@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ShipSort from "../components/ships/ShipSort";
 import ShipList from "../components/ships/ShipList";
 import GoToTop from "../components/GoToTop";
 
 const Ships = () => {
+  const [sort, setSort] = useState("");
+  console.log(sort);
+
   return (
     <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
       <NavBar />
@@ -13,7 +17,8 @@ const Ships = () => {
           Découvrez notre flotte de vaisseaux !
         </h1>
       </div>
-      <ShipList />
+      <ShipSort setSort={setSort} />
+      <ShipList sort={sort} />
       <Footer />
       <GoToTop />
     </div>
