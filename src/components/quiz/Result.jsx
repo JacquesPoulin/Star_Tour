@@ -12,6 +12,18 @@ const Result = ({ name, img, desc, weather, visit, id }) => {
     weather: PropTypes.string.isRequired,
     visit: PropTypes.string.isRequired,
   };
+  Result.propTypes = {
+    desc: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    weather: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    visit: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    id: PropTypes.number.isRequired,
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
