@@ -9,23 +9,11 @@ import axios from "axios";
 const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
   PlaneteModal.propTypes = {
     id: PropTypes.number.isRequired,
-  };
-  PlaneteModal.propTypes = {
     name: PropTypes.string.isRequired,
-  };
-  PlaneteModal.propTypes = {
     img: PropTypes.string.isRequired,
-  };
-  PlaneteModal.propTypes = {
     desc: PropTypes.string.isRequired,
-  };
-  PlaneteModal.propTypes = {
     weather: PropTypes.string.isRequired,
-  };
-  PlaneteModal.propTypes = {
     visit: PropTypes.string.isRequired,
-  };
-  PlaneteModal.propTypes = {
     closeModal: PropTypes.string.isRequired,
   };
   const [info, setInfo] = useState({});

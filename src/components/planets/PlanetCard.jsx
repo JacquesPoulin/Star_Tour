@@ -6,20 +6,10 @@ import PlaneteModal from "./PlanetModal";
 const PlanetCard = ({ id, name, img, desc, weather, visit }) => {
   PlanetCard.propTypes = {
     id: PropTypes.number.isRequired,
-  };
-  PlanetCard.propTypes = {
     name: PropTypes.string.isRequired,
-  };
-  PlanetCard.propTypes = {
     img: PropTypes.string.isRequired,
-  };
-  PlanetCard.propTypes = {
     desc: PropTypes.string.isRequired,
-  };
-  PlanetCard.propTypes = {
     weather: PropTypes.string.isRequired,
-  };
-  PlanetCard.propTypes = {
     visit: PropTypes.string.isRequired,
   };
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,20 +1,21 @@
+/* eslint-disable radix */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
-/* eslint-disable radix */
+// eslint-disable-next-line react/prop-types
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const ShipCard = ({ id, name, img }) => {
-  ShipCard.prototype = {
+const ShipCard = ({ id, name, img, sort }) => {
+  ShipCard.propTypes = {
     id: PropTypes.number.isRequired,
-  };
-  ShipCard.prototype = {
     name: PropTypes.string.isRequired,
-  };
-  ShipCard.prototype = {
     img: PropTypes.string.isRequired,
   };
+  ShipCard.propTypes = {
+    sort: PropTypes.string.isRequired,
+  };
+
   const [info, setInfo] = useState({});
   const getInfo = () => {
     axios
@@ -26,10 +27,32 @@ const ShipCard = ({ id, name, img }) => {
 
   useEffect(() => {
     getInfo();
-  }, []);
+  }, [sort]);
 
-  const capacity = parseInt(info.crew) + parseInt(info.passengers);
+  const capacity = parseInt(info.crew, 10) + parseInt(info.passengers, 10);
   const hyperdrive = info.hyperdrive_rating;
+
+  let manu = "";
+  if (info.manufacturer === "Corellian Engineering Corporation") {
+    manu = "Corellian Corp.";
+  } else if (info.manufacturer === "Sienar Fleet Systems, Cyngus Spaceworks") {
+    manu = "Siennar Fleet Sys.";
+  } else if (info.manufacturer === "Gallofree Yards, Inc.") {
+    manu = "Gallofree Yards";
+  } else if (info.manufacturer === "Mon Calamari shipyards") {
+    manu = "Mon Cala Yards";
+  } else if (info.manufacturer === "Huppla Pasa Tisc Shipwrights Collective") {
+    manu = "Huppla Pasa Tisc";
+  } else if (
+    info.manufacturer === "Kuat Drive Yards, Allanteen Six shipyards"
+  ) {
+    manu = "Kuat Drive Yards";
+  } else if (
+    info.manufacturer ===
+    "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated"
+  ) {
+    manu = "Theed Space";
+  }
 
   return (
     <div className="flex flex-col justify-start items-center w-[300px] h-[510px] rounded-xl box-shadow-1 bg-[url(assets/images/ship-card.jpg)] bg-cover hover:scale-[1.02]">
@@ -44,31 +67,15 @@ const ShipCard = ({ id, name, img }) => {
         {name}
       </h3>
       <p className="self-start pl-[18px] pr-[8px] mt-[15px] text-xl leading-[2.8rem] font-exo text-shadow-gr">
-        Fabricant :{" "}
-        {info.manufacturer === "Corellian Engineering Corporation"
-          ? "Corellian Corp."
-          : info.manufacturer === "Sienar Fleet Systems, Cyngus Spaceworks"
-          ? "Siennar Fleet Sys."
-          : info.manufacturer === "Gallofree Yards, Inc."
-          ? "Gallofree Yards"
-          : info.manufacturer === "Mon Calamari shipyards"
-          ? "Mon Cala Yards"
-          : info.manufacturer === "Huppla Pasa Tisc Shipwrights Collective"
-          ? "Huppla Pasa Tisc"
-          : info.manufacturer === "Kuat Drive Yards, Allanteen Six shipyards"
-          ? "Kuat Drive Yards"
-          : info.manufacturer ===
-            "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated"
-          ? "Theed Space"
-          : info.manufacturer}{" "}
+        Fabricant : {manu}
         <br />
         Longueur : {info.length} mètres <br />
         Capacité : {capacity} passagers
         <br />
-        Vitesse atmosphérique :{" "}
+        Vitesse atmosphérique :
         {info.max_atmosphering_speed === "n/a"
           ? "900"
-          : info.max_atmosphering_speed}{" "}
+          : info.max_atmosphering_speed}
         <br />
         Ratio hyperdrive : {hyperdrive}
       </p>
