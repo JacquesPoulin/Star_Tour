@@ -39,7 +39,7 @@ const Question = () => {
   return (
     <div>
       {showScore ? (
-        <Result name={chosenPlanet.name} img={chosenPlanet.img} />
+        <Result {...chosenPlanet} />
       ) : (
         <>
           <div>
