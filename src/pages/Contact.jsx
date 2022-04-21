@@ -8,7 +8,6 @@ const Contact = () => {
     <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
       <NavBar />
       <Form />
-      <Footer />
     </div>
   );
 };

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo">
       {/* Container Helps + Icons */}
-      <div className="w-6/6 h-0.5 -m-5 bg-[#0780FE]" />
+      <div className="w-6/6 h-0.5 -m-5 bg-slate-50" />
       <div className="flex flex-row flex-wrap w-full md:pb-px20">
         {/* Helps -- phone -- adress -- faq */}
         <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
