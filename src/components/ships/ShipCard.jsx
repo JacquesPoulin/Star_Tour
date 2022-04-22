@@ -2,6 +2,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
@@ -67,6 +68,7 @@ const ShipCard = ({ id, name, img, sort }) => {
         {name}
       </h3>
       <p className="self-start pl-[18px] pr-[8px] mt-[15px] text-xl leading-[2.8rem] font-exo text-shadow-gr">
+        
         Fabricant : {manu}
         <br />
         Longueur : {info.length} mètres <br />
