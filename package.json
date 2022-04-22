@@ -25,6 +25,7 @@
     "react-router-dom": "^6.3.0",
     "react-scroll": "^1.8.7",
     "react-select": "^5.3.0",
+    "react-tilt": "^0.1.4",
     "react-typist": "^2.0.5",
     "tailwindcss-neumorphism": "^0.1.0"
   },
