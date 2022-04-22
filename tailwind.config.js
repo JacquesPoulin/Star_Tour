@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 module.exports = {
   content: ["./src/**/*.{html,jsx}"],
+  plugins: [require("flowbite/plugin")],
   theme: {
     extend: {
       fontFamily: {
@@ -13,7 +14,9 @@ module.exports = {
     screens: {
       bp1: { max: "1390px" },
       bp2: { max: "1000px" },
+      bp2_1: { max: "800px" },
       bp3: { max: "600px" },
+      bp4: { max: "500px" },
     },
   },
 };

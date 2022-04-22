@@ -1,14 +1,29 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import PlanetModal from '../planets/PlanetModal';
+import PlanetModal from "../planets/PlanetModal";
 
-const Result = ({ name, img, desc, weather, visit, id }) => {
+const Result = ({ name, img, id, desc, weather, visit }) => {
   Result.propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    weather: PropTypes.string.isRequired,
+    visit: PropTypes.string.isRequired,
   };
   Result.propTypes = {
-    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    weather: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    visit: PropTypes.string.isRequired,
+  };
+  Result.propTypes = {
+    id: PropTypes.number.isRequired,
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,9 +78,17 @@ const Result = ({ name, img, desc, weather, visit, id }) => {
           </div>
         </div>
       </div>
-      {isModalOpen &&
-      <PlanetModal id={id} name={name} img={img} desc={desc} weather={weather} visit={visit} closeModal={closeModal} />
-      }
+      {isModalOpen && (
+        <PlanetModal
+          id={id}
+          name={name}
+          img={img}
+          desc={desc}
+          weather={weather}
+          visit={visit}
+          closeModal={closeModal}
+        />
+      )}
     </div>
   );
 };
