@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import PlanetModal from "../planets/PlanetModal";
 
-const Result = ({ name, img, desc, weather, visit, id }) => {
+const Result = ({ name, img, id, desc, weather, visit }) => {
   Result.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,

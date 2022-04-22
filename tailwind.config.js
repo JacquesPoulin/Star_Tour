@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx}"],
   darkMode: "media",
+  plugins: [require("flowbite/plugin")],
   theme: {
     extend: {
       fontFamily: {
