@@ -2,14 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const BookingRecap = ({ closeModal }) => {
-  // ({ name, destination, ship, closeModal } => {
-  BookingRecap.prototype = {
-    //     name: PropTypes.string.isRequired,
-    //     destination: PropTypes.string.isRequired,
-    //     ship: PropTypes.string.isRequired,
-    closeModal: PropTypes.string.isRequired,
-  };
-
   // const [destination, setDestination] = useState("");
   // const [ship, setShip] = useState("");
 
@@ -28,7 +20,7 @@ const BookingRecap = ({ closeModal }) => {
         </button>
       </div>
       {/* Client informations */}
-      <div className="pt-4 pb-6 pl-6 text-2xl font-exo bp2_1:text-lg">
+      <div className="pt-4 pb-2 pl-6 text-2xl font-exo bp2_1:text-lg">
         Nom : PLUVINAGE <br />
         Nombre de personnes : {Math.floor(Math.random() * 10)} <br />
         Destination : YAVIN 4<br />
@@ -47,4 +39,11 @@ const BookingRecap = ({ closeModal }) => {
   );
 };
 
+BookingRecap.propTypes = {
+  // ({ name, destination, ship, closeModal }
+  //     name: PropTypes.string.isRequired,
+  //     destination: PropTypes.string.isRequired,
+  //     ship: PropTypes.string.isRequired,
+  closeModal: PropTypes.func.isRequired,
+};
 export default BookingRecap;
