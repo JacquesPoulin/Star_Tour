@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Transition } from "@tailwindui/react";
