@@ -112,7 +112,7 @@ const BookingForm = () => {
           </div>
           {numberOfDays < 7 && (
             <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1 hover:scale-[1.01]">
-              ⚠️ Nous n'avons aucun séjours inférieurs à 7 jours
+              ⚠️ Nous n'avons aucun séjour inférieur à 7 jours
             </div>
           )}
           {numberOfDays >= 7 && (
