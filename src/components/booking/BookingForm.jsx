@@ -54,7 +54,7 @@ const BookingForm = () => {
 
         {/* DESTINATION CHOICE */}
         <div className="w-full flex flex-col justify-center items-center mt-20 text-slate-50">
-          <h2 className="mb-4 text-2xl text-slate-50">
+          <h2 className="mb-4 text-2xl text-slate-50 font-exo">
             1. OÙ SOUHAITEZ-VOUS ALLEZ ?
           </h2>
           <Select
@@ -80,12 +80,12 @@ const BookingForm = () => {
             </div>
           )}
           {/* DEPARTURE DATE */}
-          <h2 className="mt-20 mb-4 text-2xl text-slate-50">
+          <h2 className="mt-20 mb-4 text-2xl text-slate-50 font-exo">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
           </h2>
           <div className="w-full flex justify-center rounded-md">
-            <div className="w-1/3 flex flex-row text-slate-900  rounded-md">
-              <p className="text-slate-50 text-xl flex justify-center items-center m-2">
+            <div className="w-1/3 flex flex-row justify-center items-center text-slate-900  rounded-md gap-4">
+              <p className="text-slate-50 text-xl flex justify-center items-center font-exo">
                 DU
               </p>
               <DatePicker
@@ -96,7 +96,7 @@ const BookingForm = () => {
                 onChange={dateArrivalChangeHandler}
                 className="text-slate-900  rounded-md text-center font-semibold"
               />
-              <p className="text-slate-50 text-xl flex justify-center items-center m-2">
+              <p className="text-slate-50 text-xl flex justify-center items-center font-exo">
                 AU
               </p>
               <DatePicker
@@ -106,7 +106,7 @@ const BookingForm = () => {
                 endDate={endDate}
                 minDate={startDate}
                 onChange={dateDepartureChangeHandler}
-                className="text-slate-900 text-center  rounded-md ml-2 font-semibold"
+                className="text-slate-900 text-center  rounded-md font-semibold"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ const BookingForm = () => {
 
         {/* PASSENGERS */}
         <div className="w-full flex flex-col justify-center items-center mt-10 mb-20">
-          <h2 className="mt-7 mb-4 text-2xl text-slate-50">
+          <h2 className="mt-7 mb-4 text-2xl text-slate-50 font-exo">
             3. NOMBRE DE VOYAGEURS ?
           </h2>
 
