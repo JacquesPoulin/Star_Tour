@@ -45,11 +45,11 @@ const ShipList = ({ sort }) => {
   }
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-12 px-0 py-8 pb-20 mt-8">
-      {sortedShips.map((ship) => (
-        <ShipCard {...ship} sort={sort} />
-      ))}
-    </div>
+      <div className="flex flex-wrap items-center justify-center gap-12 px-0 py-8 pb-20 mt-8">
+        {sortedShips.map((ship, index) => (
+          <ShipCard key={index} {...ship} sort={sort} />
+        ))}
+      </div>
   );
 };
 
