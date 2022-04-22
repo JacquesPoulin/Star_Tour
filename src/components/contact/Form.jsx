@@ -1,5 +1,3 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 
@@ -20,23 +18,40 @@ const Form = () => {
         </p>
       </div>
       {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
-      <form className="flex flex-wrap justify-center bp2_1:flex-col">
+      <form className="flex flex-wrap justify-center bp2_1:flex-col bp2_1:justify-center">
         {/* CREATION SECTION FORM GAUCHE */}
         <section className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
           {/* CREATION DIV FORM GAUCHE */}
-          <div className="relative flex flex-col ">
+          <div className="relative flex flex-col">
             {/* CREATION PRENOM */}
             <div className="relative z-0 flex flex-row m-5">
               <input
                 type="name"
-                name="floating_name"
+                name="floating_firstname"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer block pl-3 py-2.5 w-full text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
-                htmlFor="floating_name"
+                htmlFor="floating_firstname"
+                className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                ÉCRIS TON PRÉNOM*
+              </label>
+            </div>
+            {/* CREATION NOM */}
+            <div className="relative z-0 flex flex-row m-5">
+              <input
+                type="name"
+                name="floating_lastname"
+                autoComplete="none"
+                required="required"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+                placeholder=" "
+              />
+              <label
+                htmlFor="floating_lastname"
                 className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 ÉCRIS TON NOM*
@@ -49,7 +64,7 @@ const Form = () => {
                 name="floating_email"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer block  pl-3 py-2.5 w-full text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -68,7 +83,7 @@ const Form = () => {
                 id="floating_phone"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer pl-3 py-2.5 w-full text-sm text-slate-50 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -89,7 +104,7 @@ const Form = () => {
               name="floating_message"
               autoComplete="none"
               required="required"
-              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
               placeholder=" "
             />
             <label
@@ -103,7 +118,10 @@ const Form = () => {
 
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
-          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 border-y-transparent border-x-[#0780FE] font-exo hover:text-[#0780FE]">
+          <button
+            type="button"
+            className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 border-y-transparent border-x-[#0780FE] font-exo hover:text-[#0780FE]"
+          >
             ENVOYER
           </button>
         </section>
@@ -117,7 +135,7 @@ const Form = () => {
           <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
             {/* Phone */}
             <a href="tel:0607514408">
-              <p className="flex p-3 text-xs font-bold text-slate-50 hover:text-[#25D366]">
+              <p className="flex p-3 text-xs font-bold text-slate-50 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 500 747.2"
@@ -151,7 +169,7 @@ const Form = () => {
             </a>
             {/* Adress */}
             <a href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351">
-              <p className="flex p-3 text-xs font-bold text-slate-50 hover:text-[#14C6F7]">
+              <p className="flex p-3 text-xs font-bold text-slate-50 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 44.6 44.6"
@@ -172,7 +190,7 @@ const Form = () => {
             </a>
             {/* FAQ */}
             <a href="www.google.com">
-              <p className="flex p-3 text-xs font-bold text-slate-50 hover:text-[#F4B400]">
+              <p className="flex p-3 text-xs font-bold text-slate-50 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 47 47"
@@ -329,7 +347,7 @@ const Form = () => {
         <div className="flex justify-center">
           <a
             href="https://www.wildcodeschool.com"
-            className="pt-5 text-sm text-center text-slate-50 hover:text-[#ED6C6D]"
+            className="pt-5 text-sm text-center text-slate-50"
           >
             <span>
               &copy;2022, Wild Code School Biarritz <br />

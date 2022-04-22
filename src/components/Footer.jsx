@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
           {/* Phone */}
           <a href="tel:0607514408">
-            <p className="flex p-3 text-xs font-bold text-slate-50 hover:text-[#25D366]">
+            <p className="flex p-3 text-xs font-bold text-slate-50 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 500 747.2"
@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
           {/* Adress */}
           <a href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351">
-            <p className="flex p-3 text-xs font-bold text-slate-50 hover:text-[#14C6F7]">
+            <p className="flex p-3 text-xs font-bold text-slate-50 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 44.6 44.6"
@@ -66,7 +66,7 @@ const Footer = () => {
           </a>
           {/* FAQ */}
           <a href="www.google.com">
-            <p className="flex p-3 text-xs font-bold text-slate-50 hover:text-[#F4B400]">
+            <p className="flex p-3 text-xs font-bold text-slate-50 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 47 47"
@@ -223,7 +223,7 @@ const Footer = () => {
       <div className="flex justify-center">
         <a
           href="https://www.wildcodeschool.com"
-          className="pt-5 text-sm text-center text-slate-50 hover:text-[#ED6C6D]"
+          className="pt-5 text-sm text-center text-slate-50"
         >
           <span>
             &copy;2022, Wild Code School Biarritz <br />
