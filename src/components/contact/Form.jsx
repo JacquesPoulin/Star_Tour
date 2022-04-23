@@ -20,23 +20,40 @@ const Form = () => {
         </p>
       </div>
       {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
-      <form className="flex flex-wrap justify-center bp2_1:flex-col">
+      <form className="flex flex-wrap justify-center bp2_1:flex-col bp2_1:justify-center">
         {/* CREATION SECTION FORM GAUCHE */}
         <section className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
           {/* CREATION DIV FORM GAUCHE */}
-          <div className="relative flex flex-col ">
+          <div className="relative flex flex-col">
             {/* CREATION PRENOM */}
             <div className="relative z-0 flex flex-row m-5">
               <input
                 type="name"
-                name="floating_name"
+                name="floating_firstname"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer block pl-3 py-2.5 w-full text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
-                htmlFor="floating_name"
+                htmlFor="floating_firstname"
+                className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                ÉCRIS TON PRÉNOM*
+              </label>
+            </div>
+            {/* CREATION NOM */}
+            <div className="relative z-0 flex flex-row m-5">
+              <input
+                type="name"
+                name="floating_lastname"
+                autoComplete="none"
+                required="required"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
+                placeholder=" "
+              />
+              <label
+                htmlFor="floating_lastname"
                 className=" ml-3 absolute text-sm text-slate-50 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 ÉCRIS TON NOM*
@@ -49,7 +66,7 @@ const Form = () => {
                 name="floating_email"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer block  pl-3 py-2.5 w-full text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -68,7 +85,7 @@ const Form = () => {
                 id="floating_phone"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer pl-3 py-2.5 w-full text-sm text-slate-50 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -77,28 +94,6 @@ const Form = () => {
               >
                 ÉCRIS TON TÉLÉPHONE*
               </label>
-            </div>
-            {/* CREATION COUNTRY */}
-            <div className="relative z-0 flex flex-row m-5">
-              <label
-                className="bp2_1:flex-col bp2_1:w-[50%] flex flex-row pl-3 py-2.5 border-2 border-l-[#0780FE] border-b-[#0780FE] border-t-transparent border-r-transparent text-sm text-slate-50 font-orb"
-                htmlFor="country"
-              >
-                CHOISIS TON PAYS
-              </label>
-              <select
-                id="countries"
-                className="bp2_1:flex-col bp2_1:w-[50%] bp2_1:text-xs pl-3 text-sm bg-transparent border-0 border-b-2 border-[#0780FE] cursor-pointer text-slate-50 font-exo focus:outline-none"
-              >
-                <option>Wild Code School</option>
-                <option>France</option>
-                <option>Amérique</option>
-                <option>Asie</option>
-                <option>Afrique</option>
-                <option>Tatooine</option>
-                <option>Alderaan</option>
-                <option>Bespin</option>
-              </select>
             </div>
           </div>
         </section>
@@ -111,7 +106,7 @@ const Form = () => {
               name="floating_message"
               autoComplete="none"
               required="required"
-              className="bp2_1:w-full text-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer"
+              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] peer bp2_1:w-full"
               placeholder=" "
             />
             <label
@@ -125,13 +120,13 @@ const Form = () => {
 
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
-          <button className="my-10 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 border-y-transparent border-x-[#0780FE] font-exo hover:text-[#0780FE]">
+          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 border-y-transparent border-x-[#0780FE] font-exo hover:text-[#0780FE]">
             ENVOYER
           </button>
         </section>
       </form>
 
-      <footer className="w-full p-5 bg-transparent font-exo">
+      <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo">
         {/* Container Helps + Icons */}
         <div className="w-6/6 h-0.5 -m-5 bg-[#0780FE]" />
         <div className="flex flex-row flex-wrap w-full md:pb-px20">
@@ -139,12 +134,12 @@ const Form = () => {
           <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
             {/* Phone */}
             <a href="tel:0607514408">
-              <p className="flex p-3 text-xs font-bold text-slate-50">
+              <p className="flex p-3 text-xs font-bold text-slate-50 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 500 747.2"
                   aria-hidden="true"
-                  className="w-8 h-8"
+                  className="w-8 h-8 "
                   focusable="false"
                   fill="currentColor"
                 >
@@ -173,7 +168,7 @@ const Form = () => {
             </a>
             {/* Adress */}
             <a href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351">
-              <p className="flex p-3 text-xs font-bold text-slate-50">
+              <p className="flex p-3 text-xs font-bold text-slate-50 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 44.6 44.6"
@@ -194,7 +189,7 @@ const Form = () => {
             </a>
             {/* FAQ */}
             <a href="www.google.com">
-              <p className="flex p-3 text-xs font-bold text-slate-50">
+              <p className="flex p-3 text-xs font-bold text-slate-50 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 47 47"
@@ -215,9 +210,9 @@ const Form = () => {
             {/* Facebook */}
             <a
               href="https://www.facebook.com/StarWars.fr"
-              className="p-3 text-slate-50"
+              className="hover:text-[#4267B2] p-3 text-slate-50"
             >
-              <span className="sr-only">Facebook</span>
+              <span className="sr-only ">Facebook</span>
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
@@ -232,7 +227,7 @@ const Form = () => {
             {/* Twitter */}
             <a
               href="https://twitter.com/StarWarsFR"
-              className="p-3 ml-3 text-slate-50"
+              className="p-3 ml-3 text-slate-50 hover:text-[#1DA1F2]"
             >
               <span className="sr-only">Twitter</span>
               <svg
@@ -249,7 +244,7 @@ const Form = () => {
             {/* Instagram */}
             <a
               href="https://www.instagram.com/starwars/"
-              className="p-3 ml-3 text-slate-50"
+              className="p-3 ml-3 text-slate-50 hover:text-[#7e22ce]"
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -268,7 +263,7 @@ const Form = () => {
             {/* Linkedin */}
             <a
               href="https://www.linkedin.com/showcase/starwars/about/"
-              className="p-3 ml-3 text-slate-50"
+              className="p-3 ml-3 text-slate-50  hover:text-[#0B66C2]"
             >
               <span className="sr-only">Linkedin</span>
               <svg
@@ -288,7 +283,10 @@ const Form = () => {
               </svg>
             </a>
             {/* GitHub */}
-            <a href="https://github.com/" className="p-3 ml-3 text-slate-50">
+            <a
+              href="https://github.com/"
+              className="p-3 ml-3 text-slate-50 hover:text-[#252A30] "
+            >
               <span className="sr-only">GitHub</span>
               <svg
                 fill="currentColor"
@@ -306,7 +304,7 @@ const Form = () => {
             {/* Youtube */}
             <a
               href="https://www.youtube.com/c/StarWars"
-              className="p-3 ml-3 text-slate-50"
+              className="p-3 ml-3 text-slate-50  hover:text-[#FF0000]"
             >
               <span className="sr-only">Youtube</span>
               <svg
@@ -320,6 +318,41 @@ const Form = () => {
               </svg>
             </a>
           </div>
+        </div>
+
+        {/* :CGV/NEWSLETTER */}
+        {/* <div>
+         <nav className="flex flex-wrap justify-center p-3 text-lg list-none text-slate-50">
+          <li>
+            <button
+              className="p-3 text-white bg-transparent hover:bg-slate-50 hover:text-slate-900 focus:ring-1 focus:ring-slate-50 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
+              type="button"
+              data-modal-toggle="extralarge-modal"
+            >
+              CGV
+            </button>
+          </li>
+          <li>
+            <button
+              className="p-3 text-white bg-transparent hover:bg-slate-50 hover:text-slate-900 focus:ring-1 focus:ring-slate-50 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
+              type="button"
+              data-modal-toggle="large-modal"
+            >
+              Newsletter
+            </button>
+          </li>
+        </nav> */}
+        {/* :COPYRIGHT */}
+        <div className="flex justify-center">
+          <a
+            href="https://www.wildcodeschool.com"
+            className="pt-5 text-sm text-center text-slate-50"
+          >
+            <span>
+              &copy;2022, Wild Code School Biarritz <br />
+              Astrid Jacques Rémi Nicolas Geoffrey
+            </span>
+          </a>
         </div>
       </footer>
     </div>

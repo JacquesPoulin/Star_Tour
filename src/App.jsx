@@ -1,17 +1,18 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Planets from "./pages/Planets";
 import Quiz from "./pages/Quiz";
 import Booking from "./pages/Booking";
 import Ships from "./pages/Ships";
 import Contact from "./pages/Contact";
+import "flowbite";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -21,7 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
