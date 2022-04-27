@@ -1,11 +1,30 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import PropTypes from "prop-types";
+import BookingRecap from "./BookingRecap";
 
-const ValidationForm = () => {
+const ValidationForm = ({
+  lastname,
+  passengers,
+  destination,
+  startDate,
+  endDate,
+  ships,
+}) => {
   const { register, formState, handleSubmit } = useForm({
     mode: "onChange",
   });
+
+  const [modalRecap, setModalRecap] = useState(false);
+
+  const openModalRecap = () => {
+    setModalRecap(true);
+  };
+
+  const closeModalRecap = () => {
+    setModalRecap(false);
+  };
 
   const { isSubmitSuccessful } = formState;
 
@@ -95,14 +114,35 @@ const ValidationForm = () => {
         </label>
 
         <button
-          type="submit"
+          type="button"
           className=" w-36 m-auto rounded-sm mt-20 mb-5 hover:scale-110 bg-gray-800 tracking-wide transition-all duration-700 cursor-pointer"
+          onClick={openModalRecap}
         >
           Submit
         </button>
+        {modalRecap && (
+          <BookingRecap
+            lastname={lastname}
+            passengers={passengers}
+            destination={destination}
+            startDate={startDate}
+            endDate={endDate}
+            ships={ships}
+            closeModal={closeModalRecap}
+          />
+        )}
       </form>
     </div>
   );
 };
 
+ValidationForm.propTypes = {
+  modalRecap: PropTypes.func.isRequired,
+  lastname: PropTypes.string.isRequired,
+  passengers: PropTypes.number.isRequired,
+  destination: PropTypes.string.isRequired,
+  startDate: PropTypes.number.isRequired,
+  endDate: PropTypes.number.isRequired,
+  ships: PropTypes.string.isRequired,
+};
 export default ValidationForm;

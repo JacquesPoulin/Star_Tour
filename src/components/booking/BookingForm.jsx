@@ -20,7 +20,7 @@ const BookingForm = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfDays, setNumberOfDays] = useState(0);
-  const [numberOfPassengers, setNumberOPassengers] = useState(0);
+  const [numberOfPassengers, setNumberOfPassengers] = useState(0);
 
   // HANDLERS
   const userChoiceHandler = (e) => {
@@ -37,7 +37,7 @@ const BookingForm = () => {
     return Math.floor(differenceInTime / (1000 * 3600 * 24));
   };
   const passengerChoiceHandler = (e) => {
-    setNumberOPassengers(e.target.value);
+    setNumberOfPassengers(e.target.value);
   };
 
   // USE EFFECT TO SET THE NUMBER OF DAYS
