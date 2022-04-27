@@ -4,14 +4,7 @@ import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
 import BookingRecap from "./BookingRecap";
 
-const ValidationForm = ({
-  lastname,
-  passengers,
-  destination,
-  startDate,
-  endDate,
-  ships,
-}) => {
+const ValidationForm = ({ setFirstName, setLastName }) => {
   const { register, formState, handleSubmit } = useForm({
     mode: "onChange",
   });
@@ -58,6 +51,7 @@ const ValidationForm = ({
                   { pattern: /^[A-Za-z]+$/i }
                 )}
                 className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                onChange={setFirstName}
               />
             </label>
 
@@ -72,6 +66,7 @@ const ValidationForm = ({
                   { pattern: /^[A-Za-z]+$/i }
                 )}
                 className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                onChange={setLastName}
               />
             </label>
           </div>
@@ -120,29 +115,15 @@ const ValidationForm = ({
         >
           Submit
         </button>
-        {modalRecap && (
-          <BookingRecap
-            lastname={lastname}
-            passengers={passengers}
-            destination={destination}
-            startDate={startDate}
-            endDate={endDate}
-            ships={ships}
-            closeModal={closeModalRecap}
-          />
-        )}
+        {modalRecap && <BookingRecap closeModal={closeModalRecap} />}
       </form>
     </div>
   );
 };
 
 ValidationForm.propTypes = {
+  setFirstName: PropTypes.func.isRequired,
+  setLastName: PropTypes.func.isRequired,
   modalRecap: PropTypes.func.isRequired,
-  lastname: PropTypes.string.isRequired,
-  passengers: PropTypes.number.isRequired,
-  destination: PropTypes.string.isRequired,
-  startDate: PropTypes.number.isRequired,
-  endDate: PropTypes.number.isRequired,
-  ships: PropTypes.string.isRequired,
 };
 export default ValidationForm;

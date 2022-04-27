@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
-const BookingRecap = ({ closeModal }) => {
+const BookingRecap = () => {
   // const [destination, setDestination] = useState("");
   // const [ship, setShip] = useState("");
 
@@ -13,7 +13,6 @@ const BookingRecap = ({ closeModal }) => {
         </h1>
         <button
           type="button"
-          onClick={closeModal}
           className="self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105 bp2_1:text-2xl"
         >
           X
@@ -39,11 +38,7 @@ const BookingRecap = ({ closeModal }) => {
   );
 };
 
-BookingRecap.propTypes = {
-  // ({ name, destination, ship, closeModal }
-  //     name: PropTypes.string.isRequired,
-  //     destination: PropTypes.string.isRequired,
-  //     ship: PropTypes.string.isRequired,
-  closeModal: PropTypes.func.isRequired,
-};
+// BookingRecap.propTypes = {
+//   closeModal: PropTypes.func.isRequired,
+// };
 export default BookingRecap;

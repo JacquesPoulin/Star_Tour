@@ -8,21 +8,25 @@ import "react-datepicker/dist/react-datepicker.css";
 import fr from "date-fns/locale/fr";
 import NavBar from "../Navbar";
 import planetsBooking from "../../../data/planetsBooking";
-// import PassengerInput from "./PassengerInput";
 import ValidationForm from "./ValidationForm";
+// import PassengerInput from "./PassengerInput";
 
 setDefaultLocale("fr");
 registerLocale("fr", fr);
 
 const BookingForm = () => {
-  // STATES & SETTERS
+  // >> STATES & SETTERS
   const [planetChoice, setPlanetChoice] = useState("Aucune idée !");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfDays, setNumberOfDays] = useState(0);
-  const [numberOfPassengers, setNumberOfPassengers] = useState(0);
+  const [passengers, setPassengers] = useState(0);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [ships, setShips] = useState("");
+  const [destination, setDestination] = useState("");
 
-  // HANDLERS
+  // >> FUNCTIONS
   const userChoiceHandler = (e) => {
     setPlanetChoice(e.value);
   };
@@ -37,10 +41,10 @@ const BookingForm = () => {
     return Math.floor(differenceInTime / (1000 * 3600 * 24));
   };
   const passengerChoiceHandler = (e) => {
-    setNumberOfPassengers(e.target.value);
+    setPassengers(e.target.value);
   };
 
-  // USE EFFECT TO SET THE NUMBER OF DAYS
+  // >> USE EFFECT TO SET THE NUMBER OF DAYS
   useEffect(() => {
     setNumberOfDays(sejour(startDate, endDate));
   }, [endDate]);
@@ -142,7 +146,7 @@ const BookingForm = () => {
           <select
             name="people"
             className="rounded-md text"
-            placeholder={numberOfPassengers}
+            placeholder={passengers}
             onChange={passengerChoiceHandler}
           >
             <option value="0">0</option>
@@ -151,44 +155,27 @@ const BookingForm = () => {
             <option value="3">3 personnes</option>
             <option value="4">4 personnes</option>
           </select>
-          {numberOfPassengers >= 1 && (
+          {passengers >= 1 && (
             <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1 hover:scale-[1.01] tracking-wide">
               Nombre de voyageur(s) :{" "}
-              <span className="text-lime-200 animate-pulse">
-                {numberOfPassengers}
-              </span>
+              <span className="text-lime-200 animate-pulse">{passengers}</span>
             </div>
           )}
 
           {/* VALIDATION FORM */}
-          {numberOfPassengers >= 1 && <ValidationForm />}
-
-          {/* {numberOfPassengers >= 1 && numberOfPassengers < 2 && (
-            <div>
-              <PassengerInput />
-            </div>
+          {passengers >= 1 && (
+            <ValidationForm
+              firstName={firstName}
+              setFirstName={setFirstName}
+              lastName={lastName}
+              setLastName={setLastName}
+              passengers={passengers}
+              destination={destination}
+              startDate={startDate}
+              endDate={endDate}
+              ships={ships}
+            />
           )}
-          {numberOfPassengers >= 2 && numberOfPassengers < 3 && (
-            <div>
-              <PassengerInput />
-              <PassengerInput />
-            </div>
-          )}
-          {numberOfPassengers >= 3 && numberOfPassengers < 4 && (
-            <div>
-              <PassengerInput />
-              <PassengerInput />
-              <PassengerInput />
-            </div>
-          )}
-          {numberOfPassengers >= 4 && numberOfPassengers < 5 && (
-            <div>
-              <PassengerInput />
-              <PassengerInput />
-              <PassengerInput />
-              <PassengerInput />
-            </div>
-          )} */}
         </div>
       </div>
     </div>
