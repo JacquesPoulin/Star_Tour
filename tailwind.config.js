@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 module.exports = {
   content: ["./src/**/*.{html,jsx}"],
+  darkMode: "class",
   plugins: [require("flowbite/plugin")],
   theme: {
     extend: {
@@ -18,6 +19,10 @@ module.exports = {
       bp3: { max: "600px" },
       bp4: { max: "500px" },
       bp5: { max: "400px" },
+    },
+    backgroundImage: {
+      night: "url('./assets/images/bg-dark.jpg')",
+      light: "url('./assets/images/bg-light.jpg')",
     },
   },
 };

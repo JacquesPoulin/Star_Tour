@@ -5,7 +5,7 @@ import GoToTop from "../components/GoToTop";
 
 const Contact = () => {
   return (
-    <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw]  bg-repeat">
+    <div className="bg_nightsky dark:bg_lightsky">
       <NavBar />
       <Form />
       <GoToTop />

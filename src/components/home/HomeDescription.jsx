@@ -4,17 +4,17 @@ const HomeDescription = () => {
   return (
     <div
       id="homedescription"
-      className="flex flex-col px-10 py-10 bg-[url('./assets/images/dark_bg.jpg')] bg-cover bg-repeat"
+      className="flex flex-col px-10 py-10 bg_nightsky dark:bg_lightsky"
     >
-      <h1 className="mt-2 mb-16 text-4xl sm:mb-0 text-slate-50 font-orb">
+      <h1 className="mt-2 mb-16 text-4xl sm:mb-0 text-slate-50 dark:text-slate-900 font-orb">
         Qui sommes-nous ?
       </h1>
 
       {/* div qui contient les 3 box */}
       <div className="grid grid-cols-[1fr_1fr_1fr] bp2:flex bp2:flex-col gap-24 bp2:gap-0 px-6">
         {/* Box 1 */}
-        <div className="col-[1] flex flex-col items-center justify-center text-justify px-5 py-6 border-y-[1px] border-slate-50 bp2:items-center bp2:flex-col">
-          <div className="pb-6 text-xl font-thin leading-8 text-slate-50 font-exo">
+        <div className="col-[1] flex flex-col items-center justify-center text-justify px-5 py-6 border-y-[1px] border-slate-50 dark:border-slate-900 bp2:items-center bp2:flex-col">
+          <div className="pb-6 text-xl font-thin leading-8 text-slate-50 dark:text-slate-900 font-exo">
             <h3 className="pb-4 text-2xl italic text-center font-orb">
               Hello there !
             </h3>
@@ -30,7 +30,7 @@ const HomeDescription = () => {
           />
         </div>
         {/* Box 2 */}
-        <div className=" col-[2] text-xl text-justify leading-8 border-y-[1px] border-slate-50 px-5 py-6 font-thin text-slate-50 font-exo">
+        <div className=" col-[2] text-xl text-justify leading-8 border-y-[1px] border-slate-50 dark:border-slate-900 px-5 py-6 font-thin text-slate-50 dark:text-slate-900 font-exo">
           <h3 className="pb-4 text-2xl italic text-center font-orb">
             Notre objectif
           </h3>
@@ -42,8 +42,8 @@ const HomeDescription = () => {
           </p>
         </div>
         {/* Box 3 */}
-        <div className="col-[3] flex flex-col items-center justify-center text-justify px-5 py-6 border-y-[1px] border-slate-50 bp2:items-center bp2:flex-col">
-          <div className="pb-6 text-xl font-thin leading-8 text-slate-50 font-exo">
+        <div className="col-[3] flex flex-col items-center justify-center text-justify px-5 py-6 border-y-[1px] border-slate-50 dark:border-slate-900 bp2:items-center bp2:flex-col">
+          <div className="pb-6 text-xl font-thin leading-8 text-slate-50 dark:text-slate-900 font-exo">
             <h3 className="pb-4 text-2xl italic text-center font-orb">
               Notre devise
             </h3>

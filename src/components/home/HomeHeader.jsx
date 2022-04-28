@@ -24,7 +24,9 @@ const HomeHeader = () => {
         <h1 className="pb-6 pl-5 text-6xl font-bold text-slate-50 font-orb text-shadow-1 bp5:text-4xl">
           BIENVENUE CHEZ
           <br />
-          <span className="font-extrabold text-[7.5rem] bp4:text-[4.5rem]">STAR TOUR</span>
+          <span className="font-extrabold text-[7.5rem] bp4:text-[4.5rem]">
+            STAR TOUR
+          </span>
         </h1>
         <Typist.Delay ms={500} />
         <h2 className="pl-5 text-[2.4rem] text-white font-orb text-shadow-2 bp5:text-[1.5rem]">

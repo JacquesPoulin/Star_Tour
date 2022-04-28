@@ -17,6 +17,13 @@ ensuite il faut écrire dans :
 @tailwind utilities;
 
 @layer utilities {
+  .bg_nightsky {
+    @apply bg-repeat bg-auto bg-night;
+  }
+  .bg_lightsky {
+    @apply bg-repeat bg-auto bg-light;
+  }
+
   .text-shadow-1 {
     text-shadow: 6px 6px 10px rgb(0, 0, 0, 0.8);
   }

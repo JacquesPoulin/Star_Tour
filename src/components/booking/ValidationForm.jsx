@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import BookingRecap from "./BookingRecap";
 
 const ValidationForm = ({
   passengers,
@@ -34,9 +35,8 @@ const ValidationForm = ({
 
   return (
     <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1">
-
       <form className="flex flex-col mt-4">
-        <h1 className="text-center mb-3 tracking-wide">VALIDEZ VOTRE VOYAGE</h1>
+        <h1 className="mb-3 tracking-wide text-center">VALIDEZ VOTRE VOYAGE</h1>
 
         {/* FORM CONTAINER */}
         <div className="flex flex-col justify-center gap-4 m-8">
@@ -47,13 +47,10 @@ const ValidationForm = ({
               <input
                 id="firstName"
                 type="text"
-
                 pattern="/^[A-Za-z]+$/i"
                 required
-                className="w-auto rounded-sm mt-4 focus:border-lime-500
-              text-slate-900"
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
                 onChange={(e) => setFirstName(e.target.value)}
-
               />
             </label>
 
@@ -62,13 +59,10 @@ const ValidationForm = ({
               <input
                 id="lastName"
                 type="text"
-
                 pattern="/^[A-Za-z]+$/i"
                 required
-                className="w-auto rounded-sm mt-4 focus:border-lime-500
-              text-slate-900"
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
                 onChange={(e) => setLastName(e.target.value)}
-
               />
             </label>
           </div>
@@ -81,9 +75,7 @@ const ValidationForm = ({
                 id="phone"
                 type="phone"
                 required
-                className="w-auto rounded-sm mt-4 focus:border-lime-500
-              text-slate-900"
-
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
               />
             </label>
 
@@ -93,9 +85,7 @@ const ValidationForm = ({
                 id="mail"
                 type="email"
                 required
-                className="w-auto rounded-sm mt-4 focus:border-lime-500
-              text-slate-900"
-
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
               />
             </label>
           </div>
@@ -118,7 +108,7 @@ const ValidationForm = ({
 
         <button
           type="button"
-          className="m-auto mt-20 mb-5 tracking-wide transition-all duration-700 bg-gray-800 rounded-sm cursor-pointer  w-36 hover:scale-110"
+          className="m-auto mt-20 mb-5 tracking-wide transition-all duration-700 bg-gray-800 rounded-sm cursor-pointer w-36 hover:scale-110"
           onClick={openModalRecap}
         >
           Submit

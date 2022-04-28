@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
@@ -38,19 +39,19 @@ const BookingForm = () => {
   }, [endDate]);
 
   return (
-    <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
+    <div className="bg_nightsky dark:bg_lightsky">
       <NavBar />
       <div className="w-full flex-column pb-14 pt-44">
         {/* TITLE */}
         <div className="w-full">
-          <h1 className="text-6xl p-8 text-center text-slate-50 font-orb text-shadow-wh tracking-wide bp5:text-4xl">
+          <h1 className="p-8 text-6xl tracking-wide text-center text-slate-50 font-orb text-shadow-wh bp5:text-4xl">
             C'est le moment de reserver les vacances de vos rêves !
           </h1>
         </div>
 
         {/* DESTINATION CHOICE */}
-        <div className="w-full flex flex-col justify-center items-center mt-20 text-slate-50">
-          <h2 className="mb-4 text-2xl text-slate-50 font-exo tracking-wide">
+        <div className="flex flex-col items-center justify-center w-full mt-20 text-slate-50">
+          <h2 className="mb-4 text-2xl tracking-wide text-slate-50 font-exo">
             1. OÙ SOUHAITEZ-VOUS ALLEZ ?
           </h2>
           <Select
@@ -83,9 +84,9 @@ const BookingForm = () => {
           <h2 className="mt-20 mb-4 text-2xl text-slate-50 font-exo">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
           </h2>
-          <div className="w-full flex justify-center rounded-md">
-            <div className="w-1/3 flex flex-row justify-center items-center text-slate-900  rounded-md gap-4">
-              <p className="text-slate-50 text-xl flex justify-center items-center font-exo tracking-wide">
+          <div className="flex justify-center w-full rounded-md">
+            <div className="flex flex-row items-center justify-center w-1/3 gap-4 rounded-md text-slate-900">
+              <p className="flex items-center justify-center text-xl tracking-wide text-slate-50 font-exo">
                 DU
               </p>
               <DatePicker
@@ -94,9 +95,9 @@ const BookingForm = () => {
                 startDate={startDate}
                 endDate={endDate}
                 onChange={(date) => setStartDate(date)}
-                className="text-slate-900  rounded-md text-center font-semibold"
+                className="font-semibold text-center rounded-md text-slate-900"
               />
-              <p className="text-slate-50 text-xl flex justify-center items-center font-exo tracking-wide">
+              <p className="flex items-center justify-center text-xl tracking-wide text-slate-50 font-exo">
                 AU
               </p>
               <DatePicker
@@ -106,7 +107,7 @@ const BookingForm = () => {
                 endDate={endDate}
                 minDate={startDate}
                 onChange={(date) => setEndDate(date)}
-                className="text-slate-900 text-center  rounded-md font-semibold"
+                className="font-semibold text-center rounded-md text-slate-900"
               />
             </div>
           </div>
@@ -129,8 +130,8 @@ const BookingForm = () => {
         </div>
 
         {/* PASSENGERS NUMBER */}
-        <div className="w-full flex flex-col justify-center items-center mt-10 mb-20 ">
-          <h2 className="mt-7 mb-4 text-2xl text-slate-50 font-exo tracking-wide">
+        <div className="flex flex-col items-center justify-center w-full mt-10 mb-20 ">
+          <h2 className="mb-4 text-2xl tracking-wide mt-7 text-slate-50 font-exo">
             3. NOMBRE DE VOYAGEURS ?
           </h2>
           <select
