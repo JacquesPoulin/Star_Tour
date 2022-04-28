@@ -24,12 +24,12 @@ const ShipSort = ({ sort, setSort }) => {
         <div className="flex flex-row gap-4">
           <SortButton
             name="cap_asc"
-            img="assets/images/sort_asc.png"
+            img="./assets/images/sort_asc.png"
             setSort={setSort}
           />
           <SortButton
             name="cap_desc"
-            img="assets/images/sort_desc.png"
+            img="./assets/images/sort_desc.png"
             setSort={setSort}
           />
         </div>
@@ -43,12 +43,12 @@ const ShipSort = ({ sort, setSort }) => {
         <div className="flex flex-row gap-4">
           <SortButton
             name="hyp_asc"
-            img="assets/images/sort_asc.png"
+            img="./assets/images/sort_asc.png"
             setSort={setSort}
           />
           <SortButton
             name="hyp_desc"
-            img="assets/images/sort_desc.png"
+            img="./assets/images/sort_desc.png"
             setSort={setSort}
           />
         </div>

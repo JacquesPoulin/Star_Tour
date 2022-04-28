@@ -53,7 +53,7 @@ const Question = () => {
                 <div className="relative z-0 flex mt-16 flex-row m-2 h-[32rem] bp2_1:hidden">
                   <img
                     className="w-full h-full "
-                    src="assets/images/c3po.png"
+                    src="./assets/images/c3po.png"
                     alt="c3p0 et r2d2"
                   />
                 </div>

@@ -24,7 +24,7 @@ const HomeDescription = () => {
             </p>
           </div>
           <img
-            src="../assets/images/startourHomeHelloThere.gif"
+            src="./assets/images/startourHomeHelloThere.gif"
             alt="hellothere"
             className="mb-4 w-60 rounded-xl box-shadow-1"
           />
@@ -53,7 +53,7 @@ const HomeDescription = () => {
             </p>
           </div>
           <img
-            src="../assets/images/fun-begins.gif"
+            src="./assets/images/fun-begins.gif"
             alt="hellothere"
             className="mb-4 w-60 rounded-xl box-shadow-1"
           />
