@@ -4,7 +4,22 @@ import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
 import BookingRecap from "./BookingRecap";
 
-const ValidationForm = ({ setFirstName, setLastName }) => {
+const ValidationForm = ({
+  firstName,
+  lastName,
+  passengers,
+  destination,
+  startDate,
+  endDate,
+  ships,
+  setShips,
+  setFirstName,
+  setLastName,
+  setPassengers,
+  setDestination,
+  setStartDate,
+  setEndDate,
+}) => {
   const { register, formState, handleSubmit } = useForm({
     mode: "onChange",
   });
@@ -115,7 +130,18 @@ const ValidationForm = ({ setFirstName, setLastName }) => {
         >
           Submit
         </button>
-        {modalRecap && <BookingRecap closeModal={closeModalRecap} />}
+        {modalRecap && (
+          <BookingRecap
+            closeModal={closeModalRecap}
+            firstName={firstName}
+            lastName={lastName}
+            passengers={passengers}
+            destination={destination}
+            startDate={startDate}
+            endDate={endDate}
+            ships={ships}
+          />
+        )}
       </form>
     </div>
   );
@@ -124,6 +150,17 @@ const ValidationForm = ({ setFirstName, setLastName }) => {
 ValidationForm.propTypes = {
   setFirstName: PropTypes.func.isRequired,
   setLastName: PropTypes.func.isRequired,
-  modalRecap: PropTypes.func.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  passengers: PropTypes.number.isRequired,
+  destination: PropTypes.string.isRequired,
+  startDate: PropTypes.number.isRequired,
+  endDate: PropTypes.number.isRequired,
+  ships: PropTypes.string.isRequired,
+  setShips: PropTypes.func.isRequired,
+  setPassengers: PropTypes.func.isRequired,
+  setDestination: PropTypes.func.isRequired,
+  setStartDate: PropTypes.func.isRequired,
+  setEndDate: PropTypes.func.isRequired,
 };
 export default ValidationForm;
