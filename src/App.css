@@ -72,6 +72,6 @@ ensuite il faut écrire dans :
     }
   }
   .modal-bg {
-    box-shadow: 0px 0px 0px 400px rgb(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px 400px rgb(0, 0, 0, 0.5), 0px 0px 25px black;
   }
 }
