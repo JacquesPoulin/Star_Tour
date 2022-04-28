@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <header className="absolute flex h-20 min-w-full justify-content-between">
       {/* DESKTOP MENU */}
-      <div className="flex items-center justify-center h-20 min-w-full font-exo text-slate-50 dark:text-slate-900 bp2:justify-start">
+      <div className="flex items-center justify-center h-20 min-w-full font-exo text-slate-50 bp2:justify-start">
         <NavLink to="/home">
           {/* Site logo */}
           <img
@@ -19,7 +19,7 @@ const NavBar = () => {
           />
         </NavLink>
         {/* NAVBAR */}
-        <ul className="flex justify-end w-full h-20 text-2xl text-shadow-gr bp2:hidden">
+        <ul className="flex justify-end w-full h-20 text-2xl text-shadow-gr bp2:hidden ">
           <NavLink to="/home">
             <li className="py-10 mb-10 mr-10 font-medium hover:underline">
               Accueil
@@ -76,17 +76,17 @@ const NavBar = () => {
       </div>
       <Transition
         show={isOpen}
-        enter="transition ease-out duration-1000"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-1000"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95 duration-1000"
+        enter="transition-opacity duration-1000"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-1000"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
       >
         {/* MOBILE MENU */}
         {isOpen && (
-          <div className="absolute right-0 md:hidden top-20 mr-7 lg:hidden">
-            <ul className="text-xl text-slate-50 hover:to-slate-900">
+          <div className="absolute p-4 rounded-md md:hidden right-8 top-20 lg:hidden bg-slate-900">
+            <ul className="items-center justify-center text-xl text-center text-slate-50 font-exo">
               <NavLink to="/home">
                 <li className="mt-4 mb-6 font-medium hover:underline">
                   Accueil
