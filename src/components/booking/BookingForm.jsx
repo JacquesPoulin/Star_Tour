@@ -9,33 +9,21 @@ import fr from "date-fns/locale/fr";
 import NavBar from "../Navbar";
 import planetsBooking from "../../../data/planetsBooking";
 import ValidationForm from "./ValidationForm";
-// import PassengerInput from "./PassengerInput";
 
 setDefaultLocale("fr");
 registerLocale("fr", fr);
 
 const BookingForm = () => {
   // >> STATES & SETTERS
-  const [planetChoice, setPlanetChoice] = useState("Aucune idée !");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfDays, setNumberOfDays] = useState(0);
   const [passengers, setPassengers] = useState(0);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
   const [ships, setShips] = useState("");
-  const [destination, setDestination] = useState("");
+  const [destination, setDestination] = useState("Aucune idée !");
 
   // >> FUNCTIONS
-  const userChoiceHandler = (e) => {
-    setPlanetChoice(e.value);
-  };
-  const dateArrivalChangeHandler = (date) => {
-    setStartDate(date);
-  };
-  const dateDepartureChangeHandler = (date) => {
-    setEndDate(date);
-  };
+
   const sejour = (date1, date2) => {
     const differenceInTime = date2.getTime() - date1.getTime();
     return Math.floor(differenceInTime / (1000 * 3600 * 24));
@@ -68,11 +56,11 @@ const BookingForm = () => {
           <Select
             placeholder="Choisissez votre planète ..."
             options={planetsBooking}
-            value={planetChoice}
-            onChange={userChoiceHandler}
+            value={destination}
+            onChange={(e) => setDestination(e.value)}
             className="w-1/3 text-slate-900"
           />
-          {planetChoice === "Aucune idée !" && (
+          {destination === "Aucune idée !" && (
             <Link to="/quiz">
               <button
                 type="button"
@@ -82,14 +70,15 @@ const BookingForm = () => {
               </button>
             </Link>
           )}
-          {planetChoice !== "Aucune idée !" && (
+          {destination !== "Aucune idée !" && (
             <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1 hover:scale-[1.01] tracking-wide">
-              Mon choix :{" "}
+              Mon choix :
               <span className="text-lime-200 animate-pulse">
-                {planetChoice.toUpperCase()}
+                {destination.toUpperCase()}
               </span>
             </div>
           )}
+          {console.log(destination)}
           {/* JOURNEY DATES */}
           <h2 className="mt-20 mb-4 text-2xl text-slate-50 font-exo">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
@@ -104,7 +93,7 @@ const BookingForm = () => {
                 selectsStart
                 startDate={startDate}
                 endDate={endDate}
-                onChange={dateArrivalChangeHandler}
+                onChange={(date) => setStartDate(date)}
                 className="text-slate-900  rounded-md text-center font-semibold"
               />
               <p className="text-slate-50 text-xl flex justify-center items-center font-exo tracking-wide">
@@ -116,12 +105,13 @@ const BookingForm = () => {
                 startDate={startDate}
                 endDate={endDate}
                 minDate={startDate}
-                onChange={dateDepartureChangeHandler}
+                onChange={(date) => setEndDate(date)}
                 className="text-slate-900 text-center  rounded-md font-semibold"
               />
             </div>
           </div>
-
+          {console.log(startDate)}
+          {console.log(endDate)}
           {/* WARNING MESSAGE */}
           {numberOfDays < 3 && (
             <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1 hover:scale-[1.01] tracking-wide">
@@ -157,7 +147,7 @@ const BookingForm = () => {
           </select>
           {passengers >= 1 && (
             <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1 hover:scale-[1.01] tracking-wide">
-              Nombre de voyageur(s) :
+              Nombre de voyageur(s) :{" "}
               <span className="text-lime-200 animate-pulse">{passengers}</span>
             </div>
           )}
@@ -165,18 +155,10 @@ const BookingForm = () => {
           {/* VALIDATION FORM */}
           {passengers >= 1 && (
             <ValidationForm
-              firstName={firstName}
-              setFirstName={setFirstName}
-              lastName={lastName}
-              setLastName={setLastName}
               passengers={passengers}
-              setPassengers={setPassengers}
               destination={destination}
-              setDestination={setDestination}
               startDate={startDate}
-              setStartDate={setStartDate}
               endDate={endDate}
-              setEndDate={setEndDate}
               ships={ships}
               setShips={setShips}
             />
