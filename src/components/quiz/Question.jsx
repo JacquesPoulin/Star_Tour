@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable react/jsx-no-useless-fragment */
 import React, { useState, useEffect } from "react";
 import quizForm from "../../../data/quizForm";
 import Result from "./Result";

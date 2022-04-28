@@ -9,7 +9,7 @@ const BookingRecap = () => {
         </h1>
         <button
           type="button"
-          className="self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105 bp2_1:text-2xl"
+          className="self-end mr-4 text-5xl text-slate-50 text-shadow-3 dark:text-shadow-2 font-orb -mt-52 hover:scale-105 bp2_1:text-2xl"
         >
           X
         </button>

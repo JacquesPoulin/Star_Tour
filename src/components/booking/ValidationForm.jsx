@@ -34,7 +34,7 @@ const ValidationForm = ({
   // ------------------------------------------
 
   return (
-    <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1">
+    <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2">
       <form className="flex flex-col mt-4">
         <h1 className="mb-3 tracking-wide text-center">VALIDEZ VOTRE VOYAGE</h1>
 
