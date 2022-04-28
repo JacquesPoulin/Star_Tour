@@ -10,7 +10,7 @@ const Booking = () => {
     <div>
       <NavBar />
       <BookingForm />
-      <BookingRecap />
+      {/* <BookingRecap /> */}
       <Footer />
       <GoToTop />
     </div>
