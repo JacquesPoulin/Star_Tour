@@ -10,7 +10,7 @@ const PlanetsFilters = ({ filter, setFilter }) => {
   };
   return (
     <div className="h-64 pl-10 bp2:pl-0 w-fit">
-      <h1 className="mt-10 text-4xl text-left bp2:px-6 bp3:text-3xl text-slate-50 font-orb text-shadow-1">
+      <h1 className="mt-10 text-4xl text-left bp2:px-6 bp3:text-3xl text-slate-50 dark:text-slate-900 dark:text-shadow-2 font-orb text-shadow-1">
         Filtrer les planètes :{" "}
         <span className="text-2xl italic">{filter && `${filter}`}</span>
       </h1>
