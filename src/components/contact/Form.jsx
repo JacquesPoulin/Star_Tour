@@ -1,5 +1,3 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 
@@ -82,8 +80,8 @@ const Form = () => {
               <input
                 type="tel"
                 pattern="[0-9]{10}"
-                name="floating_phone"
-                id="floating_phone"
+                name="floating_number"
+                id="floating_number"
                 autoComplete="none"
                 required="required"
                 className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 dark:text-slate-900 font-exo bg-transparent border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
@@ -121,7 +119,10 @@ const Form = () => {
 
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
-          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]">
+          <button
+            type="button"
+            className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]"
+          >
             ENVOYER
           </button>
         </section>
