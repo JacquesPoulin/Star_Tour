@@ -11,7 +11,7 @@ const PlanetsList = ({ search, filter }) => {
     search: PropTypes.string.isRequired,
   };
   return (
-    <div className="flex flex-wrap items-center justify-center gap-10 p-20">
+    <div className="flex flex-wrap items-center justify-center gap-10 p-20 bp5:p-0">
       {planets
         .filter((planet) => planet.biome === filter || !filter)
         .filter((planet) => planet.name.toLowerCase().startsWith(search))
