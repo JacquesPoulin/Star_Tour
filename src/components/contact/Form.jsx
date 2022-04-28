@@ -7,16 +7,17 @@ const Form = () => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-center mx-16 pt-36">
-        <h1 className=" bg-transparent border-2 border-[#0780FE] dark:border-[#FF0010] shadow-lg shadow-[#0780FE]/50 dark:shadow-[#FF0010]/50 text-lg tracking-[0.2rem] text-[#0780FE] dark:text-[#FF0010] font-orb text-center px-20 py-4">
-          CONTACT
+        <h1 className="w-4/6 text-6xl text-center text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2 bp4:text-4xl bp4:w-full bp4:text-center">
+          Contact
         </h1>
       </div>
       <div className="flex justify-center">
-        <p className="w-4/5 text-sm m-12 px-6 text-center border-2 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo bp3:border-none">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-          provident ipsa quis, recusandae porro dicta nesciunt doloremque
-          corporis, fuga necessitatibus corrupti voluptas perspiciatis magnam et
-          vitae rem voluptatum deserunt nam.
+        <p className="w-4/5 text-lg m-12 px-6 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo bp3:border-none">
+          Pour nous contacter, utilisez ce formulaire. Pour que nous puissions
+          vous répondre, veuillez remplir votre pseudo et votre email. <br />
+          Exprimez votre message de façon clair pour que votre demande soit
+          traitée le plus rapidement possible. <br />
+          Merci et à bientôt chez Star Tour.
         </p>
       </div>
       {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
@@ -32,7 +33,7 @@ const Form = () => {
                 name="floating_firstname"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0100] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0100] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -49,7 +50,7 @@ const Form = () => {
                 name="floating_lastname"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -66,7 +67,7 @@ const Form = () => {
                 name="floating_email"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -85,7 +86,7 @@ const Form = () => {
                 id="floating_phone"
                 autoComplete="none"
                 required="required"
-                className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 dark:text-slate-900 font-exo bg-transparent border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
+                className="cursor-pointer w-96 pl-3 py-2.5 text-sm text-slate-50 dark:text-slate-900 font-exo bg-transparent border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
                 placeholder=" "
               />
               <label
@@ -106,7 +107,7 @@ const Form = () => {
               name="floating_message"
               autoComplete="none"
               required="required"
-              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 dark:text-slate-900 cursor-pointer font-exo border-0 border-b-2 border-l-2 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
+              className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 dark:text-slate-900 cursor-pointer font-exo border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
               placeholder=" "
             />
             <label
@@ -120,7 +121,7 @@ const Form = () => {
 
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
-          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-2 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]">
+          <button className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]">
             ENVOYER
           </button>
         </section>
@@ -128,7 +129,7 @@ const Form = () => {
 
       <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat">
         {/* Container Helps + Icons */}
-        <div className="w-6/6 h-0.5 -m-5 bg-[#0780FE] dark:bg-[#FF0010]" />
+        <div className="w-6/6 h-1 -m-5 bg-[#0780FE] dark:bg-[#FF0010]" />
         <div className="flex flex-row flex-wrap w-full md:pb-px20">
           {/* Helps -- phone -- adress -- faq */}
           <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">

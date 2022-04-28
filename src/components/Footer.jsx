@@ -1,9 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full p-5 bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat font-exo dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat">
+    <footer className="w-full p-5 bg_nightsky dark:bg_lightsky">
       {/* Container Helps + Icons */}
       <div className="w-6/6 h-0.5 -m-5 bg-slate-50 dark:bg-slate-900" />
       <div className="flex flex-row flex-wrap w-full md:pb-px20">

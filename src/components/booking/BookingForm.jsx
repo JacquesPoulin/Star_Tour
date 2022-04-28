@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
@@ -46,7 +47,7 @@ const BookingForm = () => {
   }, [endDate]);
 
   return (
-    <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat">
+    <div className="bg_nightsky dark:bg_lightsky">
       <NavBar />
       <div className="w-full flex-column pb-14 pt-44">
         {/* TITLE */}

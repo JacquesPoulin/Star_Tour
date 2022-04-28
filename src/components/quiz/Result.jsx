@@ -37,7 +37,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat dark:bg-[url('./assets/images/quizPic/white.jpg')] dark:bg-[length:100vw] dark:bg-repeat">
+    <div className="h-[100vh] w-[100vw] bg_nightsky dark:bg_lightsky">
       <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] fixed flex flex-column justify-center w-3/5 rounded-xl box-shadow-1 dark:box-shadow-2">
         <img
           src={img}
