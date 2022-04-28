@@ -11,7 +11,10 @@ const HomeHeader = () => {
         loop
         muted
       >
-        <source src="assets/videos/star-tour-header-vid.mp4" type="video/mp4" />
+        <source
+          src="./assets/videos/star-tour-header-vid.mp4"
+          type="video/mp4"
+        />
       </video>
       <Typist avgTypingDelay={70} stdTypingDelay={0}>
         <Typist.Delay ms={1000} />
@@ -41,7 +44,7 @@ const HomeHeader = () => {
         className="self-center w-16 mt-32 mb-6 sha hover:scale-110"
       >
         <button type="button" href="#homeDesc">
-          <img src="assets/images/arrowdown.png" alt="fleche de direction" />
+          <img src="./assets/images/arrowdown.png" alt="fleche de direction" />
         </button>
       </Link>
     </div>
