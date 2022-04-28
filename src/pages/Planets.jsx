@@ -20,7 +20,7 @@ const Planets = () => {
     <div className="bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
       <NavBar />
       <div className="flex items-center justify-center pb-14 pt-44">
-        <h1 className="w-4/6 text-6xl text-center text-slate-50 font-orb text-shadow-wh">
+        <h1 className="w-4/6 text-6xl text-center text-slate-50 font-orb text-shadow-wh bp4:text-4xl">
           Découvrez toutes les destinations disponibles !
         </h1>
       </div>
