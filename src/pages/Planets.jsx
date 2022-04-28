@@ -20,7 +20,11 @@ const Planets = () => {
     <div className="bg_nightsky dark:bg_lightsky">
       <NavBar />
       <div className="flex items-center justify-center pb-14 pt-44">
+<<<<<<< HEAD
         <h1 className="w-4/6 text-6xl text-center text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2">
+=======
+        <h1 className="w-4/6 text-6xl text-center text-slate-50 font-orb text-shadow-wh bp4:text-4xl">
+>>>>>>> 87b47626974ad6b55018428e632140cb0aef427a
           Découvrez toutes les destinations disponibles !
         </h1>
       </div>
