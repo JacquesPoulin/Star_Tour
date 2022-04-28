@@ -5,12 +5,20 @@ import PropTypes from "prop-types";
 import BookingRecap from "./BookingRecap";
 
 const ValidationForm = ({
-  lastname,
+  firstName,
+  lastName,
   passengers,
   destination,
   startDate,
   endDate,
   ships,
+  setShips,
+  setFirstName,
+  setLastName,
+  setPassengers,
+  setDestination,
+  setStartDate,
+  setEndDate,
 }) => {
   const { register, formState, handleSubmit } = useForm({
     mode: "onChange",
@@ -58,6 +66,7 @@ const ValidationForm = ({
                   { pattern: /^[A-Za-z]+$/i }
                 )}
                 className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                onChange={setFirstName}
               />
             </label>
 
@@ -72,6 +81,7 @@ const ValidationForm = ({
                   { pattern: /^[A-Za-z]+$/i }
                 )}
                 className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                onChange={setLastName}
               />
             </label>
           </div>
@@ -122,13 +132,14 @@ const ValidationForm = ({
         </button>
         {modalRecap && (
           <BookingRecap
-            lastname={lastname}
+            closeModal={closeModalRecap}
+            firstName={firstName}
+            lastName={lastName}
             passengers={passengers}
             destination={destination}
             startDate={startDate}
             endDate={endDate}
             ships={ships}
-            closeModal={closeModalRecap}
           />
         )}
       </form>
@@ -137,12 +148,19 @@ const ValidationForm = ({
 };
 
 ValidationForm.propTypes = {
-  modalRecap: PropTypes.func.isRequired,
-  lastname: PropTypes.string.isRequired,
+  setFirstName: PropTypes.func.isRequired,
+  setLastName: PropTypes.func.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
   passengers: PropTypes.number.isRequired,
   destination: PropTypes.string.isRequired,
   startDate: PropTypes.number.isRequired,
   endDate: PropTypes.number.isRequired,
   ships: PropTypes.string.isRequired,
+  setShips: PropTypes.func.isRequired,
+  setPassengers: PropTypes.func.isRequired,
+  setDestination: PropTypes.func.isRequired,
+  setStartDate: PropTypes.func.isRequired,
+  setEndDate: PropTypes.func.isRequired,
 };
 export default ValidationForm;
