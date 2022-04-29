@@ -120,7 +120,7 @@ const Form = () => {
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
           <button
-            type="button"
+            type="submit"
             className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]"
           >
             ENVOYER
