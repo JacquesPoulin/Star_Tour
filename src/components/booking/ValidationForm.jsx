@@ -1,23 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
 import BookingRecap from "./BookingRecap";
 
 const ValidationForm = ({
-  lastname,
   passengers,
   destination,
   startDate,
   endDate,
   ships,
 }) => {
-  const { register, formState, handleSubmit } = useForm({
-    mode: "onChange",
-  });
-
+  // >> STATES & SETTERS
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
   const [modalRecap, setModalRecap] = useState(false);
 
+  // ------------------------------------------
+
+  // >> FUNCTIONS
   const openModalRecap = () => {
     setModalRecap(true);
   };
@@ -26,25 +27,19 @@ const ValidationForm = ({
     setModalRecap(false);
   };
 
-  const { isSubmitSuccessful } = formState;
-
-  const onSubmit = (data) => {
-    console.log(data);
+  const HandleCheckboxClick = () => {
+    setIsChecked(!isChecked);
   };
 
-  return (
-    <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 rounded-lg font-orb text-shadow-3 bg-opacity-80 text-slate-50 box-shadow-1">
-      <form className="flex flex-col mt-4" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="text-center mb-3 tracking-wide">VALIDEZ VOTRE VOYAGE</h1>
+  // ------------------------------------------
 
-        {isSubmitSuccessful && (
-          <div className=" text-lime-300 m-auto font-orb 	animate-pulse">
-            Votre Voyage est confirmé !
-          </div>
-        )}
+  return (
+    <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2">
+      <form className="flex flex-col mt-4">
+        <h1 className="mb-3 tracking-wide text-center">VALIDEZ VOTRE VOYAGE</h1>
 
         {/* FORM CONTAINER */}
-        <div className="m-8 flex flex-col justify-center gap-4">
+        <div className="flex flex-col justify-center gap-4 m-8">
           {/* FirstName & Name */}
           <div className="flex ">
             <label htmlFor="firstName" className="mt-4 tracking-wide">
@@ -52,26 +47,22 @@ const ValidationForm = ({
               <input
                 id="firstName"
                 type="text"
-                {...register(
-                  "firstName",
-                  { required: true },
-                  { pattern: /^[A-Za-z]+$/i }
-                )}
-                className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                pattern="/^[A-Za-z]+$/i"
+                required
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
+                onChange={(e) => setFirstName(e.target.value)}
               />
             </label>
 
-            <label htmlFor="lastname" className="mt-4 tracking-wide">
+            <label htmlFor="lastName" className="mt-4 tracking-wide">
               Nom *
               <input
-                id="lastname"
+                id="lastName"
                 type="text"
-                {...register(
-                  "lastname",
-                  { required: true },
-                  { pattern: /^[A-Za-z]+$/i }
-                )}
-                className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                pattern="/^[A-Za-z]+$/i"
+                required
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
+                onChange={(e) => setLastName(e.target.value)}
               />
             </label>
           </div>
@@ -82,9 +73,9 @@ const ValidationForm = ({
               Téléphone *
               <input
                 id="phone"
-                type="text"
-                {...register("phone", { required: true })}
-                className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                type="phone"
+                required
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
               />
             </label>
 
@@ -93,42 +84,45 @@ const ValidationForm = ({
               <input
                 id="mail"
                 type="email"
-                {...register("email", { required: true })}
-                className="w-auto rounded-sm mt-4 focus:border-lime-500 text-slate-900"
+                required
+                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
               />
             </label>
           </div>
         </div>
         <label
           htmlFor="acceptedTerms"
-          className="mt-20 text-center tracking-wide"
+          className="mt-20 tracking-wide text-center"
         >
           <input
             id="acceptedTerms"
             name="useraccepted"
             type="checkbox"
-            {...register("acceptedTerms", { required: true })}
+            checked={isChecked}
+            onClick={HandleCheckboxClick}
             className="mr-4 rounded-sm focus:border-lime-500"
+            required
           />
           J'accepte les termes du contrat *
         </label>
 
         <button
           type="button"
-          className=" w-36 m-auto rounded-sm mt-20 mb-5 hover:scale-110 bg-gray-800 tracking-wide transition-all duration-700 cursor-pointer"
+          className="m-auto mt-20 mb-5 tracking-wide transition-all duration-700 bg-gray-800 rounded-sm cursor-pointer w-36 hover:scale-110"
           onClick={openModalRecap}
         >
           Submit
         </button>
         {modalRecap && (
           <BookingRecap
-            lastname={lastname}
+            closeModalRecap={closeModalRecap}
+            firstName={firstName}
+            lastName={lastName}
             passengers={passengers}
             destination={destination}
             startDate={startDate}
             endDate={endDate}
             ships={ships}
-            closeModal={closeModalRecap}
           />
         )}
       </form>
@@ -137,12 +131,10 @@ const ValidationForm = ({
 };
 
 ValidationForm.propTypes = {
-  modalRecap: PropTypes.func.isRequired,
-  lastname: PropTypes.string.isRequired,
   passengers: PropTypes.number.isRequired,
   destination: PropTypes.string.isRequired,
-  startDate: PropTypes.number.isRequired,
-  endDate: PropTypes.number.isRequired,
+  startDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
   ships: PropTypes.string.isRequired,
 };
 export default ValidationForm;
