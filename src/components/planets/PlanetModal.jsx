@@ -62,9 +62,9 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
           />
         </div>
         {/* Grid de la partie inférieure */}
-        <div className="gap-x-20 gap-y-6 p-6 grid bp2:flex bp2:flex-col grid-cols-[1fr_1fr] grid-rows-[1fr_1fr_1fr_1fr] h-[360px] bp2:h-auto bg-[url(assets/images/modal_bg.jpg)] -mt-12 bg-cover bg-center rounded-b-xl">
+        <div className="gap-x-20 gap-y-6 p-6 grid bp2:flex bp2:flex-col grid-cols-[1fr_1fr] grid-rows-[1fr_1fr_1fr_1fr] h-[360px] bp2:h-auto bg-[url('/assets/images/modal_bg.jpg')] -mt-12 bg-cover bg-center rounded-b-xl">
           {/* Description */}
-          <div className="col-[1_/_2] row-[1_/_4] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover opacity-95">
+          <div className="col-[1_/_2] row-[1_/_4] rounded-xl box-shadow-2 bg-[url('/assets/images/modal_dark_bg2.jpg')] bg-cover opacity-95">
             <p className="pt-2 pl-6 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] font-thin font-exo text-slate-50 text-shadow-3">
               Description :
             </p>
@@ -84,7 +84,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
             </Link>
           </div>
           {/* Infos */}
-          <div className="flex flex-col justify-center items-start col-[2_/_3] row-[1_/_3] rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover bg-center opacity-95">
+          <div className="flex flex-col justify-center items-start col-[2_/_3] row-[1_/_3] rounded-xl box-shadow-2 bg-[url('/assets/images/modal_dark_bg2.jpg')] bg-cover bg-center opacity-95">
             {/* image books */}
             <img
               src="assets/images/books.png"
@@ -131,7 +131,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
             </div>
           </div>
           {/* Météo */}
-          <div className="col-[2_/_3] row-[3_/_5] rounded-xl box-shadow-2 bg-[url(assets/images/meteo.png),url(assets/images/modal_dark_bg2.jpg)] bg-cover bg-center opacity-95">
+          <div className="col-[2_/_3] row-[3_/_5] rounded-xl box-shadow-2 bg-[url('/assets/images/meteo.png'),url('/assets/images/modal_dark_bg2.jpg')] bg-cover bg-center opacity-95">
             <div className="flex flex-col items-start justify-center pt-2 pl-6 font-thin text-slate-50 font-exo">
               <p className="pb-2 text-xl bp1:text-[1.2vw] bp2:text-[2.8vw] bp3:text-[3.5vw] text-shadow-3">
                 Météo / Période de visite conseillée :
