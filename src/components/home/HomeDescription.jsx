@@ -6,7 +6,7 @@ const HomeDescription = () => {
       id="homedescription"
       className="flex flex-col px-10 py-10 bg_nightsky dark:bg_lightsky"
     >
-      <h1 className="mt-2 mb-16 text-4xl sm:mb-0 text-slate-50 dark:text-slate-900 font-orb">
+      <h1 className="mt-2 mb-16 text-4xl text-center sm:mb-0 text-slate-50 dark:text-slate-900 font-orb">
         Qui sommes-nous ?
       </h1>
 
