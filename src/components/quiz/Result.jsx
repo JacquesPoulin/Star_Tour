@@ -24,7 +24,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
         />
         <div className="flex flex-col ">
           <div className="flex flex-col">
-            <div className="m-auto mt-10 w-auto rounded-xl box-shadow-2 bg-[url(assets/images/modal_dark_bg2.jpg)] bg-cover opacity-95">
+            <div className="m-auto mt-10 w-auto rounded-xl box-shadow-2 bg-[url('/assets/images/modal_dark_bg2.jpg')] bg-cover opacity-95">
               <h2 className="p-6 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] font-thin font-orb text-slate-50 text-shadow-3">
                 Votre destination <br />
                 de prédilection est :

@@ -17,7 +17,7 @@ const PlanetsSearch = ({ search, handleSearch }) => {
         type="text"
         value={search}
         onChange={handleSearch}
-        className="w-[400px] text-2xl bg-slate-50 bg-opacity-[10%] bg-[url(assets/images/loupe.png)] bg-contain bg-no-repeat pl-12 text-slate-50 dark:text-slate-900 font-exo p-1 mt-2 rounded-lg border-2 border-slate-50 focus:border-slate-50 dark:border-slate-900 box-shadow-1 focus:box-shadow-1 bp4:w-[300px]"
+        className="w-[400px] text-2xl bg-slate-50 bg-opacity-[10%] bg-[url('/assets/images/loupe.png')] bg-contain bg-no-repeat pl-12 text-slate-50 dark:text-slate-900 font-exo p-1 mt-2 rounded-lg border-2 border-slate-50 focus:border-slate-50 dark:border-slate-900 box-shadow-1 focus:box-shadow-1 bp4:w-[300px]"
       />
       <Link to="/quiz">
         <button
