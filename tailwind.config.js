@@ -21,8 +21,8 @@ module.exports = {
       bp5: { max: "400px" },
     },
     backgroundImage: {
-      night: "url('./assets/images/bg-dark.jpg')",
-      light: "url('./assets/images/bg-light.jpg')",
+      night: "url('/assets/images/bg-dark.jpg')",
+      light: "url('/assets/images/bg-light.jpg')",
     },
   },
 };
