@@ -32,7 +32,8 @@ const BookingRecap = ({
         <p>Nombre de personnes : {passengers} </p>
         <p>Destination : {destination} </p>
         <p>
-          Date : du {startDate} au {endDate}
+          Date : du {startDate.toLocaleString("fr-FR").slice(0, 10)} au{" "}
+          {endDate.toLocaleString("fr-FR").slice(0, 10)} <br />
         </p>
         {/* <p>Transport :</p> */}
       </div>
