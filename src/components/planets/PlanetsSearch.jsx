@@ -9,7 +9,7 @@ const PlanetsSearch = ({ search, handleSearch }) => {
     handleSearch: PropTypes.func.isRequired,
   };
   return (
-    <div className="flex flex-col items-start justify-start p-8 bp2:mt-20 bp4:p-4">
+    <div className="flex flex-col items-start justify-start p-8 bp3:items-center bp2:mt-20 bp4:p-4">
       <h2 className="text-4xl text-slate-50 dark:text-slate-900 font-orb bp4:text-2xl">
         Chercher une planète :
       </h2>
@@ -22,7 +22,7 @@ const PlanetsSearch = ({ search, handleSearch }) => {
       <Link to="/quiz">
         <button
           type="button"
-          className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01]"
+          className="px-4 py-1 mt-12 text-2xl bp3:text-[1.4rem] bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01]"
         >
           J'hésite encore, aidez-moi !
         </button>

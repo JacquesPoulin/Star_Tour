@@ -68,7 +68,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
             <p className="pt-2 pl-6 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] font-thin font-exo text-slate-50 text-shadow-3">
               Description :
             </p>
-            <p className="px-6 pt-3 bp2:pt-2 bp2:pb-2 text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[2.6vw] bp1:leading-6 bp2:leading-4 font-thin font-exo text-slate-50">
+            <p className="px-6 pt-3 bp2:pt-2 bp2:pb-2 text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[3vw] bp1:leading-6 bp2:leading-4 font-thin font-exo text-slate-50">
               {desc}
             </p>
           </div>
@@ -77,7 +77,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
             <Link to="/booking">
               <button
                 type="button"
-                className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]"
+                className="font-medium rounded-md border-2 border-black text-2xl bp1:text-[1.5vw] bp2:text-[2.4vw] bp3:text-[4.2vw] font-exo box-shadow-2 bg-[#679ec2] px-6 hover:scale-[1.01]"
               >
                 JE RESERVE MON VOYAGE !
               </button>
@@ -96,7 +96,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
               <p className="pb-2 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] text-shadow-3 bp2:pt-2">
                 Infos pratiques :
               </p>
-              <div className="flex items-end justify-start text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[2.6vw] bp2:pb-4 bp2:leading-4">
+              <div className="flex items-end justify-start text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[3vw] bp2:pb-4 bp2:leading-4">
                 <p>
                   Diamètre :{" "}
                   {info.diameter !== "unknown" && info.diameter !== "0"
@@ -136,13 +136,13 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
               <p className="pb-2 text-xl bp1:text-[1.2vw] bp2:text-[2.8vw] bp3:text-[3.5vw] text-shadow-3">
                 Météo / Période de visite conseillée :
               </p>
-              <div className="flex items-center justify-center gap-2 pt-1 pl-2 bp1:gap-5">
+              <div className="flex items-center justify-center gap-2 pt-1 pl-2 bp3:pt-0 bp1:gap-5">
                 <img
                   src={weather}
                   className="w-[72px] bp2:w-[7vw] opacity-90 bp2:pb-2"
                   alt="meteo"
                 />
-                <p className="text-2xl bp1:text-[1.4vw] bp2:text-[2.2vw] bp3:text-[3vw] italic text-center text-shadow-3">
+                <p className="text-2xl bp1:text-[1.4vw] bp2:text-[2.2vw] bp3:text-[4vw] italic text-center text-shadow-3">
                   {visit}
                 </p>
               </div>
