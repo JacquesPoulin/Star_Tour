@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import BookingRecap from "./BookingRecap";
+import PassengerName from "./PassengerName";
+import PassengerContact from "./PassengerContact";
+import SubmitForm from "./SubmitForm";
 
 const ValidationForm = ({
   passengers,
@@ -13,6 +16,8 @@ const ValidationForm = ({
   // >> STATES & SETTERS
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [modalRecap, setModalRecap] = useState(false);
 
@@ -27,7 +32,7 @@ const ValidationForm = ({
     setModalRecap(false);
   };
 
-  const HandleCheckboxClick = () => {
+  const handleCheck = () => {
     setIsChecked(!isChecked);
   };
 
@@ -39,80 +44,30 @@ const ValidationForm = ({
         <h1 className="mb-3 tracking-wide text-center">VALIDEZ VOTRE VOYAGE</h1>
 
         {/* FORM CONTAINER */}
-        <div className="flex flex-col justify-center gap-4 m-8">
+        <div className="flex flex-col justify-center m-3 bg-lime-50">
           {/* FirstName & Name */}
           <div className="flex ">
-            <label htmlFor="firstName" className="mt-4 tracking-wide">
-              Prénom *
-              <input
-                id="firstName"
-                type="text"
-                pattern="/^[A-Za-z]+$/i"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-            </label>
-
-            <label htmlFor="lastName" className="mt-4 tracking-wide">
-              Nom *
-              <input
-                id="lastName"
-                type="text"
-                pattern="/^[A-Za-z]+$/i"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-                onChange={(e) => setLastName(e.target.value)}
-              />
-            </label>
+            <PassengerName
+              setFirstName={setFirstName}
+              setLastName={setLastName}
+            />
           </div>
 
           {/* Phone & Mail */}
           <div className="flex">
-            <label htmlFor="phone" className="mt-4 tracking-wide">
-              Téléphone *
-              <input
-                id="phone"
-                type="phone"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-              />
-            </label>
-
-            <label htmlFor="mail" className="mt-4 tracking-wide">
-              Email *
-              <input
-                id="mail"
-                type="email"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-              />
-            </label>
+            <PassengerContact
+              phone={phone}
+              setPhone={setPhone}
+              email={email}
+              setEmail={setEmail}
+            />
           </div>
         </div>
-        <label
-          htmlFor="acceptedTerms"
-          className="mt-20 tracking-wide text-center"
-        >
-          <input
-            id="acceptedTerms"
-            name="useraccepted"
-            type="checkbox"
-            checked={isChecked}
-            onClick={HandleCheckboxClick}
-            className="mr-4 rounded-sm focus:border-lime-500"
-            required
-          />
-          J'accepte les termes du contrat *
-        </label>
-
-        <button
-          type="button"
-          className="m-auto mt-20 mb-5 tracking-wide transition-all duration-700 bg-gray-800 rounded-sm cursor-pointer w-36 hover:scale-110"
-          onClick={openModalRecap}
-        >
-          Submit
-        </button>
+        <SubmitForm
+          isChecked={isChecked}
+          handleCheck={handleCheck}
+          openModalRecap={openModalRecap}
+        />
         {modalRecap && (
           <BookingRecap
             closeModalRecap={closeModalRecap}
