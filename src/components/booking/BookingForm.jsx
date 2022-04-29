@@ -79,7 +79,6 @@ const BookingForm = () => {
               </span>
             </div>
           )}
-          {console.log(destination)}
           {/* JOURNEY DATES */}
           <h2 className="mt-20 mb-4 text-2xl text-slate-50 dark:text-slate-900 font-exo">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
@@ -111,8 +110,6 @@ const BookingForm = () => {
               />
             </div>
           </div>
-          {console.log(startDate)}
-          {console.log(endDate)}
           {/* WARNING MESSAGE */}
           {numberOfDays < 3 && (
             <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01] tracking-wide">
