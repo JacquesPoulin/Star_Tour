@@ -8,11 +8,8 @@ const BookingRecap = ({
   destination,
   startDate,
   endDate,
-  // ships,
   closeModalRecap,
 }) => {
-
-const BookingRecap = () => {
   return (
     // Modal decoration
     <div className="fixed top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[url(assets/images/modal_bg.jpg)] mt-[15%] bg-cover bg-center w-5/6 h-1/2 md:h-4/5 rounded-lg ">
@@ -35,7 +32,8 @@ const BookingRecap = () => {
         <p>Nombre de personnes : {passengers} </p>
         <p>Destination : {destination} </p>
         <p>
-          Date : du {startDate} au {endDate}
+          Date : du {startDate.toLocaleString("fr-FR").slice(0, 10)} au{" "}
+          {endDate.toLocaleString("fr-FR").slice(0, 10)} <br />
         </p>
         {/* <p>Transport :</p> */}
       </div>
@@ -50,7 +48,6 @@ const BookingRecap = () => {
 };
 
 BookingRecap.propTypes = {
-
   closeModalRecap: PropTypes.func.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
@@ -58,6 +55,6 @@ BookingRecap.propTypes = {
   destination: PropTypes.string.isRequired,
   startDate: PropTypes.number.isRequired,
   endDate: PropTypes.number.isRequired,
-  // ships: PropTypes.string.isRequired,
 };
+
 export default BookingRecap;
