@@ -11,6 +11,8 @@ const BookingRecap = ({
   // ships,
   closeModalRecap,
 }) => {
+
+const BookingRecap = () => {
   return (
     // Modal decoration
     <div className="fixed top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[url(assets/images/modal_bg.jpg)] mt-[15%] bg-cover bg-center w-5/6 h-1/2 md:h-4/5 rounded-lg ">
@@ -21,7 +23,7 @@ const BookingRecap = ({
         <button
           type="button"
           onClick={closeModalRecap}
-          className="self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 hover:scale-105 bp2_1:text-2xl"
+          className="self-end mr-4 text-5xl text-slate-50 text-shadow-3 dark:text-shadow-2 font-orb -mt-52 hover:scale-105 bp2_1:text-2xl"
         >
           X
         </button>
@@ -48,7 +50,7 @@ const BookingRecap = ({
 };
 
 BookingRecap.propTypes = {
-  // modalRecap: PropTypes.func.isRequired,
+
   closeModalRecap: PropTypes.func.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,

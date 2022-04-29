@@ -5,6 +5,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+// eslint-disable-next-line import/no-unresolved
 import Tilt from "react-tilt";
 
 const ShipCard = ({ id, name, img, sort }) => {

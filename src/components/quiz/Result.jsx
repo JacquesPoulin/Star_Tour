@@ -1,31 +1,9 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import PlanetModal from "../planets/PlanetModal";
 
 const Result = ({ name, img, id, desc, weather, visit }) => {
-  Result.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
-    visit: PropTypes.string.isRequired,
-  };
-  Result.propTypes = {
-    desc: PropTypes.string.isRequired,
-  };
-  Result.propTypes = {
-    weather: PropTypes.string.isRequired,
-  };
-  Result.propTypes = {
-    visit: PropTypes.string.isRequired,
-  };
-  Result.propTypes = {
-    id: PropTypes.number.isRequired,
-  };
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -37,12 +15,12 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] bg-[url('./assets/images/dark_bg.jpg')] bg-[length:100vw] bg-repeat">
-      <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] fixed flex flex-column justify-center w-3/5 rounded-xl box-shadow-1">
+    <div className="h-[100vh] w-[100vw] bg_nightsky dark:bg_lightsky">
+      <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] fixed flex flex-column justify-center w-3/5 rounded-xl box-shadow-1 dark:box-shadow-2">
         <img
           src={img}
           alt={name}
-          className="absolute z-0 h-full rounded-xl box-shadow-1"
+          className="absolute z-0 h-full rounded-xl box-shadow-1 dark:box-shadow-2"
         />
         <div className="flex flex-col ">
           <div className="flex flex-col">
@@ -91,6 +69,27 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
       )}
     </div>
   );
+};
+
+Result.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  weather: PropTypes.string.isRequired,
+  visit: PropTypes.string.isRequired,
+};
+Result.propTypes = {
+  desc: PropTypes.string.isRequired,
+};
+Result.propTypes = {
+  weather: PropTypes.string.isRequired,
+};
+Result.propTypes = {
+  visit: PropTypes.string.isRequired,
+};
+Result.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default Result;
