@@ -19,9 +19,12 @@ const Form = () => {
         </p>
       </div>
       {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
-      <form className="flex flex-wrap justify-center bp2_1:flex-col bp2_1:justify-center">
+      <form
+        autoComplete="none"
+        className="flex flex-wrap justify-center bp2_1:flex-col bp2_1:justify-center"
+      >
         {/* CREATION SECTION FORM GAUCHE */}
-        <section className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
+        <div className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
           {/* CREATION DIV FORM GAUCHE */}
           <div className="relative flex flex-col">
             {/* CREATION PRENOM */}
@@ -36,7 +39,7 @@ const Form = () => {
               />
               <label
                 htmlFor="floating_firstname"
-                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
               >
                 ÉCRIS TON PRÉNOM*
               </label>
@@ -53,7 +56,7 @@ const Form = () => {
               />
               <label
                 htmlFor="floating_lastname"
-                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
               >
                 ÉCRIS TON NOM*
               </label>
@@ -70,7 +73,7 @@ const Form = () => {
               />
               <label
                 htmlFor="floating_email"
-                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
               >
                 ÉCRIS TON EMAIL*
               </label>
@@ -89,38 +92,38 @@ const Form = () => {
               />
               <label
                 htmlFor="floating_number"
-                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
               >
                 ÉCRIS TON TÉLÉPHONE*
               </label>
             </div>
           </div>
-        </section>
+        </div>
         {/* CREATION SECTION FORM DROIT */}
-        <section className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
+        <div className="flex justify-center w-2/4 bp2_1:flex-col bp2_1:w-full">
           {/* CREATION DIV FORM DROIT */}
           <div className="relative z-0 flex flex-row m-5">
             <textarea
               type="text"
               name="floating_message"
-              autoComplete="none"
+              autoComplete="off"
               required="required"
               className="bp2_1:w-fulltext-sm h-full pl-3 py-2.5 bg-transparent resize-none w-96 text-slate-50 dark:text-slate-900 cursor-pointer font-exo border-0 border-b-4 border-l-4 border-[#0780FE] dark:border-[#FF0010] appearance-none  focus:outline-none focus:ring-0 focus:border-[#0780FE] dark:focus:border-[#FF0010] peer bp2_1:w-full"
               placeholder=" "
             />
             <label
               htmlFor="floating_message"
-              className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className=" ml-3 absolute text-sm text-slate-50 dark:text-slate-900 font-orb duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0780FE] dark:peer-focus:text-[#FF0010] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
             >
               ÉCRIS TON MESSAGE*
             </label>
           </div>
-        </section>
+        </div>
 
         {/* CREATION BUTTON SUBMIT */}
         <section className="flex justify-center w-full">
           <button
-            type="button"
+            type="submit"
             className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]"
           >
             ENVOYER
