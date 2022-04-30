@@ -17,6 +17,13 @@ ensuite il faut écrire dans :
 @tailwind utilities;
 
 @layer utilities {
+  .bg_nightsky {
+    @apply bg-repeat bg-auto bg-night;
+  }
+  .bg_lightsky {
+    @apply bg-repeat bg-auto bg-light;
+  }
+
   .text-shadow-1 {
     text-shadow: 6px 6px 10px rgb(0, 0, 0, 0.8);
   }
@@ -72,6 +79,23 @@ ensuite il faut écrire dans :
     }
   }
   .modal-bg {
-    box-shadow: 0px 0px 0px 400px rgb(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px 400px rgb(0, 0, 0, 0.5), 0px 0px 25px black;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-top: none;
+  border-right: none;
+  border-left: 4px solid #0780fe;
+  border-bottom: 4px solid #0780fe;
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
 }
