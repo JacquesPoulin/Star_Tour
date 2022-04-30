@@ -41,7 +41,9 @@ const ValidationForm = ({
   return (
     <div className="scroll-smooth top-20 w-3/5 bp2:w-[80vw] bp2:flex bp2:flex-col bp2:items-center h-full py-8 ml-10 bp2:ml-0 mt-16 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[8%] bg-opacity-[8%] font-orb">
       <form className="flex flex-col justify-center items-center mt-4 text-slate-50 tracking-wide">
-        <h1 className="mb-3   text-2xl tracking-wide ">VALIDEZ VOTRE VOYAGE</h1>
+        <h1 className="mb-7 text-2xl tracking-wide animate-pulse ">
+          VALIDEZ VOTRE VOYAGE
+        </h1>
 
         {/* FORM CONTAINER */}
         <div className="w-full flex flex-col items-center">
