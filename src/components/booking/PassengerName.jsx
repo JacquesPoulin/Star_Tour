@@ -8,7 +8,7 @@ const PassengerName = ({ setFirstName, setLastName }) => {
         htmlFor="firstName"
         className="m-auto ml-10 w-auto text-xl tracking-wide"
       >
-        Prénom *
+        Prénom * <br />
         <input
           id="firstName"
           type="text"
@@ -23,7 +23,7 @@ const PassengerName = ({ setFirstName, setLastName }) => {
         htmlFor="lastName"
         className="m-auto ml-14 w-auto text-xl tracking-wide"
       >
-        Nom *
+        Nom * <br />
         <input
           id="lastName"
           type="text"

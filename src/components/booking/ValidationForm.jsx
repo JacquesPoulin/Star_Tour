@@ -46,10 +46,60 @@ const ValidationForm = ({
         {/* FORM CONTAINER */}
         <div className="w-full flex flex-col items-center">
           {/* FirstName & Name */}
-          <PassengerName
-            setFirstName={setFirstName}
-            setLastName={setLastName}
-          />
+          {passengers === "1" && (
+            <PassengerName
+              setFirstName={setFirstName}
+              setLastName={setLastName}
+            />
+          )}
+          {passengers === "2" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
+          {passengers === "3" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
+          {passengers === "4" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
 
           {/* Phone & Mail */}
           <PassengerContact
@@ -82,7 +132,7 @@ const ValidationForm = ({
 };
 
 ValidationForm.propTypes = {
-  passengers: PropTypes.number.isRequired,
+  passengers: PropTypes.string.isRequired,
   destination: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,

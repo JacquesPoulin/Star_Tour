@@ -29,7 +29,7 @@ const BookingForm = () => {
     const differenceInTime = date2.getTime() - date1.getTime();
     return Math.floor(differenceInTime / (1000 * 3600 * 24));
   };
-  const passengerChoiceHandler = (e) => {
+  const handlePassengers = (e) => {
     setPassengers(e.target.value);
   };
 
@@ -135,7 +135,7 @@ const BookingForm = () => {
             name="people"
             className="rounded-md text"
             placeholder={passengers}
-            onChange={passengerChoiceHandler}
+            onChange={handlePassengers}
           >
             <option value="0">0</option>
             <option value="1">1 personne</option>
@@ -143,15 +143,20 @@ const BookingForm = () => {
             <option value="3">3 personnes</option>
             <option value="4">4 personnes</option>
           </select>
-          {passengers >= 1 && (
+          {passengers && (
             <div className="px-4 py-1 mt-12 text-2xl text-slate-50 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
               Nombre de voyageur(s) :{" "}
-              <span className="text-lime-200 animate-pulse">{passengers}</span>
+              <span
+                className="text-lime-200 animate-pulse"
+                onChange={handlePassengers}
+              >
+                {passengers}
+              </span>
             </div>
           )}
 
           {/* VALIDATION FORM */}
-          {passengers >= 1 && (
+          {passengers > "0" && (
             <ValidationForm
               passengers={passengers}
               destination={destination}

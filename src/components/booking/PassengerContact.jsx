@@ -5,7 +5,7 @@ const PassengerContact = ({ phone, setPhone, email, setEmail }) => {
   return (
     <div className="mt-9  w-full flex justify-evenly">
       <label htmlFor="phone" className=" m-auto w-auto tracking-wide text-xl">
-        Téléphone *
+        Téléphone * <br />
         <input
           id="phone"
           type="text"
@@ -17,7 +17,7 @@ const PassengerContact = ({ phone, setPhone, email, setEmail }) => {
       </label>
 
       <label htmlFor="mail" className="m-auto w-auto tracking-wide text-xl">
-        Email *
+        Email * <br />
         <input
           id="mail"
           type="email"
