@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import BookingRecap from "./BookingRecap";
+import PassengerName from "./PassengerName";
+import PassengerContact from "./PassengerContact";
+import SubmitForm from "./SubmitForm";
 
 const ValidationForm = ({
   passengers,
@@ -13,6 +16,8 @@ const ValidationForm = ({
   // >> STATES & SETTERS
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [modalRecap, setModalRecap] = useState(false);
 
@@ -27,92 +32,90 @@ const ValidationForm = ({
     setModalRecap(false);
   };
 
-  const HandleCheckboxClick = () => {
+  const handleCheck = () => {
     setIsChecked(!isChecked);
   };
 
   // ------------------------------------------
 
   return (
-    <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2">
-      <form className="flex flex-col mt-4">
-        <h1 className="mb-3 tracking-wide text-center">VALIDEZ VOTRE VOYAGE</h1>
+    <div className="scroll-smooth top-20 w-3/5 bp2:w-[80vw] bp2:flex bp2:flex-col bp2:items-center h-full py-8 ml-10 bp2:ml-0 mt-16 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[8%] bg-opacity-[8%] font-orb">
+      <form className="flex flex-col justify-center items-center mt-4 text-slate-50 tracking-wide">
+        <h1 className="mb-7 text-2xl tracking-wide animate-pulse ">
+          VALIDEZ VOTRE VOYAGE
+        </h1>
 
         {/* FORM CONTAINER */}
-        <div className="flex flex-col justify-center gap-4 m-8">
+        <div className="w-full flex flex-col items-center">
           {/* FirstName & Name */}
-          <div className="flex ">
-            <label htmlFor="firstName" className="mt-4 tracking-wide">
-              Prénom *
-              <input
-                id="firstName"
-                type="text"
-                pattern="/^[A-Za-z]+$/i"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-                onChange={(e) => setFirstName(e.target.value)}
+          {passengers === "1" && (
+            <PassengerName
+              setFirstName={setFirstName}
+              setLastName={setLastName}
+            />
+          )}
+          {passengers === "2" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
               />
-            </label>
-
-            <label htmlFor="lastName" className="mt-4 tracking-wide">
-              Nom *
-              <input
-                id="lastName"
-                type="text"
-                pattern="/^[A-Za-z]+$/i"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-                onChange={(e) => setLastName(e.target.value)}
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
               />
-            </label>
-          </div>
+            </>
+          )}
+          {passengers === "3" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
+          {passengers === "4" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
 
           {/* Phone & Mail */}
-          <div className="flex">
-            <label htmlFor="phone" className="mt-4 tracking-wide">
-              Téléphone *
-              <input
-                id="phone"
-                type="phone"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-              />
-            </label>
-
-            <label htmlFor="mail" className="mt-4 tracking-wide">
-              Email *
-              <input
-                id="mail"
-                type="email"
-                required
-                className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
-              />
-            </label>
-          </div>
-        </div>
-        <label
-          htmlFor="acceptedTerms"
-          className="mt-20 tracking-wide text-center"
-        >
-          <input
-            id="acceptedTerms"
-            name="useraccepted"
-            type="checkbox"
-            checked={isChecked}
-            onClick={HandleCheckboxClick}
-            className="mr-4 rounded-sm focus:border-lime-500"
-            required
+          <PassengerContact
+            phone={phone}
+            setPhone={setPhone}
+            email={email}
+            setEmail={setEmail}
           />
-          J'accepte les termes du contrat *
-        </label>
-
-        <button
-          type="button"
-          className="m-auto mt-20 mb-5 tracking-wide transition-all duration-700 bg-gray-800 rounded-sm cursor-pointer w-36 hover:scale-110"
-          onClick={openModalRecap}
-        >
-          Submit
-        </button>
+        </div>
+        <SubmitForm
+          isChecked={isChecked}
+          handleCheck={handleCheck}
+          openModalRecap={openModalRecap}
+        />
         {modalRecap && (
           <BookingRecap
             closeModalRecap={closeModalRecap}
@@ -131,7 +134,7 @@ const ValidationForm = ({
 };
 
 ValidationForm.propTypes = {
-  passengers: PropTypes.number.isRequired,
+  passengers: PropTypes.string.isRequired,
   destination: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
