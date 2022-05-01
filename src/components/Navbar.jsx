@@ -75,14 +75,14 @@ const NavBar = () => {
                 Destinations
               </li>
             </NavLink>
-            <NavLink to="/booking">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Reservation
-              </li>
-            </NavLink>
             <NavLink to="/ships">
               <li className="py-10 mb-10 mr-10 font-medium hover:underline">
                 Vaisseaux
+              </li>
+            </NavLink>
+            <NavLink to="/booking">
+              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
+                Reservation
               </li>
             </NavLink>
             <NavLink to="/contact">
