@@ -3,28 +3,28 @@ import PropTypes from "prop-types";
 
 const PassengerContact = ({ phone, setPhone, email, setEmail }) => {
   return (
-    <div>
-      <label htmlFor="phone" className=" w-32 mt-6 tracking-wide">
-        Téléphone *
+    <div className="mt-9 gap-10 -ml-[5rem]  w-full flex justify-evenly">
+      <label htmlFor="phone" className=" m-auto w-auto tracking-wide text-xl">
+        Téléphone * <br />
         <input
           id="phone"
-          type="phone"
+          type="text"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           required
-          className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
+          className="cursor-pointer w-auto pl-3 mt-2 ml-10 text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] bp2_1:w-full tracking-wide  "
         />
       </label>
 
-      <label htmlFor="mail" className="mt-4 tracking-wide">
-        Email *
+      <label htmlFor="mail" className="m-auto w-auto tracking-wide text-xl">
+        Email * <br />
         <input
           id="mail"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-auto mt-4 rounded-sm focus:border-lime-500 text-slate-900"
+          className="cursor-pointer w-auto pl-3 mt-2 ml-2 text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] bp2_1:w-full tracking-wide"
         />
       </label>
     </div>

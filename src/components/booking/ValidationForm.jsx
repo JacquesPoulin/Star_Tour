@@ -39,29 +39,77 @@ const ValidationForm = ({
   // ------------------------------------------
 
   return (
-    <div className=" w-2/4 px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2">
-      <form className="flex flex-col mt-4">
-        <h1 className="mb-3 tracking-wide text-center">VALIDEZ VOTRE VOYAGE</h1>
+    <div className="scroll-smooth top-20 w-3/5 bp2:w-[80vw] bp2:flex bp2:flex-col bp2:items-center h-full py-8 ml-10 bp2:ml-0 mt-16 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[8%] bg-opacity-[8%] font-orb">
+      <form className="flex flex-col justify-center items-center mt-4 text-slate-50 tracking-wide">
+        <h1 className="mb-7 text-2xl tracking-wide animate-pulse ">
+          VALIDEZ VOTRE VOYAGE
+        </h1>
 
         {/* FORM CONTAINER */}
-        <div className="flex flex-col justify-center m-3 bg-lime-50">
+        <div className="w-full flex flex-col items-center">
           {/* FirstName & Name */}
-          <div className="flex ">
+          {passengers === "1" && (
             <PassengerName
               setFirstName={setFirstName}
               setLastName={setLastName}
             />
-          </div>
+          )}
+          {passengers === "2" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
+          {passengers === "3" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
+          {passengers === "4" && (
+            <>
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+              <PassengerName
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+              />
+            </>
+          )}
 
           {/* Phone & Mail */}
-          <div className="flex">
-            <PassengerContact
-              phone={phone}
-              setPhone={setPhone}
-              email={email}
-              setEmail={setEmail}
-            />
-          </div>
+          <PassengerContact
+            phone={phone}
+            setPhone={setPhone}
+            email={email}
+            setEmail={setEmail}
+          />
         </div>
         <SubmitForm
           isChecked={isChecked}
@@ -86,7 +134,7 @@ const ValidationForm = ({
 };
 
 ValidationForm.propTypes = {
-  passengers: PropTypes.number.isRequired,
+  passengers: PropTypes.string.isRequired,
   destination: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
