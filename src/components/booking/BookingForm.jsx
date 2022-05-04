@@ -1,5 +1,3 @@
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -20,8 +18,9 @@ const BookingForm = () => {
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfDays, setNumberOfDays] = useState(0);
   const [passengers, setPassengers] = useState(0);
-  const [ships, setShips] = useState("");
   const [destination, setDestination] = useState("Aucune idée !");
+
+  // ------------------------------------------
 
   // >> FUNCTIONS
 
@@ -32,6 +31,8 @@ const BookingForm = () => {
   const handlePassengers = (e) => {
     setPassengers(e.target.value);
   };
+
+  // ------------------------------------------
 
   // >> USE EFFECT TO SET THE NUMBER OF DAYS
   useEffect(() => {
@@ -162,8 +163,6 @@ const BookingForm = () => {
               destination={destination}
               startDate={startDate}
               endDate={endDate}
-              ships={ships}
-              setShips={setShips}
             />
           )}
         </div>
