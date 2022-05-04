@@ -146,7 +146,7 @@ const Form = () => {
         <div>
           <h2 className="w-full text-center underline-offset-4 text-slate-50 dark:text-slate-900 font-orb">
             <u className="decoration-[#0780FE] dark:decoration-[#FF0010]">
-              LIENS PARTENAIRES
+              SITES INTERNET DE NOS PARTENAIRES
             </u>
           </h2>
         </div>
