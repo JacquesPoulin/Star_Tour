@@ -16,29 +16,29 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
 
   return (
     <div className="h-[100vh] w-[100vw] bg_nightsky dark:bg_lightsky">
-      <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] fixed flex flex-column justify-center w-3/5 rounded-xl box-shadow-1 dark:box-shadow-2">
+      <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] fixed flex flex-column justify-center w-3/5 uhd:w-2/5 bp3:w-4/5 rounded-xl box-shadow-1 dark:box-shadow-2">
         <img
           src={img}
           alt={name}
-          className="absolute z-0 h-full rounded-xl box-shadow-1 dark:box-shadow-2"
+          className="absolute z-0 object-cover w-full h-full rounded-xl box-shadow-1 dark:box-shadow-2"
         />
         <div className="flex flex-col ">
           <div className="flex flex-col">
-            <div className="m-auto mt-10 w-auto rounded-xl box-shadow-2 bg-[url('/assets/images/modal_dark_bg2.jpg')] bg-cover opacity-95">
-              <h2 className="p-6 text-2xl bp1:text-[2vw] bp2:text-[3vw] bp3:text-[4vw] font-thin font-orb text-slate-50 text-shadow-3">
+            <div className="m-auto mt-10 bp2:mt-2 w-auto rounded-xl box-shadow-2 bg-[url('/assets/images/modal_dark_bg2.jpg')] bg-cover opacity-95">
+              <h2 className="p-6 bp2:px-4 bp2:py-2 text-2xl bp1:text-[2vw] bp3:text-[3vw] bp2:leading-5 font-thin font-orb text-slate-50 text-shadow-3">
                 Votre destination <br />
                 de prédilection est :
               </h2>
             </div>
-            <div className="flex flex-col h-56">
-              <h1 className="z-10 m-auto text-6xl font-normal font-orb text-slate-50 text-shadow-4">
+            <div className="flex flex-col h-40 bp2:h-20">
+              <h1 className="z-10 m-auto text-6xl font-normal bp2:text-5xl bp3:text-4xl font-orb text-slate-50 text-shadow-4">
                 {name}
               </h1>
             </div>
-            <div className="flex flex-col justify-center m-auto align-middle mt-11">
+            <div className="flex flex-col justify-center m-auto align-middle mt-11 bp2:mt-2">
               <button
                 type="button"
-                className="z-10 mb-4 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
+                className="z-10 mb-4 text-lg tracking-wider transition bp3:text-base font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
                 onClick={openModal}
               >
                 En savoir plus
@@ -47,7 +47,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
               <Link to="/booking" className="z-20">
                 <button
                   type="button"
-                  className="z-10 mb-10 text-lg tracking-wider transition font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
+                  className="z-10 mb-10 text-lg tracking-wider transition bp3:text-base bp2:mb-4 font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
                 >
                   Reserver mon voyage
                 </button>
