@@ -1,5 +1,3 @@
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -20,8 +18,9 @@ const BookingForm = () => {
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfDays, setNumberOfDays] = useState(0);
   const [passengers, setPassengers] = useState(0);
-  const [ships, setShips] = useState("");
   const [destination, setDestination] = useState("Aucune idée !");
+
+  // ------------------------------------------
 
   // >> FUNCTIONS
 
@@ -29,9 +28,11 @@ const BookingForm = () => {
     const differenceInTime = date2.getTime() - date1.getTime();
     return Math.floor(differenceInTime / (1000 * 3600 * 24));
   };
-  const passengerChoiceHandler = (e) => {
+  const handlePassengers = (e) => {
     setPassengers(e.target.value);
   };
+
+  // ------------------------------------------
 
   // >> USE EFFECT TO SET THE NUMBER OF DAYS
   useEffect(() => {
@@ -39,7 +40,7 @@ const BookingForm = () => {
   }, [endDate]);
 
   return (
-    <div className="bg_nightsky dark:bg_lightsky">
+    <div className="scroll-smooth bg_nightsky dark:bg_lightsky">
       <NavBar />
       <div className="w-full flex-column pb-14 pt-44">
         {/* TITLE */}
@@ -59,27 +60,26 @@ const BookingForm = () => {
             options={planetsBooking}
             value={destination}
             onChange={(e) => setDestination(e.value)}
-            className="w-1/3 text-slate-900"
+            className="w-1/3 text-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-exo tracking-wide outline-none"
           />
           {destination === "Aucune idée !" && (
             <Link to="/quiz">
               <button
                 type="button"
-                className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01] tracking-wide"
+                className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide"
               >
                 J'hésite encore, aidez-moi !
               </button>
             </Link>
           )}
           {destination !== "Aucune idée !" && (
-            <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50  dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01] tracking-wide">
-              Mon choix :
+            <div className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
+              Mon choix :{" "}
               <span className="text-lime-200 animate-pulse">
                 {destination.toUpperCase()}
               </span>
             </div>
           )}
-          {console.log(destination)}
           {/* JOURNEY DATES */}
           <h2 className="mt-20 mb-4 text-2xl text-slate-50 dark:text-slate-900 font-exo">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
@@ -95,7 +95,7 @@ const BookingForm = () => {
                 startDate={startDate}
                 endDate={endDate}
                 onChange={(date) => setStartDate(date)}
-                className="font-semibold text-center rounded-md text-slate-900"
+                className="border-2 text-lime-200 text-center border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%]"
               />
               <p className="flex items-center justify-center text-xl tracking-wide text-slate-50 dark:text-slate-900 font-exo">
                 AU
@@ -107,21 +107,19 @@ const BookingForm = () => {
                 endDate={endDate}
                 minDate={startDate}
                 onChange={(date) => setEndDate(date)}
-                className="font-semibold text-center rounded-md text-slate-900"
+                className="border-2 text-lime-200 text-center border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%]"
               />
             </div>
           </div>
-          {console.log(startDate)}
-          {console.log(endDate)}
           {/* WARNING MESSAGE */}
           {numberOfDays < 3 && (
-            <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01] tracking-wide">
+            <div className="p-4 mt-12 ml-8 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
               ⚠️ Nous n'avons aucun séjour inférieur à 3 jours
             </div>
           )}
           {numberOfDays >= 3 && (
-            <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:box-shadow-2 hover:scale-[1.01] tracking-wide">
-              Pour un total de :
+            <div className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
+              Pour un total de :{" "}
               <span className="text-lime-200 animate-pulse">
                 {numberOfDays} jours
               </span>
@@ -138,7 +136,7 @@ const BookingForm = () => {
             name="people"
             className="rounded-md text"
             placeholder={passengers}
-            onChange={passengerChoiceHandler}
+            onChange={handlePassengers}
           >
             <option value="0">0</option>
             <option value="1">1 personne</option>
@@ -146,22 +144,25 @@ const BookingForm = () => {
             <option value="3">3 personnes</option>
             <option value="4">4 personnes</option>
           </select>
-          {passengers >= 1 && (
-            <div className="px-4 py-1 mt-12 text-2xl bg-[#679ec2] border-[2px] border-slate-50 dark:border-slate-900 rounded-lg font-orb text-shadow-3 dark:text-shadow-2 bg-opacity-80 text-slate-50 dark:text-slate-900 box-shadow-1 dark:bow-shadow-2 hover:scale-[1.01] tracking-wide">
+          {passengers && (
+            <div className="px-4 py-1 mt-12 text-2xl text-slate-50 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
               Nombre de voyageur(s) :{" "}
-              <span className="text-lime-200 animate-pulse">{passengers}</span>
+              <span
+                className="text-lime-200 animate-pulse"
+                onChange={handlePassengers}
+              >
+                {passengers}
+              </span>
             </div>
           )}
 
           {/* VALIDATION FORM */}
-          {passengers >= 1 && (
+          {passengers > "0" && (
             <ValidationForm
               passengers={passengers}
               destination={destination}
               startDate={startDate}
               endDate={endDate}
-              ships={ships}
-              setShips={setShips}
             />
           )}
         </div>

@@ -13,7 +13,7 @@ const Ships = () => {
     <div className="bg_nightsky dark:bg_lightsky">
       <NavBar />
       <div className="flex items-center justify-center pb-14 pt-44">
-        <h1 className="w-4/6 text-6xl text-center bp2:text-4xl text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2">
+        <h1 className="w-4/6 px-1 text-6xl text-center bp2:text-5xl bp3:text-4xl text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2">
           Découvrez notre flotte de vaisseaux !
         </h1>
       </div>

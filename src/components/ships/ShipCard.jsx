@@ -58,7 +58,7 @@ const ShipCard = ({ id, name, img, sort }) => {
 
   return (
     <Tilt options={{ max: 8, scale: 1, reverse: true }}>
-      <div className="flex flex-col justify-start items-center w-[300px] h-[510px] rounded-xl box-shadow-1 bg-[url(assets/images/ship-card.jpg)] bg-cover">
+      <div className="flex flex-col justify-start items-center w-[300px] h-[510px] rounded-xl box-shadow-1 bg-[url('/assets/images/ship-card.jpg')] bg-cover">
         <img
           className="w-[300px] h-[169px] rounded-t-xl"
           src={img}
