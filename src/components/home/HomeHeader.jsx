@@ -4,7 +4,7 @@ import Typist from "react-typist";
 
 const HomeHeader = () => {
   return (
-    <div className="flex flex-col items-start justify-end w-full h-screen text-left">
+    <div className="flex flex-col items-start justify-end w-full h-screen text-left bp2:justify-center">
       <video
         className="absolute object-cover w-full h-screen -z-10 opacity-90"
         autoPlay
@@ -18,21 +18,23 @@ const HomeHeader = () => {
       </video>
       <Typist avgTypingDelay={70} stdTypingDelay={0}>
         <Typist.Delay ms={1000} />
-        <h1 className="pb-10 pl-5 text-6xl font-thin text-slate-50 font-galactic text-shadow-1">
+        <h1 className="pb-10 pl-5 uhd:pl-20 text-6xl font-thin bp1:text-[2.8rem] bp2:text-[2.6rem] bp3:text-[1.6rem] uhd:text-8xl text-slate-50 font-galactic text-shadow-1">
           BIENVENUE CHEZ
           <br />
-          <span className="font-thin text-[7.5rem]">STAR TOUR</span>
+          <span className="font-thin text-[7.5rem] bp1:text-[6rem] bp2:text-[4.2rem] bp3:text-[3.2rem] uhd:text-[11rem]">
+            STAR TOUR
+          </span>
         </h1>
         <Typist.Backspace count={24} delay={3000} />
-        <h1 className="pb-6 pl-5 text-6xl font-bold text-slate-50 font-orb text-shadow-1 bp5:text-4xl">
+        <h1 className="pb-6 pl-5 uhd:pl-20 text-6xl font-bold bp1:text-[2.8rem] bp2:text-[2.6rem] bp3:text-[1.6rem] uhd:text-8xl text-slate-50 font-orb text-shadow-1">
           BIENVENUE CHEZ
           <br />
-          <span className="font-extrabold text-[7.5rem] bp4:text-[4.5rem]">
+          <span className="font-extrabold text-[7.5rem] bp1:text-[6rem] bp2:text-[5rem] bp3:text-[3.2rem] uhd:text-[11rem]">
             STAR TOUR
           </span>
         </h1>
         <Typist.Delay ms={500} />
-        <h2 className="pl-5 text-[2.4rem] text-white font-orb text-shadow-2 bp5:text-[1.5rem]">
+        <h2 className="pl-5 uhd:pl-20 text-[2.4rem] bp1:text-[2rem] bp2:text-[1.6rem] bp3:text-[1.4rem] bp3:pt-2 uhd:text-[4rem] text-white font-orb text-shadow-2">
           Là où les rêves prennent leur envol !
         </h2>
       </Typist>
@@ -41,7 +43,7 @@ const HomeHeader = () => {
         to="homedescription"
         smooth
         duration={1000}
-        className="self-center w-16 mt-32 mb-6 sha hover:scale-110"
+        className="self-center w-16 mt-[15vh] bp1:mt-[10vh] uhd:mt-[30vh] mb-6 bp2:hidden hover:scale-110"
       >
         <button type="button" href="#homeDesc">
           <img src="./assets/images/arrowdown.png" alt="fleche de direction" />
