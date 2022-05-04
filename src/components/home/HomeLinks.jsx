@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeLinks = () => {
   return (
     <div className="pt-10 pb-28 bg_nightsky dark:bg_lightsky">
-      <h1 className="pl-10 text-4xl font-orb text-slate-50 dark:text-slate-900">
+      <h1 className="mt-6 text-4xl text-center font-orb text-slate-50 dark:text-slate-900">
         Nos services
       </h1>
       <div className="grid w-3/4 h-full grid-cols-2 grid-rows-2 gap-12 mx-auto mt-12">

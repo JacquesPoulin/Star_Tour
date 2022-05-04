@@ -6,13 +6,9 @@ import PassengerName from "./PassengerName";
 import PassengerContact from "./PassengerContact";
 import SubmitForm from "./SubmitForm";
 
-const ValidationForm = ({
-  passengers,
-  destination,
-  startDate,
-  endDate,
-  ships,
-}) => {
+// ------------------------------------------
+
+const ValidationForm = ({ passengers, destination, startDate, endDate }) => {
   // >> STATES & SETTERS
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -60,10 +56,7 @@ const ValidationForm = ({
                 setFirstName={setFirstName}
                 setLastName={setLastName}
               />
-              <PassengerName
-                setFirstName={setFirstName}
-                setLastName={setLastName}
-              />
+              <PassengerName />
             </>
           )}
           {passengers === "3" && (
@@ -72,14 +65,8 @@ const ValidationForm = ({
                 setFirstName={setFirstName}
                 setLastName={setLastName}
               />
-              <PassengerName
-                setFirstName={setFirstName}
-                setLastName={setLastName}
-              />
-              <PassengerName
-                setFirstName={setFirstName}
-                setLastName={setLastName}
-              />
+              <PassengerName />
+              <PassengerName />
             </>
           )}
           {passengers === "4" && (
@@ -88,18 +75,9 @@ const ValidationForm = ({
                 setFirstName={setFirstName}
                 setLastName={setLastName}
               />
-              <PassengerName
-                setFirstName={setFirstName}
-                setLastName={setLastName}
-              />
-              <PassengerName
-                setFirstName={setFirstName}
-                setLastName={setLastName}
-              />
-              <PassengerName
-                setFirstName={setFirstName}
-                setLastName={setLastName}
-              />
+              <PassengerName />
+              <PassengerName />
+              <PassengerName />
             </>
           )}
 
@@ -113,8 +91,12 @@ const ValidationForm = ({
         </div>
         <SubmitForm
           isChecked={isChecked}
+          firstName={firstName}
+          lastName={lastName}
           handleCheck={handleCheck}
           openModalRecap={openModalRecap}
+          phone={phone}
+          email={email}
         />
         {modalRecap && (
           <BookingRecap
@@ -125,7 +107,6 @@ const ValidationForm = ({
             destination={destination}
             startDate={startDate}
             endDate={endDate}
-            ships={ships}
           />
         )}
       </form>
@@ -133,11 +114,11 @@ const ValidationForm = ({
   );
 };
 
+// ----------PROPTYPES------------------------
 ValidationForm.propTypes = {
   passengers: PropTypes.string.isRequired,
   destination: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
-  ships: PropTypes.string.isRequired,
 };
 export default ValidationForm;

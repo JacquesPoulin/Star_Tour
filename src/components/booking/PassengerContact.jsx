@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 
 const PassengerContact = ({ phone, setPhone, email, setEmail }) => {
   return (
-    <div className="mt-9 gap-10 -ml-[5rem]  w-full flex justify-evenly">
-      <label htmlFor="phone" className=" m-auto w-auto tracking-wide text-xl">
+    <div className="mt-9 gap-4 w-full flex justify-evenly">
+      {/* USER PHONE */}
+      <label
+        htmlFor="phone"
+        className=" m-auto ml-10 w-auto text-xl tracking-wide"
+      >
         Téléphone * <br />
         <input
           id="phone"
@@ -16,7 +20,11 @@ const PassengerContact = ({ phone, setPhone, email, setEmail }) => {
         />
       </label>
 
-      <label htmlFor="mail" className="m-auto w-auto tracking-wide text-xl">
+      {/* USER EMAIL */}
+      <label
+        htmlFor="mail"
+        className="m-auto w-auto  ml-14 tracking-wide text-xl"
+      >
         Email * <br />
         <input
           id="mail"
@@ -31,6 +39,7 @@ const PassengerContact = ({ phone, setPhone, email, setEmail }) => {
   );
 };
 
+// ----------PROPTYPES------------------------
 PassengerContact.propTypes = {
   setPhone: PropTypes.func.isRequired,
   setEmail: PropTypes.func.isRequired,
