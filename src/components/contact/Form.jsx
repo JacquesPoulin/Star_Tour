@@ -1,21 +1,23 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 const Form = () => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-center mx-16 pt-36">
-        <h1 className="w-4/6 text-6xl text-center text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2 bp4:text-4xl bp4:w-full bp4:text-center">
+        <h1 className="w-4/6 text-6xl text-center text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2 bp2:text-5xl bp3:text-4xl bp4:w-full bp4:text-center">
           Contact
         </h1>
       </div>
       <div className="flex justify-center">
         <p className="w-4/5 text-lg m-12 px-6 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo bp3:border-none">
-          Pour nous contacter, utilisez ce formulaire. Pour que nous puissions
-          vous répondre, veuillez remplir votre pseudo et votre email. <br />
-          Exprimez votre message de façon clair pour que votre demande soit
+          Pour nous contacter, merci d'utiliser ce formulaire. Pour que nous
+          puissions vous répondre, veuillez renseigner votre prénom, votre nom,
+          et votre email. <br />
+          Exprimez votre message de façon claire pour que votre demande soit
           traitée le plus rapidement possible. <br />
-          Merci et à bientôt chez Star Tour.
+          Merci et à bientôt chez Star Tour !
         </p>
       </div>
       {/* CREATION DIV ENGLOBANT FORM DROIT & GAUCHE */}
@@ -124,7 +126,7 @@ const Form = () => {
         <section className="flex justify-center w-full">
           <button
             type="submit"
-            className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] font-exo hover:text-[#0780FE] dark:hover:text-[#FF0010]"
+            className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] hover:text-[#0780FE] dark:hover:text-[#FF0010]"
           >
             ENVOYER
           </button>

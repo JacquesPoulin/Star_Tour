@@ -5,7 +5,7 @@ import GoToTop from "../components/GoToTop";
 
 const Contact = () => {
   return (
-    <div className="bg_nightsky dark:bg_lightsky">
+    <div className="min-h-screen bg_nightsky dark:bg_lightsky">
       <NavBar />
       <Form />
       <GoToTop />
