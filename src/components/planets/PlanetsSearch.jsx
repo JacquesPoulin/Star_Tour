@@ -9,8 +9,8 @@ const PlanetsSearch = ({ search, handleSearch }) => {
     handleSearch: PropTypes.func.isRequired,
   };
   return (
-    <div className="flex flex-col items-start justify-start p-8 bp3:items-center bp2:mt-20 bp4:p-4">
-      <h2 className="text-4xl text-slate-50 dark:text-slate-900 font-orb bp4:text-2xl">
+    <div className="flex flex-col items-start justify-start p-8 bp2:items-center bp2:mt-5 bp3:mt-10 bp4:p-4">
+      <h2 className="text-4xl text-slate-50 dark:text-slate-900 font-orb bp3:text-2xl">
         Chercher une planète :
       </h2>
       <input
