@@ -20,7 +20,11 @@ const Footer = () => {
             </p>
           </a>
           {/* Adress */}
-          <a href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351">
+          <a
+            href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351"
+            target="_blank"
+            rel="noreferrer"
+          >
             <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
               <Logo
                 myStyle="w-8 h-8"
