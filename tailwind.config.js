@@ -19,6 +19,7 @@ module.exports = {
       bp3: { max: "600px" },
       bp4: { max: "500px" },
       bp5: { max: "400px" },
+      uhd: { min: "2000px" }
     },
     backgroundImage: {
       night: "url('/assets/images/bg-dark.jpg')",
