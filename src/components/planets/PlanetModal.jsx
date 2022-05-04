@@ -18,6 +18,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
   };
   const [info, setInfo] = useState({});
 
+  // Récupération des données de l'API
   const getInfo = () => {
     axios
       .get(`https://swapi.dev/api/planets/${id}`)
@@ -34,7 +35,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
     // Modale et background blur
     <div className="z-[20] w-[100vw] h-[100vh] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center bg-slate-100 bg-opacity-10 backdrop-blur-[2px]">
       {/* Modale entière */}
-      <div className="w-3/5 m-auto bg-black modal-bg bp2:w-5/6 uhd:w-[40%] rounded-xl">
+      <div className="w-3/5 m-auto bg-black modal-bg bp2:w-5/6 uhd:w-[40%] rounded-xl animate-modalSlideIn">
         {/* Image et titre */}
         <div className="flex flex-col items-center justify-center border-b-[2px] border-black">
           <img

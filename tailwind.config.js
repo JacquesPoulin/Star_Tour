@@ -11,6 +11,15 @@ module.exports = {
         starjedi: "Starjedi",
         galactic: "Galactic Basic",
       },
+      keyframes: {
+        modalSlideIn: {
+          "0%": { transform: "translate(0px, -70px)" },
+          "100%": { transform: "translate(0px, 0px)" },
+        },
+      },
+      animation: {
+        modalSlideIn: "modalSlideIn 0.3s ease-out",
+      },
     },
     screens: {
       bp1: { max: "1390px" },
