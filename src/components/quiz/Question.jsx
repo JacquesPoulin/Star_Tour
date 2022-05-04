@@ -60,7 +60,7 @@ const Question = () => {
             {/* CREATION SECTION FORM DROITE - QUESTION/REPONSES */}
             <section className="flex justify-center w-2/3 bp2_1:w-full">
               {/* CREATION DIV FORM DROIT */}
-              <div className="relative flex flex-col w-full pt-32 m-5 bp2_1:w-full bp4:pt-24">
+              <div className="relative flex flex-col w-full pt-32 m-5 bp2_1:w-full bp4:pt-8">
                 {/* CREATION DIV NB+QUESTION */}
                 <div className="relative flex flex-row justify-center bp4:flex-col">
                   {/* CREATION NB */}
