@@ -83,7 +83,7 @@ const NavBar = () => {
       >
         {/* MOBILE MENU */}
         {isOpen && (
-          <div className="absolute p-7 rounded-md md:hidden right-8 top-24 lg:hidden bg-neutral-900">
+          <div className=" w-full absolute p-7 rounded-md md:hidden right-0 top-24 lg:hidden bg-neutral-900">
             <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
               <NavLink to="/home">
                 <li className="mt-2 mb-8 font-medium hover:underline">
@@ -97,14 +97,14 @@ const NavBar = () => {
                 </li>
               </NavLink>
 
+              <NavLink to="/ships">
+                <li className="mb-8 font-medium hover:underline">Vaisseaux</li>
+              </NavLink>
+
               <NavLink to="/booking">
                 <li className="mb-8 font-medium hover:underline">
                   Reservation
                 </li>
-              </NavLink>
-
-              <NavLink to="/ships">
-                <li className="mb-8 font-medium hover:underline">Vaisseaux</li>
               </NavLink>
 
               <NavLink to="/contact">
