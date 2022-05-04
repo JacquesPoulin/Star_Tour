@@ -145,7 +145,7 @@ const BookingForm = () => {
             <option value="4">4 personnes</option>
           </select>
           {passengers && (
-            <div className="px-4 py-1 mt-12 text-2xl text-slate-50 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
+            <div className="px-4 py-1 mt-12 text-2xl text-slate-50 dark:text-slate-900 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
               Nombre de voyageur(s) :{" "}
               <span
                 className="text-lime-200 animate-pulse"

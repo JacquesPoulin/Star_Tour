@@ -18,7 +18,7 @@ const PartnersButton = ({ id, name, img, link, desc }) => {
   // ------------------------------------------
 
   return (
-    <div>
+    <div className="bp2_1:flex bp2_1:justify-center">
       <button
         type="submit"
         id={id}

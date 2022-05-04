@@ -142,15 +142,15 @@ const Form = () => {
       </form>
       {/* // ------------------------------------------ */}
       {/* >> SECTION PARTNERS */}
-      <div className="flex flex-col justify-center w-full mt-24">
+      <div className="flex flex-col justify-center w-full mt-24 bp2_1:flex-col bp2_1:w-full">
         <div>
-          <h2 className="w-full text-center underline-offset-4 text-slate-50 dark:text-slate-900 font-orb">
-            <u className="decoration-[#0780FE] dark:decoration-[#FF0010]">
+          <h2 className="w-full text-center underline-offset-4 text-slate-50 dark:text-slate-900 font-orb bp2_1:flex-col bp2_1:w-full">
+            <u className="decoration-[#0780FE] dark:decoration-[#FF0010] bp2_1:flex-col bp2_1:w-full bp2_1:text-xl">
               SITES INTERNET DE NOS PARTENAIRES
             </u>
           </h2>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center bp2_1:flex-col bp2_1:w-full">
           {partners &&
             partners.map((partner) => <PartnersButton {...partner} />)}
         </div>
