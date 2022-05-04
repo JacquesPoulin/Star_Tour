@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const PassengerName = ({ setFirstName, setLastName }) => {
   return (
     <div className="mt-9 gap-4 w-full flex justify-evenly">
+      {/* USER FIRSTNAME */}
       <label
         htmlFor="firstName"
         className="m-auto ml-10 w-auto text-xl tracking-wide"
@@ -19,6 +20,7 @@ const PassengerName = ({ setFirstName, setLastName }) => {
         />
       </label>
 
+      {/* USER LASTNAME */}
       <label
         htmlFor="lastName"
         className="m-auto ml-14 w-auto text-xl tracking-wide"
@@ -37,6 +39,7 @@ const PassengerName = ({ setFirstName, setLastName }) => {
   );
 };
 
+// ----------PROPTYPES------------------------
 PassengerName.propTypes = {
   setFirstName: PropTypes.func.isRequired,
   setLastName: PropTypes.func.isRequired,
