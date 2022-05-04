@@ -22,7 +22,7 @@ const PlanetsList = ({ search, filter }) => {
 
   return (
     // Les deux boutons et la planetslist
-    <div className="flex flex-col items-center py-8">
+    <div className="flex flex-col items-center pt-8 pb-20">
       {/* Les 2 boutons Grille et Liste */}
       <div className="flex justify-end items-center w-[100%] gap-4 pr-36 pb-8 bp3:hidden">
         <p className="text-slate-50 font-orb text-[1.2rem]">Affichage :</p>
