@@ -5,7 +5,6 @@ import Select from "react-select";
 import DatePicker, { registerLocale, setDefaultLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import fr from "date-fns/locale/fr";
-import NavBar from "../Navbar";
 import planetsBooking from "../../../data/planetsBooking";
 import ValidationForm from "./ValidationForm";
 
@@ -41,7 +40,6 @@ const BookingForm = () => {
 
   return (
     <div className="scroll-smooth bg_nightsky dark:bg_lightsky">
-      <NavBar />
       <div className="w-full flex-column pb-14 pt-44">
         {/* TITLE */}
         <div className="w-full">
