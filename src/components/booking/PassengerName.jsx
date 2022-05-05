@@ -14,7 +14,6 @@ const PassengerName = ({ setFirstName, setLastName }) => {
         <input
           id="firstName"
           type="text"
-          pattern="/^[A-Za-z]+$/i"
           required
           className="cursor-pointer w-auto pl-3 mt-2 ml-10 text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 dark:border-slate-900  appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] bp2_1:w-full tracking-wide  "
           onChange={(e) => setFirstName(e.target.value)}
@@ -30,7 +29,6 @@ const PassengerName = ({ setFirstName, setLastName }) => {
         <input
           id="lastName"
           type="text"
-          pattern="/^[A-Za-z]+$/i"
           required
           className="cursor-pointer w-auto pl-3 mt-2 ml-2 text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 dark:border-slate-900 appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] bp2_1:w-full tracking-wide"
           onChange={(e) => setLastName(e.target.value)}
