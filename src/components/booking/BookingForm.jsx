@@ -60,13 +60,13 @@ const BookingForm = () => {
             options={planetsBooking}
             value={destination}
             onChange={(e) => setDestination(e.value)}
-            className="w-1/3 text-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-exo tracking-wide outline-none"
+            className="w-1/3 text-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-exo tracking-wide outline-none bp2_1:w-full"
           />
           {destination === "Aucune idée !" && (
             <Link to="/quiz">
               <button
                 type="button"
-                className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide"
+                className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide bp2_1:text-xl"
               >
                 J'hésite encore, aidez-moi !
               </button>
@@ -81,11 +81,11 @@ const BookingForm = () => {
             </div>
           )}
           {/* JOURNEY DATES */}
-          <h2 className="mt-20 mb-4 text-2xl text-slate-50 dark:text-slate-900 font-exo">
+          <h2 className="mt-20 mb-4 text-2xl text-slate-50 dark:text-slate-900 font-exo bp2_1:text-center">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
           </h2>
           <div className="flex justify-center w-full rounded-md">
-            <div className="flex flex-row items-center justify-center w-1/3 gap-4 rounded-md text-slate-900">
+            <div className="flex flex-row items-center justify-center w-1/3 gap-4 rounded-md text-slate-900 bp2_1:flex-col bp2_1:w-full bp2_1:text-center ">
               <p className="flex items-center justify-center text-xl tracking-wide text-slate-50 dark:text-slate-900 font-exo">
                 DU
               </p>
@@ -113,7 +113,7 @@ const BookingForm = () => {
           </div>
           {/* WARNING MESSAGE */}
           {numberOfDays < 3 && (
-            <div className="p-4 mt-12 ml-8 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
+            <div className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide bp2_1:text-xl bp2_1:text-center bp2_1:w-[90%]">
               ⚠️ Nous n'avons aucun séjour inférieur à 3 jours
             </div>
           )}
@@ -145,7 +145,7 @@ const BookingForm = () => {
             <option value="4">4 personnes</option>
           </select>
           {passengers && (
-            <div className="px-4 py-1 mt-12 text-2xl text-slate-50 dark:text-slate-900 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide">
+            <div className="px-4 py-1 mt-12 text-2xl text-slate-50 dark:text-slate-900 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide bp2_1:text-center bp2_1:w-[90%] bp2_1:text-xl ">
               Nombre de voyageur(s) :{" "}
               <span
                 className="text-lime-200 animate-pulse"

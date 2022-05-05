@@ -77,9 +77,9 @@ const Question = () => {
                   </div>
                 </div>
                 {/* CREATION REPONSES */}
-                <div className="relative flex flex-row mt-10 bp2_1:w-full bp2_1:mt-1 bp4:flex-col ">
+                <div className="relative flex flex-row mt-10 bp2_1:w-full bp2_1:mt-1 bp4:flex-col">
                   {/* CREATION REPONSE 1 */}
-                  <div className="relative flex flex-row w-1/2 m-5 bp2_1:w-1/2 bp2_1:justify-center bp4:w-full bp4:h-full bp4:m-2">
+                  <div className="relative flex flex-row w-1/2 m-5 bp2_1:w-1/2 bp2_1:justify-center bp4:w-full bp4:h-full bp4:m-2 ">
                     {quizForm[currentQuestion].answerOptions.map(
                       (answerOption) => (
                         <button
