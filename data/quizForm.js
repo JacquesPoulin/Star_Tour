@@ -104,22 +104,5 @@ const quizForm = [
       },
     ],
   },
-  {
-    questionText: "Quel formateur est le meilleur ?",
-    answerOptions: [
-      {
-        answerText: "Jimmmmmyy",
-        isCorrect: 0,
-        img: "./assets/images/quizPic/7-jimmy.png",
-      },
-    ],
-    answerOptions2: [
-      {
-        answerText2: "Lydiiiiiiie ",
-        isCorrect: 0,
-        img2: "./assets/images/quizPic/7-lydie.png",
-      },
-    ],
-  },
 ];
 export default quizForm;

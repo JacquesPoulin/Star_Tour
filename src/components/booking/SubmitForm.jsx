@@ -22,11 +22,12 @@ const SubmitForm = ({ isChecked, handleCheck, openModalRecap }) => {
       </label>
 
       <button
-        type="button"
-        className="w-auto m-auto text-2xl tracking-wider cursor-pointer first-line:text-center mt-14 hover:scale-110 animate-pulse text-slate-50 dark:text-slate-900"
+        type="submit"
+        className=" w-auto first-line:text-center m-auto mt-14 text-2xl cursor-pointer hover:scale-110 tracking-wider animate-pulse"
+
         onClick={openModalRecap}
       >
-        DEVIS
+        RESERVEZ
       </button>
     </div>
   );
