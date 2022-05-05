@@ -70,42 +70,41 @@ const NavBar = () => {
           />
         </button>
 
-        {/* I will fade in and out */}
+        {/* Transition : to FADE IN and FADE OUT */}
       </div>
-
       <Transition
         show={isOpen}
         enter="transition-opacity duration-1000"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity duration-1000"
+        leave="transition-opacity"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
         {/* MOBILE MENU */}
         {isOpen && (
-          <div className="absolute p-4 rounded-md md:hidden right-8 top-20 lg:hidden bg-slate-900">
-            <ul className="items-center justify-center text-xl text-center text-slate-50 font-exo">
+          <div className=" w-full absolute p-7 rounded-md md:hidden right-0 top-24 lg:hidden bg-neutral-900">
+            <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
               <NavLink to="/home">
-                <li className="mt-4 mb-6 font-medium hover:underline">
+                <li className="mt-2 mb-8 font-medium hover:underline">
                   Accueil
                 </li>
               </NavLink>
 
               <NavLink to="/destination">
-                <li className="mb-6 font-medium hover:underline">
+                <li className="mb-8 font-medium hover:underline">
                   Destinations
                 </li>
               </NavLink>
 
-              <NavLink to="/booking">
-                <li className="mb-6 font-medium hover:underline">
-                  Reservation
-                </li>
+              <NavLink to="/ships">
+                <li className="mb-8 font-medium hover:underline">Vaisseaux</li>
               </NavLink>
 
-              <NavLink to="/ships">
-                <li className="mb-6 font-medium hover:underline">Vaisseaux</li>
+              <NavLink to="/booking">
+                <li className="mb-8 font-medium hover:underline">
+                  Reservation
+                </li>
               </NavLink>
 
               <NavLink to="/contact">
