@@ -17,7 +17,7 @@ const BookingForm = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfDays, setNumberOfDays] = useState(0);
-  const [passengers, setPassengers] = useState(0);
+  const [passengers, setPassengers] = useState("");
   const [destination, setDestination] = useState("Aucune idée !");
 
   // ------------------------------------------

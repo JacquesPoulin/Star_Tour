@@ -26,7 +26,7 @@ const SubmitForm = ({ isChecked, handleCheck, openModalRecap }) => {
         className=" w-auto first-line:text-center m-auto mt-14 text-2xl cursor-pointer hover:scale-110 tracking-wider animate-pulse"
         onClick={openModalRecap}
       >
-        DEVIS
+        RESERVEZ
       </button>
     </div>
   );
