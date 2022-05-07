@@ -5,9 +5,10 @@ const PassengerName = ({ setFirstName, setLastName }) => {
   return (
     <div className="flex w-full gap-4 mt-9 justify-evenly">
       {/* USER FIRSTNAME */}
+
       <label
         htmlFor="firstName"
-        className="w-auto m-auto ml-10 text-xl tracking-wide text-slate-50 dark:text-slate-900"
+        className="w-auto m-auto ml-10 text-xl tracking-wide text-slate-50 dark:text-slate-900 "
       >
         Prénom * <br />
         <input
