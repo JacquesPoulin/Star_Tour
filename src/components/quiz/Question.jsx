@@ -63,7 +63,7 @@ const Question = () => {
             {/* >> SECTION FORM RIGHT - NUMBER/QUESTIONS/RESPONSES */}
             <section className="flex justify-center w-2/3 bp2_1:w-full">
               {/* >> DIV FORM RIGHT */}
-              <div className="relative flex flex-col w-full pt-32 m-5 bp2_1:w-full bp4:pt-8">
+              <div className="relative flex flex-col w-full pt-32 m-5 bp2_1:w-full bp5:pt-20">
                 {/* >> DIV NUMBER + QUESTIONS */}
                 <div className="relative flex flex-row justify-center bp4:flex-col">
                   {/* >> NUMBER */}
@@ -98,7 +98,7 @@ const Question = () => {
                             src={answerOption.img}
                             alt={answerOption.answerText}
                           />
-                          <span className="z-10">
+                          <span className="z-50">
                             {answerOption.answerText}
                           </span>
                         </button>
@@ -122,7 +122,7 @@ const Question = () => {
                             src={answerOption2.img2}
                             alt={answerOption2.answerText2}
                           />
-                          <span className="z-10">
+                          <span className="z-50">
                             {answerOption2.answerText2}
                           </span>
                         </button>

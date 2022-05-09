@@ -9,7 +9,7 @@ const NavBar = () => {
   const [isOpened, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute flex h-20 min-w-full justify-content-between">
+    <header className="absolute z-[99] flex h-20 min-w-full justify-content-between">
       {/* DESKTOP MENU */}
       <div className="flex items-center justify-center h-20 min-w-full font-exo text-slate-50 dark:text-slate-900 bp2:justify-start">
         <NavLink to="/home">
@@ -52,7 +52,7 @@ const NavBar = () => {
             </NavLink>
           </ul>
           <ThemeProvider>
-            <div className="py-10 mr-10 -mt-2 font-medium bp2:mt-8">
+            <div className="py-10 mr-10 -mt-2 font-medium bp2:mt-8 bp2:mr-3">
               <Toggle />
             </div>
           </ThemeProvider>
@@ -83,7 +83,7 @@ const NavBar = () => {
       >
         {/* MOBILE MENU */}
         {isOpened && (
-          <div className=" w-full absolute p-7 rounded-md md:hidden right-0 top-24 lg:hidden bg-neutral-900">
+          <div className="absolute right-0 w-full rounded-md p-7 md:hidden top-24 lg:hidden bg-neutral-900">
             <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
               <NavLink to="/home">
                 <li className="mt-2 mb-8 font-medium hover:underline">

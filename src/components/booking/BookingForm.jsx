@@ -50,7 +50,7 @@ const BookingForm = () => {
 
         {/* DESTINATION CHOICE */}
         <div className="flex flex-col items-center justify-center w-full mt-20 text-slate-50 dark:text-slate-900">
-          <h2 className="mb-4 text-2xl tracking-wide text-slate-50 dark:text-slate-900 font-exo">
+          <h2 className="mb-4 text-2xl tracking-wide text-center text-slate-50 dark:text-slate-900 font-exo bp4:w-[90%]">
             1. OÙ SOUHAITEZ-VOUS ALLEZ ?
           </h2>
           <Select
@@ -58,13 +58,13 @@ const BookingForm = () => {
             options={planetsBooking}
             value={destination}
             onChange={(e) => setDestination(e.value)}
-            className="w-1/3 text-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-exo tracking-wide outline-none bp2_1:w-full"
+            className="w-[25rem] text-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-exo tracking-wide outline-none bp2:w-[45%] bp3:w-[60%] bp4:w-[90%]"
           />
           {destination === "Aucune idée !" && (
-            <Link to="/quiz">
+            <Link to="/quiz" className="flex justify-center">
               <button
                 type="button"
-                className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide bp2_1:text-xl"
+                className="px-4 py-1 mt-12 text-2xl border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%] font-orb tracking-wide bp2_1:text-xl bp4:w-[90%]"
               >
                 J'hésite encore, aidez-moi !
               </button>
@@ -79,7 +79,7 @@ const BookingForm = () => {
             </div>
           )}
           {/* JOURNEY DATES */}
-          <h2 className="mt-20 mb-4 text-2xl text-slate-50 dark:text-slate-900 font-exo bp2_1:text-center">
+          <h2 className="mt-20 mb-4 text-2xl text-slate-50 dark:text-slate-900 font-exo bp2_1:text-center bp4:w-[90%]">
             2. QUAND SOUHAITEZ-VOUS PARTIR ?
           </h2>
           <div className="flex justify-center w-full rounded-md">
@@ -127,7 +127,7 @@ const BookingForm = () => {
 
         {/* PASSENGERS NUMBER */}
         <div className="flex flex-col items-center justify-center w-full mt-10 mb-20 ">
-          <h2 className="mb-4 text-2xl tracking-wide mt-7 text-slate-50 dark:text-slate-900 font-exo">
+          <h2 className="mb-4 text-2xl tracking-wide text-center mt-7 text-slate-50 dark:text-slate-900 font-exo bp4:w-[90%]">
             3. NOMBRE DE VOYAGEURS ?
           </h2>
           <select
