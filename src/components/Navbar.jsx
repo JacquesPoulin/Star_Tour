@@ -6,7 +6,7 @@ import { ThemeProvider } from "./darkmode/ThemeContext";
 import Logo from "./Logo";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpened, setIsOpen] = useState(false);
 
   return (
     <header className="absolute flex h-20 min-w-full justify-content-between">
@@ -61,7 +61,7 @@ const NavBar = () => {
         <button
           type="button"
           className="hidden transition-all rounded-md active:outline-none focus:outline-none first-letter:focus:ring-inset mt-9 bp2:inline-block bp2:ml-auto bp2:mr-7"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(!isOpened)}
         >
           <Logo
             myStyle="w-8 h-8 rounded-md text-slate-50 dark:text-slate-900 bg-gradient-to-br from-transparent to-transparent hover:text-white hover:from-slate-500 hover:to-slate-900 dark:hover:text-slate-900 dark:hover:from-slate-500 dark:hover:to-white"
@@ -73,7 +73,7 @@ const NavBar = () => {
         {/* Transition : to FADE IN and FADE OUT */}
       </div>
       <Transition
-        show={isOpen}
+        show={isOpened}
         enter="transition-opacity duration-1000"
         enterFrom="opacity-0"
         enterTo="opacity-100"
@@ -82,7 +82,7 @@ const NavBar = () => {
         leaveTo="opacity-0"
       >
         {/* MOBILE MENU */}
-        {isOpen && (
+        {isOpened && (
           <div className=" w-full absolute p-7 rounded-md md:hidden right-0 top-24 lg:hidden bg-neutral-900">
             <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
               <NavLink to="/home">

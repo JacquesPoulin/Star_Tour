@@ -1,21 +1,11 @@
 /* eslint-disable no-nested-ternary */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/button-has-type */
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
-  PlaneteModal.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
-    visit: PropTypes.string.isRequired,
-    closeModal: PropTypes.string.isRequired,
-  };
+const PlanetModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
   const [info, setInfo] = useState({});
 
   // Récupération des données de l'API
@@ -155,4 +145,14 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
   );
 };
 
-export default PlaneteModal;
+PlanetModal.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  weather: PropTypes.string.isRequired,
+  visit: PropTypes.string.isRequired,
+  closeModal: PropTypes.string.isRequired,
+};
+
+export default PlanetModal;

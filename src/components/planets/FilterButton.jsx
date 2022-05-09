@@ -1,17 +1,10 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import PropTypes from "prop-types";
 
 const FilterButton = ({ id, filter, setFilter }) => {
-  FilterButton.propTypes = {
-    id: PropTypes.number.isRequired,
-    filter: PropTypes.string.isRequired,
-    setFilter: PropTypes.func.isRequired,
-  };
   return (
-    <div
-      role="button"
+    <button
+      type="button"
       onClick={() => (id === "Tout afficher" ? setFilter("") : setFilter(id))}
       className={`bp2:justify-self-center dark:border-slate-900 dark:box-shadow-2 ${
         id === filter ? "activeFilter" : "inactiveFilter"
@@ -24,8 +17,14 @@ const FilterButton = ({ id, filter, setFilter }) => {
       >
         {id}
       </p>
-    </div>
+    </button>
   );
+};
+
+FilterButton.propTypes = {
+  id: PropTypes.string.isRequired,
+  filter: PropTypes.string.isRequired,
+  setFilter: PropTypes.func.isRequired,
 };
 
 export default FilterButton;

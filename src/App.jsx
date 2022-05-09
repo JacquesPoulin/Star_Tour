@@ -7,11 +7,13 @@ import Quiz from "./pages/Quiz";
 import Booking from "./pages/Booking";
 import Ships from "./pages/Ships";
 import Contact from "./pages/Contact";
+import NavBar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <HashRouter>
+        <NavBar />
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/home" element={<Home />} />

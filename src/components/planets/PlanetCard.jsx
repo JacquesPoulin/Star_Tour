@@ -1,18 +1,9 @@
 /* eslint-disable react/button-has-type */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import PlaneteModal from "./PlanetModal";
+import PlanetModal from "./PlanetModal";
 
 const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
-  PlanetCard.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
-    visit: PropTypes.string.isRequired,
-    isList: PropTypes.bool.isRequired,
-  };
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -55,7 +46,7 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
         </button>
       </div>
       {isModalOpen && (
-        <PlaneteModal
+        <PlanetModal
           id={id}
           name={name}
           img={img}
@@ -67,6 +58,16 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
       )}
     </>
   );
+};
+
+PlanetCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  weather: PropTypes.string.isRequired,
+  visit: PropTypes.string.isRequired,
+  isList: PropTypes.bool.isRequired,
 };
 
 export default PlanetCard;

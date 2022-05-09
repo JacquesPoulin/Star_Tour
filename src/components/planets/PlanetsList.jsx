@@ -5,11 +5,6 @@ import PlanetCard from "./PlanetCard";
 import planets from "../../../data/planets";
 
 const PlanetsList = ({ search, filter }) => {
-  PlanetsList.propTypes = {
-    filter: PropTypes.string.isRequired,
-    search: PropTypes.string.isRequired,
-  };
-
   const [isList, setIsList] = useState(false);
 
   const showGrid = () => {
@@ -56,6 +51,11 @@ const PlanetsList = ({ search, filter }) => {
       </div>
     </div>
   );
+};
+
+PlanetsList.propTypes = {
+  filter: PropTypes.string.isRequired,
+  search: PropTypes.string.isRequired,
 };
 
 export default PlanetsList;
