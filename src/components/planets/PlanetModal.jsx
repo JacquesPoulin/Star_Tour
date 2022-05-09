@@ -5,7 +5,25 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const PlanetModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
+const PlaneteModal = ({
+  id,
+  name,
+  img,
+  desc,
+  weather,
+  visit,
+  setIsModalOpened,
+}) => {
+  PlaneteModal.propTypes = {
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    weather: PropTypes.string.isRequired,
+    visit: PropTypes.string.isRequired,
+    setIsModalOpened: PropTypes.func.isRequired,
+  };
+
   const [info, setInfo] = useState({});
 
   // Récupération des données de l'API
@@ -38,7 +56,9 @@ const PlanetModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
           </h1>
           <button
             type="button"
-            onClick={closeModal}
+            onClick={() => {
+              setIsModalOpened(false);
+            }}
             className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 bp2:-mt-20 hover:scale-105"
           >
             X

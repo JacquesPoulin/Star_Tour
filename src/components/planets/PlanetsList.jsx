@@ -45,8 +45,8 @@ const PlanetsList = ({ search, filter }) => {
         {planets
           .filter((planet) => planet.biome === filter || !filter)
           .filter((planet) => planet.name.toLowerCase().startsWith(search))
-          .map((planet) => (
-            <PlanetCard isList={isList} {...planet} />
+          .map((planet, index) => (
+            <PlanetCard key={index} isList={isList} {...planet} />
           ))}
       </div>
     </div>
