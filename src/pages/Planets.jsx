@@ -5,7 +5,6 @@ import PlanetsList from "../components/planets/PlanetsList";
 import Footer from "../components/Footer";
 import GoToTop from "../components/GoToTop";
 import PlanetsSearch from "../components/planets/PlanetsSearch";
-// import PlanetModal from "../components/planets/PlanetModal";
 
 const Planets = () => {
   const [search, setSearch] = useState("");

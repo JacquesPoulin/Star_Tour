@@ -15,7 +15,12 @@ const PlanetsFilters = ({ filter, setFilter }) => {
       </h1>
       <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-4 bp3:gap-1 bp3:grid-cols-3 bp3:grid-rows-3">
         {filters.map((filterBut) => (
-          <FilterButton filter={filter} setFilter={setFilter} {...filterBut} />
+          <FilterButton
+            key={filterBut.item}
+            filter={filter}
+            setFilter={setFilter}
+            {...filterBut}
+          />
         ))}
       </div>
     </div>
