@@ -5,15 +5,15 @@ import PartnersModal from "./PartnersModal";
 
 const PartnersButton = ({ id, name, img, link, desc }) => {
   // >> STATES & SETTERS
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState(false);
   // ------------------------------------------
   // >> FUNCTIONS
-  const openModalPartners = () => {
-    setIsModalOpen(true);
+  const openPartnersModal = () => {
+    setIsModalOpened(true);
   };
 
-  const closeModalPartners = () => {
-    setIsModalOpen(false);
+  const closePartnersModal = () => {
+    setIsModalOpened(false);
   };
   // ------------------------------------------
 
@@ -23,15 +23,15 @@ const PartnersButton = ({ id, name, img, link, desc }) => {
         type="submit"
         id={id}
         className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] hover:text-[#0780FE] dark:hover:text-[#FF0010]"
-        onClick={openModalPartners}
+        onClick={openPartnersModal}
       >
         {name}
       </button>
-      {isModalOpen && (
+      {isModalOpened && (
         <PartnersModal
           img={img}
           link={link}
-          closeModalPartners={closeModalPartners}
+          closeModalPartners={closePartnersModal}
           desc={desc}
         />
       )}

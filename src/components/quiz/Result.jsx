@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import PlanetModal from "../planets/PlanetModal";
 
 const Result = ({ name, img, id, desc, weather, visit }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   const openModal = () => {
-    setIsModalOpen(true);
+    setIsModalOpened(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setIsModalOpened(false);
   };
 
   return (
@@ -56,7 +56,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
+      {isModalOpened && (
         <PlanetModal
           id={id}
           name={name}
