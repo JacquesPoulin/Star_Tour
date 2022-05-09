@@ -50,7 +50,7 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
       </div>
 
       {isModalOpened && (
-        <PlaneteModal
+        <PlanetModal
           id={id}
           name={name}
           img={img}
