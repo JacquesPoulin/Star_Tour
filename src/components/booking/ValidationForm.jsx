@@ -20,7 +20,8 @@ const ValidationForm = ({ passengers, destination, startDate, endDate }) => {
   // ------------------------------------------
 
   // >> FUNCTIONS
-  const openModalRecap = () => {
+  const openModalRecap = (e) => {
+    e.preventDefault();
     setModalRecap(true);
   };
 
