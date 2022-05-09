@@ -4,7 +4,7 @@ import { ThemeContext } from "./ThemeContext";
 
 const Toggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-  console.log(theme);
+
   return (
     <div className="p-2 transition duration-500 ease-in-out rounded-full">
       {theme === "dark" ? (

@@ -4,10 +4,6 @@ import FilterButton from "./FilterButton";
 import filters from "../../../data/filters";
 
 const PlanetsFilters = ({ filter, setFilter }) => {
-  PlanetsFilters.propTypes = {
-    filter: PropTypes.string.isRequired,
-    setFilter: PropTypes.func.isRequired,
-  };
   return (
     <div className="h-64 pl-10 bp2:pl-0">
       <h1 className="mt-10 text-4xl text-left bp2:px-6 bp2:text-center bp3:text-2xl text-slate-50 dark:text-slate-900 dark:text-shadow-2 font-orb text-shadow-1">
@@ -25,6 +21,11 @@ const PlanetsFilters = ({ filter, setFilter }) => {
       </div>
     </div>
   );
+};
+
+PlanetsFilters.propTypes = {
+  filter: PropTypes.string.isRequired,
+  setFilter: PropTypes.func.isRequired,
 };
 
 export default PlanetsFilters;

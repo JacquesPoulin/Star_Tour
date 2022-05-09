@@ -79,17 +79,5 @@ Result.propTypes = {
   weather: PropTypes.string.isRequired,
   visit: PropTypes.string.isRequired,
 };
-Result.propTypes = {
-  desc: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  weather: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  visit: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  id: PropTypes.number.isRequired,
-};
 
 export default Result;

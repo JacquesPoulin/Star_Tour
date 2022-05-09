@@ -2,16 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icons from "../../public/assets/logo/logos.svg";
 
-// interface Props {
-//   name: string;
-//   color?: string;
-//   style: string;
-//   icon: string;
-// }
-
-const Logo = ({ id, color, myStyle }) => {
+const Logo = ({ id, myStyle }) => {
   return (
-    <svg className={myStyle} fill={color}>
+    <svg className={myStyle}>
       <use xlinkHref={`${Icons}#${id}`} />
       {/* {name} */}
     </svg>
@@ -19,7 +12,6 @@ const Logo = ({ id, color, myStyle }) => {
 };
 
 Logo.propTypes = {
-  color: PropTypes.string.isRequired,
   myStyle: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };

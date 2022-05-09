@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -41,7 +38,11 @@ const PartnersModal = ({ id, link, closeModalPartners, img, desc }) => {
 };
 
 PartnersModal.propTypes = {
+  id: PropTypes.number.isRequired,
+  link: PropTypes.string.isRequired,
   closeModalPartners: PropTypes.func.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
 };
 
 export default PartnersModal;
