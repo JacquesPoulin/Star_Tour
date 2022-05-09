@@ -50,5 +50,5 @@ export const ThemeProvider = ({ initialTheme, children }) => {
 
 ThemeProvider.propTypes = {
   initialTheme: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.func.isRequired,
 };
