@@ -35,7 +35,7 @@ const SubmitForm = ({ isChecked, handleCheck, openModalRecap }) => {
 // ----------PROPTYPES------------------------
 SubmitForm.propTypes = {
   openModalRecap: PropTypes.func.isRequired,
-  isChecked: PropTypes.func.isRequired,
+  isChecked: PropTypes.string.isRequired,
   handleCheck: PropTypes.func.isRequired,
 };
 

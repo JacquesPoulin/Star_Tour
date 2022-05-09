@@ -38,7 +38,7 @@ const Footer = () => {
             </p>
           </a>
           {/* FAQ */}
-          <a href="www.google.com">
+          <a href="https://www.starwars-universe.com/dossier-page-81-1544-univers-officiel-legends-et-autres-f-a-q-star-wars-facts-la-f-a-q-illustree.html">
             <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900">
               <Logo myStyle="w-8 h-8" name="logos-faq" id="logos-faq" />
               <span>FAQ</span>
@@ -103,28 +103,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* :CGV/NEWSLETTER */}
-      {/* <div>
-         <nav className="flex flex-wrap justify-center p-3 text-lg list-none text-slate-50 dark:text-slate-900">
-          <li>
-            <button
-              className="p-3 text-slate-50 dark:text-slate-900 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-50 focus:ring-1 focus:ring-slate-50 dark:focus:ring-slate-900 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
-              type="button"
-              data-modal-toggle="extralarge-modal"
-            >
-              CGV
-            </button>
-          </li>
-          <li>
-            <button
-              className="p-3 text-slate-50 dark:text-slate-900 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-50 focus:ring-1 focus:ring-slate-50 dark:focus:ring-slate-900 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
-              type="button"
-              data-modal-toggle="large-modal"
-            >
-              Newsletter
-            </button>
-          </li>
-        </nav> */}
       {/* :COPYRIGHT */}
       <div className="flex justify-center">
         <a

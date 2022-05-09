@@ -83,6 +83,10 @@ ensuite il faut écrire dans :
   }
 }
 
+.hidden {
+  display: none;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
