@@ -13,15 +13,7 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
     visit: PropTypes.string.isRequired,
     isList: PropTypes.bool.isRequired,
   };
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
     <>
@@ -33,7 +25,9 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
       >
         <button
           type="button"
-          onClick={openModal}
+          onClick={() => {
+            setIsModalOpened(true);
+          }}
           className={`flex items-center  ${
             isList
               ? "justify-start gap-12 w-[80vw] h-[5rem] bg-slate-50 bg-opacity-10 italic"
@@ -54,7 +48,7 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
           </p>
         </button>
       </div>
-      {isModalOpen && (
+      {isModalOpened && (
         <PlaneteModal
           id={id}
           name={name}
@@ -62,7 +56,7 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
           desc={desc}
           weather={weather}
           visit={visit}
-          closeModal={closeModal}
+          setIsModalOpened={setIsModalOpened}
         />
       )}
     </>
