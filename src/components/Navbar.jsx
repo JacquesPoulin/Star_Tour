@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 import { Transition } from "@tailwindui/react";
 import Toggle from "./darkmode/ThemeToggle";
 import { ThemeProvider } from "./darkmode/ThemeContext";
+import navLinks from "../../data/navLinks";
 import Logo from "./Logo";
 
 const NavBar = () => {
-  const [isOpened, setIsOpen] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
   return (
     <header className="absolute flex h-20 min-w-full justify-content-between">
@@ -25,31 +26,13 @@ const NavBar = () => {
         {/* NAVBAR */}
         <div className="flex justify-end w-full h-20 bp2:items-center">
           <ul className="flex text-2xl text-shadow-gr bp2:hidden ">
-            <NavLink to="/home">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Accueil
-              </li>
-            </NavLink>
-            <NavLink to="/destination">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Destinations
-              </li>
-            </NavLink>
-            <NavLink to="/ships">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Vaisseaux
-              </li>
-            </NavLink>
-            <NavLink to="/booking">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Reservation
-              </li>
-            </NavLink>
-            <NavLink to="/contact">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Contact
-              </li>
-            </NavLink>
+            {navLinks.map((link) => (
+              <NavLink to={link.path}>
+                <li className="py-10 mb-10 mr-10 font-medium hover:underline">
+                  {link.title}
+                </li>
+              </NavLink>
+            ))}
           </ul>
           <ThemeProvider>
             <div className="py-10 mr-10 -mt-2 font-medium bp2:mt-8">
@@ -61,7 +44,7 @@ const NavBar = () => {
         <button
           type="button"
           className="hidden transition-all rounded-md active:outline-none focus:outline-none first-letter:focus:ring-inset mt-9 bp2:inline-block bp2:ml-auto bp2:mr-7"
-          onClick={() => setIsOpen(!isOpened)}
+          onClick={() => setIsOpened(!isOpened)}
         >
           <Logo
             myStyle="w-8 h-8 rounded-md text-slate-50 dark:text-slate-900 bg-gradient-to-br from-transparent to-transparent hover:text-white hover:from-slate-500 hover:to-slate-900 dark:hover:text-slate-900 dark:hover:from-slate-500 dark:hover:to-white"
@@ -85,31 +68,13 @@ const NavBar = () => {
         {isOpened && (
           <div className=" w-full absolute p-7 rounded-md md:hidden right-0 top-24 lg:hidden bg-neutral-900">
             <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
-              <NavLink to="/home">
-                <li className="mt-2 mb-8 font-medium hover:underline">
-                  Accueil
-                </li>
-              </NavLink>
-
-              <NavLink to="/destination">
-                <li className="mb-8 font-medium hover:underline">
-                  Destinations
-                </li>
-              </NavLink>
-
-              <NavLink to="/ships">
-                <li className="mb-8 font-medium hover:underline">Vaisseaux</li>
-              </NavLink>
-
-              <NavLink to="/booking">
-                <li className="mb-8 font-medium hover:underline">
-                  Reservation
-                </li>
-              </NavLink>
-
-              <NavLink to="/contact">
-                <li className="font-medium hover:underline">Contact</li>
-              </NavLink>
+              {navLinks.map((link) => (
+                <NavLink to={link.path}>
+                  <li className="mt-2 mb-8 font-medium hover:underline">
+                    {link.title}
+                  </li>
+                </NavLink>
+              ))}
             </ul>
           </div>
         )}
