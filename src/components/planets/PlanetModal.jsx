@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const PlaneteModal = ({
+const PlanetModal = ({
   id,
   name,
   img,
@@ -14,16 +14,6 @@ const PlaneteModal = ({
   visit,
   setIsModalOpened,
 }) => {
-  PlaneteModal.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
-    visit: PropTypes.string.isRequired,
-    setIsModalOpened: PropTypes.func.isRequired,
-  };
-
   const [info, setInfo] = useState({});
 
   // Récupération des données de l'API
@@ -172,7 +162,7 @@ PlanetModal.propTypes = {
   desc: PropTypes.string.isRequired,
   weather: PropTypes.string.isRequired,
   visit: PropTypes.string.isRequired,
-  closeModal: PropTypes.string.isRequired,
+  setIsModalOpened: PropTypes.func.isRequired,
 };
 
 export default PlanetModal;
