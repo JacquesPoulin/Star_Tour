@@ -38,8 +38,13 @@ const PassengerName = ({ setFirstName, setLastName }) => {
 
 // ----------PROPTYPES------------------------
 PassengerName.propTypes = {
-  setFirstName: PropTypes.func.isRequired,
-  setLastName: PropTypes.func.isRequired,
+  setFirstName: PropTypes.func,
+  setLastName: PropTypes.func,
+};
+
+PassengerName.defaultProps = {
+  setFirstName: (e) => e.target.value,
+  setLastName: (e) => e.target.value,
 };
 
 export default PassengerName;

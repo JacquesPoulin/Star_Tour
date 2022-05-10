@@ -16,6 +16,7 @@ const SubmitForm = ({ isChecked, handleCheck, openModalRecap }) => {
           checked={isChecked}
           onClick={handleCheck}
           className="ml-4 mr-4 rounded-sm cursor-pointer focus:border-lime-500"
+          readOnly
           required
         />
         J'accepte les termes du <u className="underline-offset-4">contrat</u> *
@@ -35,7 +36,7 @@ const SubmitForm = ({ isChecked, handleCheck, openModalRecap }) => {
 // ----------PROPTYPES------------------------
 SubmitForm.propTypes = {
   openModalRecap: PropTypes.func.isRequired,
-  isChecked: PropTypes.string.isRequired,
+  isChecked: PropTypes.bool.isRequired,
   handleCheck: PropTypes.func.isRequired,
 };
 

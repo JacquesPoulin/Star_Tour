@@ -81,8 +81,6 @@ ShipCard.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-};
-ShipCard.propTypes = {
   sort: PropTypes.string.isRequired,
 };
 
