@@ -22,8 +22,7 @@ const PartnersModal = ({ id, link, setIsModalOpened, img, desc }) => {
         </button>
 
         <p className="w-1/2 text-center absolute z-[20] font-medium font-orb text-2xl text-slate-50 text-shadow-3 -mb-[350px] bp1:text-[1rem] bp2:-mb-[100px]">
-          {" "}
-          {desc}{" "}
+          {desc}
         </p>
 
         <button
