@@ -99,32 +99,32 @@ const PlanetModal = ({
               </p>
               <div className="flex items-end justify-start text-lg bp1:text-[1.2vw] bp2:text-[2vw] bp3:text-[3vw] bp2:pb-4 bp2:leading-4">
                 <p>
-                  Diamètre :{" "}
+                  Diamètre :
                   {info.diameter !== "unknown" && info.diameter !== "0"
                     ? info.diameter
-                    : "6000"}{" "}
+                    : "6000"}
                   km
                   <br />
-                  Rotation :{" "}
+                  Rotation :
                   {info.rotation_period !== "unknown"
                     ? info.rotation_period
-                    : "24"}{" "}
+                    : "24"}
                   h<br />
-                  Orbite :{" "}
+                  Orbite :
                   {info.orbital_period !== "unknown"
                     ? info.orbital_period
-                    : "365"}{" "}
+                    : "365"}
                   j<br />
                 </p>
                 <p className="-ml-7 bp2:ml-4 z-[50]">
-                  Population :{" "}
+                  Population :
                   {info.population === "unknown"
                     ? "Inconnu"
                     : parseInt(info.population, 10) < 1000000000
                     ? `${parseInt(info.population, 10) / 1000000}M`
                     : `${parseInt(info.population, 10) / 1000000000}MM`}
                   <br />
-                  Climat :{" "}
+                  Climat :
                   {info.climate === "unknown" ? "temperate" : info.climate}
                   <br />
                 </p>
