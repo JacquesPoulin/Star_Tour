@@ -49,6 +49,10 @@ export const ThemeProvider = ({ initialTheme, children }) => {
 };
 
 ThemeProvider.propTypes = {
-  initialTheme: PropTypes.string.isRequired,
-  children: PropTypes.func.isRequired,
+  initialTheme: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+ThemeProvider.defaultProps = {
+  initialTheme: "light",
 };
