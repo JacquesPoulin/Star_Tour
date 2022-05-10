@@ -4,10 +4,6 @@ import ShipCard from "./ShipCard";
 import ships from "../../../data/ships";
 
 const ShipList = ({ sort }) => {
-  ShipList.propTypes = {
-    sort: PropTypes.string.isRequired,
-  };
-
   // Fonction de comparaison pour la capacité
   const compareCap = (a, b) => {
     if (a.cap < b.cap) {
@@ -51,6 +47,10 @@ const ShipList = ({ sort }) => {
       ))}
     </div>
   );
+};
+
+ShipList.propTypes = {
+  sort: PropTypes.string.isRequired,
 };
 
 export default ShipList;

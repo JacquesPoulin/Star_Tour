@@ -25,7 +25,7 @@ const BookingForm = () => {
 
   const sejour = (date1, date2) => {
     const differenceInTime = date2.getTime() - date1.getTime();
-    return Math.floor(differenceInTime / (1000 * 3600 * 24));
+    return Math.ceil(differenceInTime / (1000 * 3600 * 24) + 1);
   };
   const handlePassengers = (e) => {
     setPassengers(e.target.value);
