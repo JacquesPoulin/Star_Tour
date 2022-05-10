@@ -44,7 +44,7 @@ const BookingRecap = ({
           <p>Destination : {destination} </p>
           {/* le toLocaleString permert d'afficher la date en version fr et le .slice supprime l'heure qui s'affichait en même temps */}
           <p>
-            Du {startDate.toLocaleString("fr-FR").slice(0, 10)} au{" "}
+            Du {startDate.toLocaleString("fr-FR").slice(0, 10)} au
             {endDate.toLocaleString("fr-FR").slice(0, 10)} <br />
           </p>
           {/* <p>Transport :</p> */}
