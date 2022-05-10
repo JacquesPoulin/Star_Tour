@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import PlanetModal from "./PlanetModal";

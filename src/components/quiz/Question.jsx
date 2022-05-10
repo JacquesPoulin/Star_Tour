@@ -98,7 +98,7 @@ const Question = () => {
                             src={answerOption.img}
                             alt={answerOption.answerText}
                           />
-                          <span className="z-50">
+                          <span className="z-10">
                             {answerOption.answerText}
                           </span>
                         </button>
