@@ -22,7 +22,7 @@ const partners = [
   },
   {
     id: 4,
-    link: "https://wild-stone-jimmyganci.vercel.app/#/",
+    link: "https://wildstone.vercel.app/",
     name: "WILDSTONE",
     desc: "Pour découvrir un jeu de plateau",
     img: "/assets/images/partners/wildstone.png",

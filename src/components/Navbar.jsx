@@ -27,7 +27,7 @@ const NavBar = () => {
         <div className="flex justify-end w-full h-20 bp2:items-center">
           <ul className="flex text-2xl text-shadow-gr bp2:hidden ">
             {navLinks.map((link) => (
-              <NavLink to={link.path}>
+              <NavLink key={link.id} to={link.path}>
                 <li className="py-10 mb-10 mr-10 font-medium hover:underline">
                   {link.title}
                 </li>
@@ -69,7 +69,11 @@ const NavBar = () => {
           <div className="absolute right-0 w-full rounded-md p-7 md:hidden top-24 lg:hidden bg-neutral-900">
             <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
               {navLinks.map((link) => (
-                <NavLink to={link.path} onClick={() => setIsOpened(false)}>
+                <NavLink
+                  key={link.id}
+                  to={link.path}
+                  onClick={() => setIsOpened(false)}
+                >
                   <li className="mt-2 mb-8 font-medium hover:underline">
                     {link.title}
                   </li>
