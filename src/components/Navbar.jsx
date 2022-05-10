@@ -10,7 +10,7 @@ const NavBar = () => {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <header className="absolute z-[99] flex h-20 min-w-full justify-content-between">
+    <header className="absolute bp4:z-[99] flex h-20 min-w-full justify-content-between">
       {/* DESKTOP MENU */}
       <div className="flex items-center justify-center h-20 min-w-full font-exo text-slate-50 dark:text-slate-900 bp2:justify-start">
         <NavLink to="/home">

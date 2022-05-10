@@ -6,14 +6,6 @@ import PlanetModal from "../planets/PlanetModal";
 const Result = ({ name, img, id, desc, weather, visit }) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpened(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpened(false);
-  };
-
   return (
     <div className="h-[100vh] w-[100vw] bg_nightsky dark:bg_lightsky">
       <div className=" top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%] fixed flex flex-column justify-center w-3/5 uhd:w-2/5 bp3:w-4/5 rounded-xl box-shadow-1 dark:box-shadow-2">
@@ -39,7 +31,9 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
               <button
                 type="button"
                 className="z-10 mb-4 text-lg tracking-wider transition bp3:text-base font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
-                onClick={openModal}
+                onClick={() => {
+                  setIsModalOpened(true);
+                }}
               >
                 En savoir plus
               </button>
@@ -64,7 +58,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
           desc={desc}
           weather={weather}
           visit={visit}
-          closeModal={closeModal}
+          setIsModalOpened={setIsModalOpened}
         />
       )}
     </div>
