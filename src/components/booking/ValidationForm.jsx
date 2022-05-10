@@ -36,7 +36,7 @@ const ValidationForm = ({ passengers, destination, startDate, endDate }) => {
   // ------------------------------------------
 
   return (
-    <div className="scroll-smooth top-20 w-3/5 bp2:w-[80vw] bp2:flex bp2:flex-col bp2:items-center h-full py-8 ml-10 bp2:ml-0 mt-16 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[8%] bg-opacity-[8%] font-orb">
+    <div className="scroll-smooth top-20 w-[50rem] h-full py-8 ml-10 bp2:ml-0 mt-16 border-2 border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[8%] bg-opacity-[8%] font-orb bp2_1:w-[90%] bp2:w-[45rem]">
       <form className="flex flex-col items-center justify-center mt-4 tracking-wide text-slate-50 dark:text-slate-900">
         <h1 className="text-2xl tracking-wide mb-7 animate-pulse bp2_1:text-center bp2_1:w-[90%] bp2_1:text-xl  ">
           VALIDEZ VOTRE VOYAGE
