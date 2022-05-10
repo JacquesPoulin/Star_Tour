@@ -45,14 +45,12 @@ const BookingRecap = ({
           <p>Nombre de personnes : {passengers} </p>
           <p>Destination : {destination} </p>
           {/* toLocaleString post french date .slice delete hour */}
-          <p>
-            Du {startDate.toLocaleString("fr-FR").slice(0, 10)} au
-            {endDate.toLocaleString("fr-FR").slice(0, 10)} <br />
-          </p>
+          <p>Du {startDate.toLocaleString("fr-FR").slice(0, 10)}</p>
+          <p>au {endDate.toLocaleString("fr-FR").slice(0, 10)}</p>
         </div>
         <div className="flex justify-end pt-10 pr-6 bp1:pb-5 bp1:pt-5 bp2:pb-5 bp2_1:pb-5 bp4:pt-4 bp4:pr-2 bp4:pb-3">
           <div className="rounded-lg justify-end font-exo bg-[url('/assets/images/modal_dark_bg2.jpg')] bg-cover w-1/2 h-20 text-slate-50 text-2xl pl-4 pt-1 bp1:text-base bp1:w-56  bp1:h-16 bp2:text-[15px] bp2:leading-5 bp2:h-14 bp2:w-1/3 bp2:pl-2 bp2_1:w-52 bp4:h-14  text-shadow-wh bp4:text-[12px] bp4:w-44 ">
-            MONTANT TOTAL : {Math.floor(Math.random() * 120000)} <br /> CREDITS
+            MONTANT TOTAL : {Math.floor(Math.random() * 120000)} CREDITS
             REPUBLICAINS
           </div>
         </div>
