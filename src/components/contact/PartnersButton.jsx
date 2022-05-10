@@ -39,7 +39,7 @@ const PartnersButton = ({ id, name, img, link, desc }) => {
   );
 };
 PartnersButton.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,

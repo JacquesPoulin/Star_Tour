@@ -150,7 +150,9 @@ const Form = () => {
         </div>
         <div className="flex justify-center bp2_1:flex-col bp2_1:w-full">
           {partners &&
-            partners.map((partner) => <PartnersButton {...partner} />)}
+            partners.map((partner) => (
+              <PartnersButton key={partner.id} {...partner} />
+            ))}
         </div>
       </div>
     </div>
