@@ -43,7 +43,7 @@ const BookingForm = () => {
       <div className="w-full flex-column pb-14 pt-44">
         {/* TITLE */}
         <div className="w-full">
-          <h1 className="p-8 text-6xl tracking-wide text-center text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2 bp5:text-4xl">
+          <h1 className="p-8 text-6xl tracking-wide text-center text-slate-50 dark:text-slate-900 font-orb text-shadow-wh dark:text-shadow-2 bp2:text-5xl bp3:text-4xl">
             C'est le moment de reserver les vacances de vos rêves !
           </h1>
         </div>

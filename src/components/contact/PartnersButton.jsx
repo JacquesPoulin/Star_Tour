@@ -7,15 +7,6 @@ const PartnersButton = ({ id, name, img, link, desc }) => {
   // >> STATES & SETTERS
   const [isModalOpened, setIsModalOpened] = useState(false);
   // ------------------------------------------
-  // >> FUNCTIONS
-  const openPartnersModal = () => {
-    setIsModalOpened(true);
-  };
-
-  const closePartnersModal = () => {
-    setIsModalOpened(false);
-  };
-  // ------------------------------------------
 
   return (
     <div className="bp2_1:flex bp2_1:justify-center">
@@ -23,7 +14,7 @@ const PartnersButton = ({ id, name, img, link, desc }) => {
         type="submit"
         id={id}
         className="mt-10 mb-20 font-orb cursor-pointer px-10 text-center border-4 text-slate-50 dark:text-slate-900 border-y-transparent border-x-[#0780FE] dark:border-x-[#FF0010] hover:text-[#0780FE] dark:hover:text-[#FF0010]"
-        onClick={openPartnersModal}
+        onClick={setIsModalOpened}
       >
         {name}
       </button>
@@ -31,7 +22,7 @@ const PartnersButton = ({ id, name, img, link, desc }) => {
         <PartnersModal
           img={img}
           link={link}
-          closeModalPartners={closePartnersModal}
+          setIsModalOpened={setIsModalOpened}
           desc={desc}
         />
       )}
