@@ -39,11 +39,15 @@ const PartnersModal = ({ id, link, setIsModalOpened, img, desc }) => {
 };
 
 PartnersModal.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   link: PropTypes.string.isRequired,
   setIsModalOpened: PropTypes.func.isRequired,
   img: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+};
+
+PartnersModal.defaultProps = {
+  id: 1,
 };
 
 export default PartnersModal;

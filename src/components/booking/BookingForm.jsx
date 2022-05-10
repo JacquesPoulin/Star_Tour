@@ -88,10 +88,9 @@ const BookingForm = () => {
                 DU
               </p>
               <DatePicker
-                selected={startDate}
-                selectsStart
-                startDate={startDate}
-                endDate={endDate}
+                selected={startDate && new Date(startDate)}
+                locale="fr"
+                dateFormat="P"
                 onChange={(date) => setStartDate(date)}
                 className="border-2 text-lime-200 text-center border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%]"
               />
@@ -99,11 +98,13 @@ const BookingForm = () => {
                 AU
               </p>
               <DatePicker
-                selected={endDate}
+                locale="fr"
+                selected={endDate && new Date(endDate)}
                 selectsEnd
                 startDate={startDate}
                 endDate={endDate}
                 minDate={startDate}
+                dateFormat="P"
                 onChange={(date) => setEndDate(date)}
                 className="border-2 text-lime-200 text-center border-slate-50 dark:border-slate-900 rounded-xl box-shadow-1 bg-slate-50 dark:bg-slate-900 dark:bg-opacity-[10%] bg-opacity-[10%]"
               />

@@ -121,4 +121,5 @@ ValidationForm.propTypes = {
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
 };
+
 export default ValidationForm;
