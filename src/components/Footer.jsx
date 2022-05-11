@@ -4,12 +4,12 @@ import Logo from "./Logo";
 const Footer = () => {
   return (
     <footer className="w-full p-5 bg_nightsky dark:bg_lightsky">
-      {/* Container Helps + Icons */}
+      {/* >> CONTAINER HELPS + ICONS */}
       <div className="w-6/6 h-0.5 -m-5 bg-slate-50 dark:bg-slate-900" />
       <div className="flex flex-row flex-wrap w-full md:pb-px20">
-        {/* Helps -- phone -- adress -- faq */}
+        {/* >> HELPS -- PHONE -- ADDRESS -- FAQ */}
         <div className="flex flex-wrap justify-between w-2/3 px-1 py-5">
-          {/* Phone */}
+          {/* >> PHONE */}
           <a href="tel:0607514408">
             <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900 ">
               <Logo myStyle="w-8 h-8" name="logos-phone" id="logos-phone" />
@@ -19,7 +19,7 @@ const Footer = () => {
               </span>
             </p>
           </a>
-          {/* Adress */}
+          {/* >> ADDRESS */}
           <a
             href="https://www.google.fr/maps/place/Wild+Code+School/@43.4633631,-1.5136242,17z/data=!3m1!4b1!4m5!3m4!1s0xd51151b04400001:0x5e8e4026b1a5e55f!8m2!3d43.4633437!4d-1.5114351"
             target="_blank"
@@ -37,8 +37,8 @@ const Footer = () => {
               </span>
             </p>
           </a>
-          {/* FAQ */}
-          <a href="www.google.com">
+          {/* >> FAQ */}
+          <a href="https://www.starwars-universe.com/dossier-page-81-1544-univers-officiel-legends-et-autres-f-a-q-star-wars-facts-la-f-a-q-illustree.html">
             <p className="flex p-3 text-xs font-bold text-slate-50 dark:text-slate-900">
               <Logo myStyle="w-8 h-8" name="logos-faq" id="logos-faq" />
               <span>FAQ</span>
@@ -46,9 +46,9 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Icons -- fb -- twitter -- insta -- linkedin -- github -- youtube */}
+        {/* >> ICONS: FACEBOOK-TWITTER-INSTAGRAM-LINKEDIN-GITHUB-YOUTUBE */}
         <div className="flex flex-wrap justify-end w-1/3 px-1 py-5">
-          {/* Facebook */}
+          {/* >> FACEBOOK */}
           <a
             href="https://www.facebook.com/StarWars.fr"
             className="hover:text-[#4267B2] p-3 text-slate-50 dark:text-slate-900"
@@ -56,7 +56,7 @@ const Footer = () => {
             <span className="sr-only ">Facebook</span>
             <Logo myStyle="w-6 h-6" name="logos-facebook" id="logos-facebook" />
           </a>
-          {/* Twitter */}
+          {/* >> TWITTER */}
           <a
             href="https://twitter.com/StarWarsFR"
             className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#1DA1F2]"
@@ -64,7 +64,7 @@ const Footer = () => {
             <span className="sr-only">Twitter</span>
             <Logo myStyle="w-6 h-6" name="logos-twitter" id="logos-twitter" />
           </a>
-          {/* Instagram */}
+          {/* >> INSTAGRAM */}
           <a
             href="https://www.instagram.com/starwars/"
             className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#7e22ce]"
@@ -76,7 +76,7 @@ const Footer = () => {
               id="logos-instagram"
             />
           </a>
-          {/* Linkedin */}
+          {/* >> LINKEDIN */}
           <a
             href="https://www.linkedin.com/showcase/starwars/about/"
             className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#0B66C2]"
@@ -84,7 +84,7 @@ const Footer = () => {
             <span className="sr-only">Linkedin</span>
             <Logo myStyle="w-6 h-6" name="logos-linkedin" id="logos-linkedin" />
           </a>
-          {/* GitHub */}
+          {/* >> GITHUB */}
           <a
             href="https://github.com/"
             className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#252A30] "
@@ -92,7 +92,7 @@ const Footer = () => {
             <span className="sr-only">GitHub</span>
             <Logo myStyle="w-6 h-6" name="logos-github" id="logos-github" />
           </a>
-          {/* Youtube */}
+          {/* >> YOUTUBE */}
           <a
             href="https://www.youtube.com/c/StarWars"
             className="p-3 ml-3 text-slate-50 dark:text-slate-900 hover:text-[#FF0000]"
@@ -103,29 +103,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* :CGV/NEWSLETTER */}
-      {/* <div>
-         <nav className="flex flex-wrap justify-center p-3 text-lg list-none text-slate-50 dark:text-slate-900">
-          <li>
-            <button
-              className="p-3 text-slate-50 dark:text-slate-900 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-50 focus:ring-1 focus:ring-slate-50 dark:focus:ring-slate-900 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
-              type="button"
-              data-modal-toggle="extralarge-modal"
-            >
-              CGV
-            </button>
-          </li>
-          <li>
-            <button
-              className="p-3 text-slate-50 dark:text-slate-900 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-slate-50 focus:ring-1 focus:ring-slate-50 dark:focus:ring-slate-900 font-medium rounded-lg text-lg px-5 py-2.5 text-center"
-              type="button"
-              data-modal-toggle="large-modal"
-            >
-              Newsletter
-            </button>
-          </li>
-        </nav> */}
-      {/* :COPYRIGHT */}
+      {/* >> COPYRIGHT */}
       <div className="flex justify-center">
         <a
           href="https://www.wildcodeschool.com"

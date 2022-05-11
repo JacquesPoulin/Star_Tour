@@ -1,27 +1,9 @@
-/* eslint-disable react/button-has-type */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import PlaneteModal from "./PlanetModal";
+import PlanetModal from "./PlanetModal";
 
 const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
-  PlanetCard.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
-    visit: PropTypes.string.isRequired,
-    isList: PropTypes.bool.isRequired,
-  };
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
     <>
@@ -33,7 +15,9 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
       >
         <button
           type="button"
-          onClick={openModal}
+          onClick={() => {
+            setIsModalOpened(true);
+          }}
           className={`flex items-center  ${
             isList
               ? "justify-start gap-12 w-[80vw] h-[5rem] bg-slate-50 bg-opacity-10 italic"
@@ -54,19 +38,30 @@ const PlanetCard = ({ id, name, img, desc, weather, visit, isList }) => {
           </p>
         </button>
       </div>
-      {isModalOpen && (
-        <PlaneteModal
+
+      {isModalOpened && (
+        <PlanetModal
           id={id}
           name={name}
           img={img}
           desc={desc}
           weather={weather}
           visit={visit}
-          closeModal={closeModal}
+          setIsModalOpened={setIsModalOpened}
         />
       )}
     </>
   );
+};
+
+PlanetCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  weather: PropTypes.string.isRequired,
+  visit: PropTypes.string.isRequired,
+  isList: PropTypes.bool.isRequired,
 };
 
 export default PlanetCard;

@@ -3,10 +3,11 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { ThemeContext } from "./ThemeContext";
 
 const Toggle = () => {
+  // >> STATES & SETTERS
   const { theme, setTheme } = useContext(ThemeContext);
-  console.log(theme);
   return (
     <div className="p-2 transition duration-500 ease-in-out rounded-full">
+      {/* >> ICONS DARK/LIGHT MODE */}
       {theme === "dark" ? (
         <FaSun
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

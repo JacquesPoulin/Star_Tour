@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
 import React from "react";
 import PropTypes from "prop-types";
 
-const PartnersModal = ({ id, link, closeModalPartners, img, desc }) => {
+const PartnersModal = ({ id, link, setIsModalOpened, img, desc }) => {
   return (
     // >> Modal decoration
     <div className="z-[20] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[100vw] h-[100vh] bg-slate-900 flex justify-center items-center bg-opacity-10 backdrop-blur-[2px]">
@@ -16,15 +13,16 @@ const PartnersModal = ({ id, link, closeModalPartners, img, desc }) => {
         />
         <button
           type="button"
-          onClick={closeModalPartners}
+          onClick={() => {
+            setIsModalOpened(false);
+          }}
           className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-[470px] bp2:-mt-[230px] hover:scale-105"
         >
           X
         </button>
 
         <p className="w-1/2 text-center absolute z-[20] font-medium font-orb text-2xl text-slate-50 text-shadow-3 -mb-[350px] bp1:text-[1rem] bp2:-mb-[100px]">
-          {" "}
-          {desc}{" "}
+          {desc}
         </p>
 
         <button
@@ -41,7 +39,15 @@ const PartnersModal = ({ id, link, closeModalPartners, img, desc }) => {
 };
 
 PartnersModal.propTypes = {
-  closeModalPartners: PropTypes.func.isRequired,
+  id: PropTypes.number,
+  link: PropTypes.string.isRequired,
+  setIsModalOpened: PropTypes.func.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};
+
+PartnersModal.defaultProps = {
+  id: 1,
 };
 
 export default PartnersModal;

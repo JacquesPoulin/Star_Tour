@@ -19,8 +19,8 @@ const HomeDescription = () => {
               Hello there !
             </h3>
             <p>
-              {`Nous sommes l'agence Star Tour, votre agence de voyage spécialisée dans
-              les séjours aux quatre coins de la galaxie !`}
+              Nous sommes l&apos;agence Star Tour, votre agence de voyage
+              spécialisée dans les séjours aux quatre coins de la galaxie !
             </p>
           </div>
           <img
@@ -35,10 +35,10 @@ const HomeDescription = () => {
             Notre objectif
           </h3>
           <p>
-            {`Vous permettre de vivre un dépaysement total, en vous
-            proposant des séjours all-inclusive vers 28 destinations toutes plus
-            différentes les unes que les autres, des mondes du noyau jusqu'aux confins de la
-            bordure extérieure.`}
+            Vous permettre de vivre un dépaysement total, en vous proposant des
+            séjours all-inclusive vers 28 destinations toutes plus différentes
+            les unes que les autres, des mondes du noyau jusqu&apos;aux confins
+            de la bordure extérieure.
           </p>
         </div>
         {/* Box 3 */}
@@ -48,8 +48,8 @@ const HomeDescription = () => {
               Notre devise
             </h3>
             <p>
-              {`Etre à votre écoute, répondre à vos attentes, afin de
-              vous proposer le voyage intergalactique de votre vie !`}
+              Etre à votre écoute, répondre à vos attentes, afin de vous
+              proposer le voyage intergalactique de votre vie !
             </p>
           </div>
           <img
