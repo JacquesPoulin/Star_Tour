@@ -10,6 +10,7 @@ const HomeHeader = () => {
         autoPlay
         loop
         muted
+        playsinline
       >
         <source
           src="./assets/videos/star-tour-header-vid.mp4"
