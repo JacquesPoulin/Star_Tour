@@ -94,7 +94,6 @@ What optimizations did we make in the code ?
 - Filters
 - API Call
 - modals
-- booking features
 
 ## THE DEVELOPERS TEAM
 
