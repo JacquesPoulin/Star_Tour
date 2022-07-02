@@ -18,9 +18,6 @@ as a student at the wild code school bootcamp ...
 - The main objective : A complete website made using the 
 REACT library and an API call.
 
--TEAM : 4 motivated web developers
-
-
 
 ## Tech Stack
 
