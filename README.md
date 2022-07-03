@@ -1,12 +1,3 @@
-## 🚀 About Me
-
-## Hi, I'm jacques ! 👋
-
-A passionate web developer student from France
-
-know more : https://github.com/JacquesPoulin
-
-
 # STAR TOUR (travel agency)
 
 Welcome to the first space agency, based on the universe
