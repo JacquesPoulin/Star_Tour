@@ -11,11 +11,10 @@ const getInitialTheme = () => {
 
     const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
     if (userMedia.matches) {
-      return "dark";
+      return "light";
     }
   }
-
-  return "light"; // light theme as the default;
+  return "dark"; // night theme as the default;
 };
 
 export const ThemeContext = createContext();
