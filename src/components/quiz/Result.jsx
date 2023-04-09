@@ -4,15 +4,7 @@ import { Link } from "react-router-dom";
 import PlanetModal from "../planets/PlanetModal";
 
 const Result = ({ name, img, id, desc, weather, visit }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
     <div className="h-[100vh] w-[100vw] bg_nightsky dark:bg_lightsky">
@@ -39,7 +31,9 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
               <button
                 type="button"
                 className="z-10 mb-4 text-lg tracking-wider transition bp3:text-base font-orb text-slate-50 text-shadow-3 hover:scale-110 duration-900"
-                onClick={openModal}
+                onClick={() => {
+                  setIsModalOpened(true);
+                }}
               >
                 En savoir plus
               </button>
@@ -56,7 +50,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
+      {isModalOpened && (
         <PlanetModal
           id={id}
           name={name}
@@ -64,7 +58,7 @@ const Result = ({ name, img, id, desc, weather, visit }) => {
           desc={desc}
           weather={weather}
           visit={visit}
-          closeModal={closeModal}
+          setIsModalOpened={setIsModalOpened}
         />
       )}
     </div>
@@ -78,18 +72,6 @@ Result.propTypes = {
   desc: PropTypes.string.isRequired,
   weather: PropTypes.string.isRequired,
   visit: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  desc: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  weather: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  visit: PropTypes.string.isRequired,
-};
-Result.propTypes = {
-  id: PropTypes.number.isRequired,
 };
 
 export default Result;

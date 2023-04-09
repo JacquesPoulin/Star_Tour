@@ -11,6 +11,15 @@ module.exports = {
         starjedi: "Starjedi",
         galactic: "Galactic Basic",
       },
+      keyframes: {
+        modalSlideIn: {
+          "0%": { transform: "translate(0px, -70px)" },
+          "100%": { transform: "translate(0px, 0px)" },
+        },
+      },
+      animation: {
+        modalSlideIn: "modalSlideIn 0.3s ease-out",
+      },
     },
     screens: {
       bp1: { max: "1390px" },
@@ -20,6 +29,7 @@ module.exports = {
       bp4: { max: "500px" },
       bp5: { max: "400px" },
       uhd: { min: "2000px" },
+      bp2inv: { min: "1000px" },
     },
     backgroundImage: {
       night: "url('/assets/images/bg-dark.jpg')",

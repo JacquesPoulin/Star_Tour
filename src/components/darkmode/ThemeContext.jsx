@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useMemo } from "react";
 import PropTypes from "prop-types";
 
 const getInitialTheme = () => {
@@ -40,14 +39,18 @@ export const ThemeProvider = ({ initialTheme, children }) => {
     rawSetTheme(theme);
   }, [theme]);
 
+  const memoTheme = useMemo(() => ({ theme, setTheme }), [theme]);
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={memoTheme}>{children}</ThemeContext.Provider>
   );
 };
 
 ThemeProvider.propTypes = {
-  initialTheme: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  initialTheme: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+ThemeProvider.defaultProps = {
+  initialTheme: "light",
 };

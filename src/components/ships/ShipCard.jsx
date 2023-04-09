@@ -1,23 +1,9 @@
-/* eslint-disable radix */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line react/prop-types
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-// eslint-disable-next-line import/no-unresolved
 import Tilt from "react-tilt";
 
 const ShipCard = ({ id, name, img, sort }) => {
-  ShipCard.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-  };
-  ShipCard.propTypes = {
-    sort: PropTypes.string.isRequired,
-  };
-
   const [info, setInfo] = useState({});
   const getInfo = () => {
     axios
@@ -89,6 +75,13 @@ const ShipCard = ({ id, name, img, sort }) => {
       </div>
     </Tilt>
   );
+};
+
+ShipCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 
 export default ShipCard;

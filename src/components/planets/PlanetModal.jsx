@@ -1,23 +1,21 @@
 /* eslint-disable no-nested-ternary */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/button-has-type */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
-  PlaneteModal.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    weather: PropTypes.string.isRequired,
-    visit: PropTypes.string.isRequired,
-    closeModal: PropTypes.string.isRequired,
-  };
+const PlanetModal = ({
+  id,
+  name,
+  img,
+  desc,
+  weather,
+  visit,
+  setIsModalOpened,
+}) => {
   const [info, setInfo] = useState({});
 
+  // Récupération des données de l'API
   const getInfo = () => {
     axios
       .get(`https://swapi.dev/api/planets/${id}`)
@@ -34,7 +32,7 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
     // Modale et background blur
     <div className="z-[20] w-[100vw] h-[100vh] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center bg-slate-100 bg-opacity-10 backdrop-blur-[2px]">
       {/* Modale entière */}
-      <div className="w-3/5 m-auto bg-black modal-bg bp2:w-5/6 uhd:w-[40%] rounded-xl">
+      <div className="w-3/5 m-auto bg-black modal-bg bp2:w-5/6 uhd:w-[40%] rounded-xl animate-modalSlideIn">
         {/* Image et titre */}
         <div className="flex flex-col items-center justify-center border-b-[2px] border-black">
           <img
@@ -47,7 +45,9 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
           </h1>
           <button
             type="button"
-            onClick={closeModal}
+            onClick={() => {
+              setIsModalOpened(false);
+            }}
             className="absolute z-10 self-end mr-4 text-5xl text-slate-50 text-shadow-3 font-orb -mt-52 bp2:-mt-20 hover:scale-105"
           >
             X
@@ -101,18 +101,18 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
                   Diamètre :{" "}
                   {info.diameter !== "unknown" && info.diameter !== "0"
                     ? info.diameter
-                    : "6000"}{" "}
+                    : "6000"}
                   km
                   <br />
                   Rotation :{" "}
                   {info.rotation_period !== "unknown"
                     ? info.rotation_period
-                    : "24"}{" "}
+                    : "24"}
                   h<br />
                   Orbite :{" "}
                   {info.orbital_period !== "unknown"
                     ? info.orbital_period
-                    : "365"}{" "}
+                    : "365"}
                   j<br />
                 </p>
                 <p className="-ml-7 bp2:ml-4 z-[50]">
@@ -154,4 +154,14 @@ const PlaneteModal = ({ id, name, img, desc, weather, visit, closeModal }) => {
   );
 };
 
-export default PlaneteModal;
+PlanetModal.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  weather: PropTypes.string.isRequired,
+  visit: PropTypes.string.isRequired,
+  setIsModalOpened: PropTypes.func.isRequired,
+};
+
+export default PlanetModal;

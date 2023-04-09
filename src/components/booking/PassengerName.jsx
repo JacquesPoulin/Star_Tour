@@ -3,19 +3,18 @@ import PropTypes from "prop-types";
 
 const PassengerName = ({ setFirstName, setLastName }) => {
   return (
-    <div className="mt-9 gap-4 w-full flex justify-evenly">
+    <div className="flex w-full gap-4 mt-9 justify-evenly bp4:flex-col">
       {/* USER FIRSTNAME */}
+
       <label
         htmlFor="firstName"
-        className="m-auto ml-10 w-auto text-xl tracking-wide"
+        className="text-xl tracking-wide ml-14 text-slate-50 dark:text-slate-900 bp5:text-lg bp4:w-full bp3:ml-1 bp2:ml-5"
       >
         Prénom * <br />
         <input
           id="firstName"
           type="text"
-          pattern="/^[A-Za-z]+$/i"
-          required
-          className="cursor-pointer w-auto pl-3 mt-2 ml-10 text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50  appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] bp2_1:w-full tracking-wide"
+          className="cursor-pointer w-auto pl-3 mt-2  text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 dark:border-slate-900  appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] tracking-wide bp5:text-lg bp2_1:w-[90%] bp2:ml-1"
           onChange={(e) => setFirstName(e.target.value)}
         />
       </label>
@@ -23,15 +22,13 @@ const PassengerName = ({ setFirstName, setLastName }) => {
       {/* USER LASTNAME */}
       <label
         htmlFor="lastName"
-        className="m-auto ml-14 w-auto text-xl tracking-wide"
+        className="text-xl tracking-wide ml-14 text-slate-50 dark:text-slate-900 bp5:text-lg bp4:w-full bp3:ml-1 bp2:ml-5"
       >
         Nom * <br />
         <input
           id="lastName"
           type="text"
-          pattern="/^[A-Za-z]+$/i"
-          required
-          className="cursor-pointer w-auto pl-3 mt-2 ml-2 text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] bp2_1:w-full tracking-wide"
+          className="cursor-pointer w-auto pl-3 mt-2  text-xl font-exo text-slate-50 dark:text-slate-900 bg-transparent border-0 border-b-4 border-l-4 border-slate-50 dark:border-slate-900  appearance-none focus:outline-none focus:ring-0 focus:border-[#7ad563] tracking-wide bp5:text-lg bp2_1:w-[90%] bp2:ml-1"
           onChange={(e) => setLastName(e.target.value)}
         />
       </label>
@@ -41,8 +38,13 @@ const PassengerName = ({ setFirstName, setLastName }) => {
 
 // ----------PROPTYPES------------------------
 PassengerName.propTypes = {
-  setFirstName: PropTypes.func.isRequired,
-  setLastName: PropTypes.func.isRequired,
+  setFirstName: PropTypes.func,
+  setLastName: PropTypes.func,
+};
+
+PassengerName.defaultProps = {
+  setFirstName: (e) => e.target.value,
+  setLastName: (e) => e.target.value,
 };
 
 export default PassengerName;

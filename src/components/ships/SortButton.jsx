@@ -2,16 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const SortButton = ({ name, img, setSort }) => {
-  SortButton.propTypes = {
-    name: PropTypes.string.isRequired,
-  };
-  SortButton.propTypes = {
-    img: PropTypes.string.isRequired,
-  };
-  SortButton.propTypes = {
-    setSort: PropTypes.func.isRequired,
-  };
-
   const handleSort = () => {
     setSort(name);
   };
@@ -25,6 +15,12 @@ const SortButton = ({ name, img, setSort }) => {
       <img className="m-auto w-7 h-7" src={img} alt={name} />
     </button>
   );
+};
+
+SortButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  setSort: PropTypes.func.isRequired,
 };
 
 export default SortButton;

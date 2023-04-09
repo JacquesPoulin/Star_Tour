@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import { Transition } from "@tailwindui/react";
 import Toggle from "./darkmode/ThemeToggle";
 import { ThemeProvider } from "./darkmode/ThemeContext";
+import navLinks from "../../data/navLinks";
 import Logo from "./Logo";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <header className="absolute flex h-20 min-w-full justify-content-between">
+    <header className="absolute bp4:z-[19] flex h-20 min-w-full justify-content-between">
       {/* DESKTOP MENU */}
       <div className="flex items-center justify-center h-20 min-w-full font-exo text-slate-50 dark:text-slate-900 bp2:justify-start">
         <NavLink to="/home">
@@ -25,34 +26,16 @@ const NavBar = () => {
         {/* NAVBAR */}
         <div className="flex justify-end w-full h-20 bp2:items-center">
           <ul className="flex text-2xl text-shadow-gr bp2:hidden ">
-            <NavLink to="/home">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Accueil
-              </li>
-            </NavLink>
-            <NavLink to="/destination">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Destinations
-              </li>
-            </NavLink>
-            <NavLink to="/ships">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Vaisseaux
-              </li>
-            </NavLink>
-            <NavLink to="/booking">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Reservation
-              </li>
-            </NavLink>
-            <NavLink to="/contact">
-              <li className="py-10 mb-10 mr-10 font-medium hover:underline">
-                Contact
-              </li>
-            </NavLink>
+            {navLinks.map((link) => (
+              <NavLink key={link.id} to={link.path}>
+                <li className="py-10 mb-10 mr-10 font-medium hover:underline">
+                  {link.title}
+                </li>
+              </NavLink>
+            ))}
           </ul>
           <ThemeProvider>
-            <div className="py-10 mr-10 -mt-2 font-medium bp2:mt-8">
+            <div className="py-10 mr-10 -mt-2 font-medium bp2:mt-8 bp2:mr-3">
               <Toggle />
             </div>
           </ThemeProvider>
@@ -61,7 +44,7 @@ const NavBar = () => {
         <button
           type="button"
           className="hidden transition-all rounded-md active:outline-none focus:outline-none first-letter:focus:ring-inset mt-9 bp2:inline-block bp2:ml-auto bp2:mr-7"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpened(!isOpened)}
         >
           <Logo
             myStyle="w-8 h-8 rounded-md text-slate-50 dark:text-slate-900 bg-gradient-to-br from-transparent to-transparent hover:text-white hover:from-slate-500 hover:to-slate-900 dark:hover:text-slate-900 dark:hover:from-slate-500 dark:hover:to-white"
@@ -70,47 +53,32 @@ const NavBar = () => {
           />
         </button>
 
-        {/* I will fade in and out */}
+        {/* Transition : to FADE IN and FADE OUT */}
       </div>
-
       <Transition
-        show={isOpen}
+        show={isOpened}
         enter="transition-opacity duration-1000"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity duration-1000"
+        leave="transition-opacity"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
         {/* MOBILE MENU */}
-        {isOpen && (
-          <div className="absolute p-4 rounded-md md:hidden right-8 top-20 lg:hidden bg-slate-900">
-            <ul className="items-center justify-center text-xl text-center text-slate-50 font-exo">
-              <NavLink to="/home">
-                <li className="mt-4 mb-6 font-medium hover:underline">
-                  Accueil
-                </li>
-              </NavLink>
-
-              <NavLink to="/destination">
-                <li className="mb-6 font-medium hover:underline">
-                  Destinations
-                </li>
-              </NavLink>
-
-              <NavLink to="/booking">
-                <li className="mb-6 font-medium hover:underline">
-                  Reservation
-                </li>
-              </NavLink>
-
-              <NavLink to="/ships">
-                <li className="mb-6 font-medium hover:underline">Vaisseaux</li>
-              </NavLink>
-
-              <NavLink to="/contact">
-                <li className="font-medium hover:underline">Contact</li>
-              </NavLink>
+        {isOpened && (
+          <div className="absolute right-0 w-full rounded-md p-7 md:hidden top-24 lg:hidden bg-neutral-900">
+            <ul className="items-center justify-center text-3xl text-center text-slate-50 font-exo">
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.id}
+                  to={link.path}
+                  onClick={() => setIsOpened(false)}
+                >
+                  <li className="mt-2 mb-8 font-medium hover:underline">
+                    {link.title}
+                  </li>
+                </NavLink>
+              ))}
             </ul>
           </div>
         )}
